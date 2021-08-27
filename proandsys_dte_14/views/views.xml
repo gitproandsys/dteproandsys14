@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="dte_payment_type_tree_view" model="ir.ui.view">
+			<field name="name">Tipo de Pago DTE</field>
+			<field name="model">l10n_cl_dte.payment_type</field>
+			<field name="arch" type="xml">
+				<tree string="Payment Type">
+					<field name="name"/>
+					<field name="code"/>
+					<field name="internal_code"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="dte_payment_type_form_view" model="ir.ui.view">
+			<field name="name">Tipo de Pago DTE</field>
+			<field name="model">l10n_cl_dte.payment_type</field>
+			<field name="arch" type="xml">
+				<form string="Tipo de Pago">
+					<sheet>
+						<group>
+							<group>
+								<field name="name"/>
+							</group>
+							<group>
+								<field name="code"/>
+								<field name="internal_code"/>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_dte_payment_type" model="ir.actions.act_window">
+			<field name="name">Tipo de Pago DTE</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">l10n_cl_dte.payment_type</field>
+			<field name="binding_view_types">list</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="Tipo de Pago" action="action_dte_payment_type" id="menu_payment_type"
+								parent="proandsys_partner_14.root_menu_account_DTE" sequence="20"/>
+
+		<!-- Folios -->
+		<record id="folio_history_tree_view" model="ir.ui.view">
+			<field name="name">folio.history.tree.view</field>
+			<field name="model">l10n_cl_dte.folio_history</field>
+			<field name="arch" type="xml">
+				<tree string="Historial de Folio">
+					<field name="type_id"/>
+					<field name="company_id"/>
+					<field name="sequence_id"/>
+					<field name="begin_folio"/>
+					<field name="end_folio"/>
+					<field name="next_value" string="Siguiente Folio"/>
+					<field name="active"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="folio_history_form_view" model="ir.ui.view">
+			<field name="name">folio.history.form.view</field>
+			<field name="model">l10n_cl_dte.folio_history</field>
+			<field name="arch" type="xml">
+				<form string="Historial de Folio">
+					<header>
+						<button name="%(proandsys_dte_14.xml_import_action)d" string="Importar XML"
+												type="action" class="oe_highlight"/>
+					</header>
+					<sheet>
+						<group>
+							<group>
+								<field name="type_id" required="1"/>
+								<field name="company_id" required="1"/>
+								<field name="sequence_id" readonly="1"/>
+								<field name="file_code" invisible="1"/>
+							</group>
+							<group>
+								<field name="begin_folio" readonly="1"
+											attrs="{'required': [('active','=',True)]}"/>
+								<field name="end_folio" readonly="1"
+											attrs="{'required': [('active','=',True)]}"/>
+								<field name="active"/>
+							</group>
+						</group>
+						<notebook>
+							<page string="XML">
+								<field name="xml" nolabel="1" readonly="1"
+											attrs="{'required': [('active','=',True)]}"/>
+							</page>
+							<page string="CAF">
+								<field name="caf" nolabel="1" readonly="1"
+											attrs="{'required': [('active','=',True)]}"/>
+							</page>
+							<page string="Private Key">
+								<field name="private_key" nolabel="1" readonly="1"
+											attrs="{'required': [('active','=',True)]}"/>
+							</page>
+							<page string="Public Key">
+								<field name="public_key" nolabel="1" readonly="1"
+											attrs="{'required': [('active','=',True)]}"/>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_folio_history" model="ir.actions.act_window">
+			<field name="name">Historial de Folio</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">l10n_cl_dte.folio_history</field>
+			<field name="binding_view_types">list</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="Historial de Folio" action="action_folio_history" id="menu_folio_history"
+										parent="proandsys_partner_14.root_menu_account_DTE" sequence="30"/>
+
+		<!-- Books Maintainer -->
+		<record id="ebooks_tree_view" model="ir.ui.view">
+			<field name="name">e-books.tree.view</field>
+			<field name="model">l10n_cl_dte.electronic_books</field>
+			<field name="arch" type="xml">
+				<tree string="E-Books">
+					<field name="type"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="ebooks_form_view" model="ir.ui.view">
+			<field name="name">e-books.form.view</field>
+			<field name="model">l10n_cl_dte.electronic_books</field>
+			<field name="arch" type="xml">
+				<form string="E-Books">
+					<header>
+						<button string="Get Validation" name="get_validation_book" type="object" class="oe_highlight"
+											attrs="{'invisible': [('state','=','Approved')]}"/>
+						<button string="Get Xml" name="get_xml_book" type="object" class="oe_highlight"
+					attrs="{'invisible': ['|',('track_id','=',False),'|',('xml','!=',False),('state','=','Approved')]}"/>
+					</header>
+					<sheet>
+						<group>
+							<group>
+								<field name="name" readonly="1"/>
+								<field name="type" readonly="1"/>
+								<field name="track_id" readonly="1"/>
+							</group>
+							<group>
+								<field name="company_id" readonly="1"/>
+								<field name="state" readonly="1"/>
+							</group>
+						</group>
+						<group>
+							<field name="failed_text" readonly="1"
+										attrs="{'invisible': [('failed_text','=',False)]}"/>
+							<field name="xml" readonly="1"
+										attrs="{'invisible': [('xml','=',False)]}"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_ebooks" model="ir.actions.act_window">
+			<field name="name">E-Books</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">l10n_cl_dte.electronic_books</field>
+			<field name="view_mode">tree,form</field>
+			<field name="binding_view_types">list</field>
+		</record>
+
+		<menuitem name="E-books" action="action_ebooks" id="menu_ebooks_dte" parent="proandsys_partner_14.root_menu_account_DTE" sequence="42"/>
+
+		<!-- Purchase Invoice XML -->
+		<record model="ir.ui.view" id="document_xml_form">
+			<field name="name">l10n_cl_dte.document_xml.form</field>
+			<field name="model">l10n_cl_dte.document_xml</field>
+			<field name="arch" type="xml">
+				<form string="Documento Recibido xml" create="false" delete="true" edit="true">
+					<header>
+						<button name="create_invoice" string="Crear Factura" type="object" attrs="{'invisible': ['|', ('comercial_state', '!=', '1'), ('invoice_asoc_id', '!=', False)]}"/>
+						<button name="action_enviar_acuse" string="Enviar Acuse" type="object" attrs="{'invisible': [('comercial_state', '!=', '0'),('merchandise_state','!=','0')]}"/>
+						<button name="imprimir_documento" string="Obtener PDF" type="object"/>
+					</header>
+					<sheet>
+						<h1>
+							<label for="folio" string="Folio"/>
+							<field name="folio" nolabel="1" class="oe_inline" readonly="1"/>
+						</h1>
+
+						<group>
+							<group>
+                                <field name="invoice_asoc_id" string="Ingreso Odoo" widget="many2one" readonly="1" />
+								<field name="tipo_dte" readonly="1"/>
+								<field name="rut_emisor" readonly="1"/>
+							   	<field name="razon_social_emisor" readonly="1"/>
+								<field name="provider_id" context="{'default_name': razon_social_emisor, 'default_rut': rut_emisor, 'default_giro': giro_emisor}"/>
+								<field name="date_due" invisible="True"/>
+								<field name="saldo_anterior" invisible="True"/>
+								<field name="date" string="Fecha factura" readonly="1"/>
+								<field name="saldo_insol" invisible="True"/>
+								<field name="date_cancel" invisible="True"/>
+								<field name="dctos_globales" invisible="True"/>
+								<field name="integration_point_id" invisible="True"/>
+								<field name="giro_emisor" readonly="1"/>
+								<field name="acteco" invisible="True"/>
+
+								<field name="comuna_origen" readonly="1"/>
+								<field name="int_number" readonly="1"/>
+								<field name="tipo_despacho" invisible="True"/>
+								<field name="periodo_desde" invisible="True"/>
+								<field name="periodo_hasta" invisible="True"/>
+								<field name="tipo_impresion" invisible="True"/>
+                                <field name="name_file" invisible="1"/>
+                                <field name="pdf_img" filename="name_file"/>
+							</group>
+							<group>
+								<field name="comercial_state" string="Acuse Comercial"/>
+								<field name="merchandise_state" string="Acuse Mercaderia"/>
+								<field name="date_account" string="Fecha Contable"/>
+								<field name="date_acuse_comercial" readonly="1"/>
+								<field name="date_acuse_merchandise" readonly="1"/>
+
+							</group>
+						</group>
+						<notebook colspan="4">
+							<page string="Lineas de factura">
+								<field nolabel="1" name="line_ids">
+									<tree string="Invoice lines" editable="bottom">
+                             			<field name="nmb_item"/>
+										<field name="product_id"/>
+										<field name="analytic_account_id"/>
+										<field name="detalle"/>
+										<field name="cantidad"/>
+                                         <field name="prc"/>
+                                         <field name="descuento"/>
+										<field name="precio_unitario"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Referencias">
+								<field name="reference_ids" nolabel="1">
+									<tree string="Lineas de Referencia" editable="bottom">
+										<field name="numero_ref"/>
+										<field name="tipo_doc_ref"/>
+										<field name="folio_ref"/>
+										<field name="fecha_ref"/>
+										<field name="codigo_ref"/>
+										<field name="razon_ref"/>
+									</tree>
+								</field>
+							</page>
+							<page string="Transporte">
+								<field name="transport_ids" nolabel="1">
+									<tree string="Lineas de Transporte" editable="bottom">
+										<field name="aduana"/>
+										<field name="ciudad_destino"/>
+										<field name="comuna_destino"/>
+										<field name="direccion_destino"/>
+										<field name="nombre_chofer"/>
+										<field name="patente"/>
+										<field name="rut_chofer"/>
+										<field name="rut_transporte"/>
+									</tree>
+									<form string="Lineas de Transporte">
+										<group>
+											<field name="aduana"/>
+											<field name="ciudad_destino"/>
+											<field name="comuna_destino"/>
+											<field name="direccion_destino"/>
+										</group>
+										<group>
+											<field name="nombre_chofer"/>
+											<field name="patente"/>
+											<field name="rut_chofer"/>
+											<field name="rut_transporte"/>
+										</group>
+									</form>
+								</field>
+							</page>
+							<page string="Otra Informacion">
+								<group col="4">
+                                                                          <field name="razon_social_receptor"/>
+                                                                           <field name="rut_receptor"/>
+									<field name="giro_receptor"/>
+									<field name="direccion_receptor"/>
+									<field name="comuna_receptor"/>
+									<field name="ciudad_receptor"/>
+									<field name="correo_receptor"/>
+									<field name="rut_mandante"/>
+									<field name="medio_pago"/>
+									<field name="tipo_cta_pago"/>
+									<field name="numero_cta_pago"/>
+									<field name="banco_pago"/>
+									<field name="forma_pago"/>
+									<field name="forma_pago_exp"/>
+									<field name="cod_term_pago"/>
+									<field name="dias_term_pago"/>
+									<field name="glosa_term_pago"/>
+									<field name="ind_traslado"/>
+									<field name="ind_servicio"/>
+									<field name="ind_no_rebaja"/>
+								</group>
+								<group col="4">
+									<field name="ciudad_origen"/>
+									<field name="direccion_origen"/>
+									<field name="sucursal"/>
+									<field name="codigo_sucursal_sii"/>
+									<field name="contacto"/>
+									<field name="telefono"/>
+									<field name="direccion_postal"/>
+									<field name="comuna_postal"/>
+									<field name="ciudad_postal"/>
+									<field name="codigo_vendedor"/>
+									<field name="codigo_int_receptor"/>
+
+
+								</group>
+							</page>
+							<page string="Impuestos">
+								<group col="4">
+									<field name="tipo_imp"/>
+									<field name="tasa_imp"/>
+									<field name="monto_imp"/>
+									<field name="iva_prop"/>
+									<field name="iva_terc"/>
+									<field name="tasa_iva"/>
+
+								</group>
+							</page>
+						</notebook>
+						<group>
+							<group>
+
+							</group>
+							<group>
+								<field name="monto_neto" readonly="1"/>
+								<field name="monto_exento" string="Monto Exento" readonly="1"/>
+								 <field name="IVA" readonly="1"/>
+								<field name="monto_bruto" readonly="1"/>
+								<field name="monto_cancelar" readonly="1"/>
+								<field name="monto_pagos" readonly="1"/>
+								<field name="monto_periodo" readonly="1"/>
+								<field name="monto_nf" readonly="1"/>
+								<field name="monto_total" readonly="1"/>
+							</group>
+						</group>
+						<field name="tedxml"/>
+					</sheet>
+
+				</form>
+			</field>
+		</record>
+
+		<!--Vista Tree -->
+		<record model="ir.ui.view" id="document_xml_tree">
+			<field name="name">l10n_cl_dte.document_xml.tree</field>
+			<field name="model">l10n_cl_dte.document_xml</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Documentos Recibidos XML" create="false" delete="true" edit="true">
+				    <field name="tipo_dte"/>
+                    <field name="folio"/>
+                    <field name="create_date" string="Fecha Creación" widget="date"/>
+					<field name="date" string="Fecha factura"/>
+                    <field name="date_due" string="Fecha Vencimiento"/>
+					<field name="rut_emisor"/>
+					<field name="razon_social_emisor"/>
+					<field name="monto_exento" string="Exento"/>
+					<field name="monto_neto" sum="monto_neto"/>
+					<field name="IVA" sum="IVA"/>
+					<field name="monto_total" sum="monto_total"/>
+					<field name="comercial_state" string="Acuse Comercial"/>
+					<field name="merchandise_state" string="Acuse mercaderia"/>
+					<field name="invoice_asoc_id" string="Ingreso Odoo"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="document_xml_search" model="ir.ui.view">
+			<field name="name">l10n.cl.dte.document.xml.search</field>
+			<field name="model">l10n_cl_dte.document_xml</field>
+			<field name="arch" type="xml">
+				<search string="Buscar...">
+
+					<field name="rut_emisor" string="Rut Emisor" />
+					<field name="folio" string="Folio" />
+					<field name="date" string="Fecha" />
+					<field name="razon_social_emisor" string="Razón Social" />
+					<separator />
+					<group expand="0" string="Agrupar por...">
+						<filter name="invoice_asoc_id" string="No Ingresadas" domain="[('invoice_asoc_id','=', False)]"/>
+						<filter name="invoice_asoc_id" string="Ingresadas" domain="[('invoice_asoc_id','!=', False)]"/>
+						<filter name="comercial_state" string="Sin Acuse Comercial" domain="[('comercial_state','=', 0)]"/>
+						<filter name="comercial_state" string="Con Acuse Comercial" domain="[('comercial_state','=', 1)]"/>
+						<filter name="merchandise_state" string="Sin Acuse Mercaderias" domain="[('merchandise_state','=', 0)]"/>
+						<filter name="merchandise_state" string="Con Acuse Mercaderias" domain="[('merchandise_state','=', 3)]"/>
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="document_xml_action">
+			<field name="name">Documentos Recibidos XML</field>
+			<field name="res_model">l10n_cl_dte.document_xml</field>
+			<field name="binding_view_types">list</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem action="document_xml_action" id="menu_document_xml" parent="account.menu_finance_payables" sequence="60"/>
+
+		<record id="view_internal_folio_form" model="ir.ui.view">
+            <field name="name">view.internal.folio.form</field>
+            <field name="model">internal.folio</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form string="Folios Internos">
+                    <sheet string="Folios Internos">
+                        <group>
+                            <group>
+                                <field name="l10n_latam_document_type_id" string="Tipo de Document" required="1"/>
+                                <field name="sig_folio" string="Siguiente Folio" required="1"/>
+                                <field name="company_id" string="Compañia" required="1"/>
+                            </group>
+                            <group>
+                            </group>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_internal_folio_tree" model="ir.ui.view">
+            <field name="name">view.internal.folio.tree</field>
+            <field name="model">internal.folio</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Folios Internos">
+                    <field name="l10n_latam_document_type_id"/>
+                    <field name="sig_folio"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_internal_folio_form" model="ir.actions.act_window">
+            <field name="name">Folios Internos</field>
+            <field name="res_model">internal.folio</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_internal_folio" action="action_internal_folio_form" name="Folios Internos" parent="proandsys_partner_14.root_menu_account_DTE"/>
+
+	</data>
+</odoo>
+

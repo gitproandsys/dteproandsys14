@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="dte_account_move_form">
+            <field name="name">Account Invoice</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <data>
+	                <field name="l10n_latam_document_type_id" position="before">
+		                <field name="ref_ready" attrs="{'invisible': ['|',('state','!=','draft'),'|',('dte','=',False), ('move_type','=','entry')]}"/>
+						<field name="dte" attrs="{'invisible': [('move_type','not in',['out_invoice', 'out_refund'])]}"/>
+						<field name="cesion" readonly="1" attrs="{'invisible': [('cesion','=',False)]}"/>
+						<field name="waiting_cesion" readonly="1" attrs="{'invisible': ['|', ('waiting_cesion','=',False), ('move_type','=','entry')]}"/>
+						<field name="para_ceder" invisible="1"/>
+						<field name="export_invoice" invisible="1"/>
+						<field name="state_dte" attrs="{'invisible': [('move_type','=','entry')]}"/>
+						<field name="sent_email_cron"/>
+	                </field>
+
+	                <field name="partner_id" position="after">
+						<field name="partner_invoice_id" attrs="{'invisible': [('move_type','=','entry')]}" context="{'default_customer': False, 'show_address': 1, 'default_company_type': 'company', 'default_parent_id': partner_id, 'default_type': 'invoice'}" options="{&quot;always_reload&quot;: True, &quot;no_quick_create&quot;: True}"/>
+	                    <field name="partner_shipping_id" attrs="{'invisible': [('move_type','=','entry')]}" context="{'default_customer': False, 'show_address': 1, 'default_company_type': 'company', 'default_parent_id': partner_id, 'default_type': 'delivery'}" options="{&quot;always_reload&quot;: True, &quot;no_quick_create&quot;: True}"/>
+						<field name="contacto_invoice_id" attrs="{'invisible': [('move_type','=','entry')]}" context="{'default_customer': False, 'show_address': 1, 'default_company_type': 'company', 'default_parent_id': partner_id, 'default_type': 'contact'}"/>
+	                    <field name="contacto_collection_id" attrs="{'invisible': [('move_type','=','entry')]}" context="{'default_customer': False, 'show_address': 1, 'default_company_type': 'company', 'default_parent_id': partner_id, 'default_type': 'contact'}"/>
+
+						<field name="medio_pago_id" attrs="{'invisible': [('move_type','=','entry')], 'required': [('move_type','!=','entry')]}"/>
+						<field name="ind_servicio" attrs="{'invisible': [('move_type','=','entry')]}"/>
+					</field>
+
+	                <button name="action_post" position="after">
+						<button name="get_dte_info" type="object" string="Resolicitar DTE Info"
+							attrs="{'invisible': [('state_dte','not in',['dte_failed','dte_waiting'])]}" />
+						<button name="get_acks" type="object" string="Tracking DTE"
+							attrs="{'invisible': ['|',('state_dte','not in',['dte_acepted']),'|',('dte','=',False),('sii_failed_text','!=',False)]}" />
+		                <button name="get_pdf" type="object" string="Solicitar Adjuntos"
+							attrs="{'invisible': ['|',('state','not in',['dte_acepted']),'|',('dte','=',False),('sii_failed_text','!=',False)]}" />
+						<button name="get_validation" string="Solicitar Validacion" type="object"
+									class="oe_highlight" attrs="{'invisible': [('state_dte','!=','dte_waiting')]}" />
+						<button name="get_transfer_validation" type="object" string="Solicitar Validacion de Transferencia"
+							attrs="{'invisible': [('waiting_cesion','=',False)]}" class="oe_highlight"/>
+						<button name="%(cesion_factura_wizard_action)d" type="action" string="Ceder Factura"
+							attrs="{'invisible': ['|',('state_dte','!=','dte_acepted'),'|',('dte','=',False),'|',('move_type','!=','out_invoice'),'|',('cesion','=',True),('waiting_cesion','=',True)]}" />
+					</button>
+
+	                <field name="name" position="before">
+						<group colspan="4">
+							<label for="failed_text" string="Razón del fracaso:" colspan="4"
+										attrs="{'invisible': [('failed_text','=',False)]}"/>
+							<field name="failed_text" readonly="1" nolabel="1"
+										attrs="{'invisible': [('failed_text','=',False)]}"/>
+							<label for="sii_failed_text" string="Razón del fracaso:" colspan="4"
+										attrs="{'invisible': [('sii_failed_text','=',False)]}"/>
+							<field name="sii_failed_text" readonly="1" nolabel="1"
+										attrs="{'invisible': [('sii_failed_text','=',False)]}"/>
+							<label for="transfer_failed_text" string="Razón del fracaso:" colspan="4"
+										attrs="{'invisible': [('transfer_failed_text','=',False)]}"/>
+							<field name="transfer_failed_text" readonly="1" nolabel="1"
+										attrs="{'invisible': [('transfer_failed_text','=',False)]}"/>
+						</group>
+					</field>
+
+	                <field name="amount_untaxed" position="replace">
+						<field name="amount_untaxed" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+						<field name="amount_exent" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+					</field>
+
+	                <notebook position="inside">
+						<page string="DTE" attrs="{'invisible': ['|', ('dte','=',False), ('move_type','=','entry')]}">
+							<notebook>
+								<page string="Información Base">
+									<group>
+										<group string="Número de seguimiento"
+												attrs="{'invisible': [('dte_track','=',False)]}">
+											<field name="dte_track" readonly="1" nolabel="1"/>
+											<field name="pdf_img"/>
+											<field name= "sii_track_id" readonly="1" nolabel="1"/>
+										</group>
+										<group string="Número de seguimiento de transferencia"
+												attrs="{'invisible': [('para_ceder','=',False),('transfer_track_id','=',False)]}">
+											<field name="transfer_track_id" readonly="1"
+															nolabel="1" colspan="4"/>
+											<label for="transfer_to_id" string="Transferir a:"/>
+											<field name="transfer_to_id" readonly="1"
+															nolabel="1" colspan="4"/>
+										</group>
+									</group>
+									<group string="Dte Referencias">
+										<field name="reference_lines" nolabel="1" context="{'type': move_type}">
+											<tree editable="bottom">
+												<field name="type" invisible="1"/>
+												<field name="tpo_doc_ref"/>
+												<field name="ref_folio"/>
+												<field name="ref_date"/>
+												<field name="ref_reason"
+												attrs="{'required': [('type','=','out_refund')]}"/>
+												<field name="external_document"/>
+											</tree>
+										</field>
+									</group>
+								</page>
+								<page string="Información Ack's"
+								      attrs="{'invisible': ['|',('state_dte','!=','dte_acepted'),('sii_failed_text','!=',False)]}">
+									<group>
+										<group string="Recepción Ack">
+											<field name="reception_ack" readonly="1"/>
+											<label string="Texto Recepción Ack" for="reception_ack_text"
+											attrs="{'invisible': [('reception_ack_text','=',False)]}"/>
+											<field name="reception_ack_text"
+												readonly="1" colspan="4" nolabel="1"
+											attrs="{'invisible': [('reception_ack_text','=',False)]}"/>
+										</group>
+										<group string="Comercial Ack">
+											<field name="comercial_ack" readonly="1"/>
+											<label string="Texto Comercial Ack" for="comercial_ack_text"
+											attrs="{'invisible': [('comercial_ack_text','=',False)]}"/>
+											<field name="comercial_ack_text"
+												readonly="1" colspan="4" nolabel="1"
+											attrs="{'invisible': [('comercial_ack_text','=',False)]}"/>
+										</group>
+									</group>
+								</page>
+							</notebook>
+						</page>
+	                    <page string="Adjuntos" attrs="{'invisible': ['|', ('dte','=',False), ('move_type','=','entry')]}">
+	                        <field name="attr_ids" nolabel="1" readonly="1">
+	                            <tree editable="bottom">
+	                                <field name="name" readonly="1"/>
+	                                <field name="type" readonly="1"/>
+	                                <field name="res_name" invisible="1"/>
+	                                <field name="datas" string="Xml Factura" filename="res_name" />
+	                            </tree>
+	                            <form>
+	                                <sheet>
+	                                    <group>
+	                                        <group>
+	                                            <field name="name" readonly="1"/>
+	                                            <field name="type" readonly="1"/>
+	                                            <field name="res_name" invisible="1"/>
+	                                            <field name="datas" string="Xml Factura" filename="res_name" />
+	                                        </group>
+	                                        <group></group>
+	                                    </group>
+
+	                                </sheet>
+	                            </form>
+	                        </field>
+						</page>
+					</notebook>
+
+	                <xpath expr="//sheet/notebook/page/field[@name='invoice_line_ids']" position="attributes">
+						<attribute name="context">{'journal_id': journal_id}</attribute>
+					</xpath>
+
+	                <xpath expr="//sheet/notebook/page/field[@name='invoice_line_ids']/tree/field[@name='sequence']" position="after">
+						<field name="ind_exencion" required="1"/>
+					</xpath>
+
+                </data>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="wizard_reversal_dte_account_move_form">
+            <field name="name">Nota de credito DTE</field>
+            <field name="model">account.move.reversal</field>
+            <field name="inherit_id" ref="l10n_latam_invoice_document.view_account_move_reversal"/>
+            <field name="arch" type="xml">
+                <data>
+	                <field name="l10n_latam_document_type_id" position="replace">
+						<field name="l10n_latam_document_type_id" options="{'no_open': True, 'no_create': True}"/>
+	                </field>
+
+                </data>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="view_dte_account_move_tree">
+            <field name="name">Listado de Facturas DTE</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree"/>
+            <field name="arch" type="xml">
+                <data>
+					<field name="payment_state" position="after">
+							<field name="state_dte" widget="badge" decoration-danger="state_dte == 'dte_failed'"
+							       decoration-warning="state_dte == 'dte_waiting'"
+							       decoration-success="state_dte == 'dte_acepted'"
+							       decoration-info="state_dte == 'dte_none'"
+							       invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund','out_receipt')"/>
+					</field>
+	                <field name="name" position="after">
+		                <field name="l10n_latam_document_type_id" invisible="context.get('default_move_type') not in ('out_invoice', 'out_refund','out_receipt')"/>
+	                </field>
+                </data>
+            </field>
+        </record>
+	</data>
+</odoo>
+

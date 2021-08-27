@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="payment_type_1" model="l10n_cl_dte.payment_type">
+			<field name="name">Cheque</field>
+			<field name="internal_code"></field>
+			<field name="code">CH</field>
+		</record>
+		<record id="payment_type_2" model="l10n_cl_dte.payment_type">
+			<field name="name">Letra</field>
+			<field name="internal_code"></field>
+			<field name="code">LT</field>
+		</record>
+		<record id="payment_type_3" model="l10n_cl_dte.payment_type">
+			<field name="name">Efectivo</field>
+			<field name="internal_code"></field>
+			<field name="code">EF</field>
+		</record>
+		<record id="payment_type_4" model="l10n_cl_dte.payment_type">
+			<field name="name">Pago a Cuenta Corriente</field>
+			<field name="internal_code"></field>
+			<field name="code">PE</field>
+		</record>
+		<record id="payment_type_5" model="l10n_cl_dte.payment_type">
+			<field name="name">Tarjeta de Credito</field>
+			<field name="internal_code"></field>
+			<field name="code">TC</field>
+		</record>
+		<record id="payment_type_6" model="l10n_cl_dte.payment_type">
+			<field name="name">Cheque a Fecha</field>
+			<field name="internal_code"></field>
+			<field name="code">CF</field>
+		</record>
+		<record id="payment_type_7" model="l10n_cl_dte.payment_type">
+			<field name="name">Otros</field>
+			<field name="internal_code"></field>
+			<field name="code">OT</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="libros_tax_inherit" model="ir.ui.view">
+            <field name="name">libros.tax.inherit</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="account.view_tax_form"/>            
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Reportes Chile" name="proandsys_reportes_chile_14_page">
+                        <group name="mostrar_v_c_group">
+                            <field name="mostrar_v" string="Mostrar en libro de venta"/>
+                            <field name="mostrar_c" string="Mostrar en libro de compra"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="account_type_form_inh" model="ir.ui.view">
+            <field name="name">account_type_form_inh</field>
+            <field name="model">account.account.type</field>
+            <field name="inherit_id" ref="account.view_account_type_form"/>            
+            <field name="arch" type="xml">
+                <field name="include_initial_balance" position="after">
+                    <field name="report_type"/>                    
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

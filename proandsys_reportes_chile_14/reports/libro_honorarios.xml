@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<odoo>
+<data>
+<report id="libro_honorario" string="Libro de honorario" model="wizard.reportes.chile"
+report_type="qweb-pdf" name="proandsys_reportes_chile_14.libro_honorarios" paperformat="paperformat_proandsys_reportes_chile_14"/>
+<template id="libro_honorarios">
+<t t-name="proandsys_reportes_chile_14.libro_honorarios">
+<t t-call="web.basic_layout">
+<t t-foreach="docs" t-as="o">
+
+    
+        <div class="header">
+        	<table class="table-condensed table-bordered" style="width:100%;font-size:10px">
+        		<tr>
+                    <td><img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" style="max-height: 45px;"/></td> 
+        			<td>
+                        <b>Informe: </b><span>Libro de Honorarios</span>                        
+                    </td>
+        			<td>
+                        <b>Periodo: </b>
+                        <span t-field="o.fecha_inicio"/>
+                        <span> hasta </span>
+                        <span t-field="o.fecha_term"/>                
+                    </td>
+                    <td>                  
+                        <span>Pagina </span>
+                        <span class="page"/>
+                        <span>de </span>
+                        <span class="topage"/>                        
+                    </td>
+        		</tr>        		
+        	</table>
+        </div> 
+
+        <div class="page"> 
+            <style>
+                th,td{ white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+                thead { display: table-header-group }
+                tfoot { display: table-row-group }
+                tr { page-break-inside: avoid }
+            </style>
+            <t t-set="tabla" t-value="o._libro_honorarios()"/>
+            <t t-if="tabla.empty"> 
+                <h2>No hay datos para mostrar</h2>
+            </t>
+            <t t-if="not tabla.empty">                                                                   
+                    <table class="table-condensed table-bordered" style="width:100%;font-size:10px;table-layout: fixed">
+                        <tr> 
+                            <t t-foreach="tabla.columns.values.tolist()" t-as="p">
+                                <th><span t-esc="p"/></th>
+                            </t>
+                        </tr>                        
+                        <t t-foreach="tabla.values.tolist()" t-as="p">
+                            <tr>
+                                <t t-foreach="p[:-3]" t-as="q">
+                                    <td>
+                                        <span t-esc="q"/>
+                                    </td>
+                                </t>
+                                <t t-foreach="p[-3:]" t-as="q">
+                                    <td style="text-align: right">
+                                        <span t-esc="q" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                    </td>
+                                </t>                                                     
+                            </tr> 
+                        </t>
+                        <tr>
+                            <th colspan="5">                                    
+                                Total
+                            </th>
+                            <t t-foreach="tabla[tabla.columns[-3:]].sum().values.tolist()" t-as="p">
+                                <th style="text-align: right">
+                                    <span t-esc="p" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                </th>  
+                            </t>                            
+                        </tr>                                                    
+                    </table>                         
+                </t> 
+        </div>
+
+
+</t>
+</t>
+</t>
+</template>
+
+
+
+</data>
+</odoo>

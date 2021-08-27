@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="tipo_traslado_1" model="l10n_cl_dte.tipo_traslado">
+			<field name="name">Operación Constituye Venta</field>
+			<field name="code">1</field>
+		</record>
+		<record id="tipo_traslado_2" model="l10n_cl_dte.tipo_traslado">
+			<field name="name">Ventas por Efectuar</field>
+			<field name="code">2</field>
+		</record>
+		<record id="tipo_traslado_3" model="l10n_cl_dte.tipo_traslado">
+			<field name="name">Consignaciones</field>
+			<field name="code">3</field>
+		</record>
+		<record id="tipo_traslado_4" model="l10n_cl_dte.tipo_traslado">
+			<field name="name">Entrega Gratuita</field>
+			<field name="code">4</field>
+		</record>
+		<record id="tipo_traslado_5" model="l10n_cl_dte.tipo_traslado">
+			<field name="name">Traslados Internos</field>
+			<field name="code">5</field>
+		</record>
+		<record id="tipo_traslado_6" model="l10n_cl_dte.tipo_traslado">
+			<field name="name">Otros Traslados no Venta</field>
+			<field name="code">6</field>
+		</record>
+		<record id="tipo_traslado_7" model="l10n_cl_dte.tipo_traslado">
+			<field name="name">Guía Devolución</field>
+			<field name="code">7</field>
+		</record>
+		<record id="tipo_traslado_8" model="l10n_cl_dte.tipo_traslado">
+			<field name="name">Traslado para Exportación. (No Venta)</field>
+			<field name="code">8</field>
+		</record>
+		<record id="tipo_traslado_9" model="l10n_cl_dte.tipo_traslado">
+			<field name="name">Venta para Exportación</field>
+			<field name="code">9</field>
+		</record>
+	</data>
+</odoo>
+

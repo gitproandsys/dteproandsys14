@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="stock_picking_dte_form_inh" model="ir.ui.view">
+	        <field name="name">stock_picking_dte_form_inh</field>
+	        <field name="model">stock.picking</field>
+	        <field name="inherit_id" ref="stock.view_picking_form"/>
+	        <field name="arch" type="xml">
+	            <field name="origin" position="after">
+	              <field name="currency_id"/>
+	            </field>
+	            <field name="move_ids_without_package" position="after">
+	                <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+	                    <field name="amount_untaxed_imp" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+	                    <field name="amount_tax_imp" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+	                    <div class="oe_subtotal_footer_separator oe_inline">
+	                        <label for="amount_total_imp" />
+	                        <button name="amount_all_imp"
+	                            states="draft,sent" string="(update)" type="object" class="oe_edit_only oe_link" invisible="1"/>
+	                    </div>
+	                    <field name="amount_total_imp" nolabel="1" class="oe_subtotal_footer_separator" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+	                </group>
+	                <div class="oe_clear"/>
+	            </field>
+	            <field name="partner_id" position="after">
+	                <field name="dte" attrs="{'invisible': [('picking_type_code','in',['incoming',False])]}"/>
+	                <field name="dte_send" invisible="1"/>
+	                <field name="journal_id" attrs="{'required': [('dte','=',True)], 'invisible': [('dte','=',False)],
+	                        'readonly': [('dte_status','=','1')]}"/>
+	                <field name="l10n_latam_document_type_id" attrs="{'required': [('dte','=',True)], 'invisible': [('dte','=',False)],
+	                        'readonly': [('dte_status','=','1')]}"/>
+	                <field name="dte_status" readonly="1" attrs="{'invisible': [('dte','=',False)]}"/>
+	                <field name="state_dte" readonly="1" attrs="{'invisible': [('dte','=',False)]}"/>
+	                <field name="ref_ready" attrs="{'readonly': [('dte_status','=','1')],
+	                      'invisible': ['|',('state','!=','done'),('dte','=',False)]}"/>
+
+	            </field>
+	            <xpath expr="//sheet/div/h1" position="after">
+	                <group colspan="4">
+	                    <label for="failed_text" string="Reason for Failure:" colspan="4" class="oe_force_bold"
+	                                        attrs="{'invisible': [('failed_text','=',False)]}"/>
+	                    <field name="failed_text" colspan="4" readonly="1" nolabel="1"
+	                                        attrs="{'invisible': [('failed_text','=',False)]}"/>
+	                    <label for="sii_failed_text" string="Reason for Failure" colspan="4" class="oe_force_bold"
+	                                    attrs="{'invisible': [('sii_failed_text','=',False)]}"/>
+	                    <field name="sii_failed_text" colspan="4" readonly="1" nolabel="1"
+	                                    attrs="{'invisible': [('sii_failed_text','=',False)]}"/>
+	                </group>
+	            </xpath>
+	            <field name="partner_id" position="after">
+	                <field string="Folio" name="internal_number" readonly="1" attrs="{'invisible': [('dte','=',False)]}"/>
+	                <field name="fecha_guia" attrs="{'invisible': [('dte','=',False)]}" />
+	            </field>
+	            <field name="partner_id" position="attributes">
+	                <attribute name="attrs">{'required': [('dte','=',True)]}</attribute>
+	            </field>
+	            <field name="partner_id" position="after">
+	                <field name="name"/>
+	                <field name="sale_id" string="Presupuesto Asociado" invisible="1"/>
+
+
+	            </field>
+	            <field name="picking_type_id" position="attributes">
+	                <attribute name="invisible">1</attribute>
+	            </field>
+	            <field name="location_id" position="before">
+	                <field name="picking_type_id"/>
+	            </field>
+	            <field name="location_id" position="attributes">
+	                <attribute name="readonly">0</attribute>
+	            </field>
+	            <field name="location_dest_id" position="attributes">
+	                <attribute name="readonly">0</attribute>
+	            </field>
+	            <field name="origin" position="after">
+
+	                <field name="referencia" attrs="{'invisible': [('picking_type_code', '=', 'outgoing')]}"/>
+	                <field name="ind_traslado" attrs="{'required': [('dte','=',True)], 'invisible': [('dte','=',False)]}"/>
+	                <field name="rut_transpor" invisible="1"/>
+	                <field name="patente_vehic" invisible="1"/>
+	                <field name="anulada" attrs="{'invisible': [('dte','=',False)]}"/>
+	            </field>
+	            <button name="button_scrap" position="after">
+
+	                <!--button name="cambiar_moneda" states="draft" string="Cambiar Moneda" type="object"
+	                                    class="oe_highlight" context="{'default_stock_picking_id':id}"/-->
+
+
+	                <button name="get_dte_info" type="object" string="Resolicitar Information DTE"
+	                        attrs="{'invisible': [('state_dte','!=', 'dte_waiting')]}"/>
+	                <button name="get_acks" type="object" string="Get Ack's Status"
+	                        attrs="{'invisible': ['|',('state','!=','done'),'|',('dte','=',False),'|',('sii_failed_text','!=',False),('dte_status','!=','1')]}"/>
+	                <button name="send_dte" string="Generar DTE" class="oe_highlight" type="object"
+	                        attrs="{'invisible': ['|', ('dte','=', False), ('state_dte','=', 'dte_acepted')]}"/>
+	                <button name="get_validation" string="Solicitar Validacion" type="object"
+	                        class="oe_highlight" attrs="{'invisible': [('state_dte','!=', 'dte_waiting')]}"/>
+	                <button name="anular_dte" string="Anular DTE" attrs="{'invisible': [('state','!=','cancel')]}"/>
+	            </button>
+	            <notebook position="inside">
+	                <page string="DTE" attrs="{'invisible': [('dte','=',False)]}">
+	                    <group>
+	                        <group string="Followup Number" attrs="{'invisible': [('dte_track','=',False)]}">
+	                            <field name="dte_track" readonly="1" nolabel="1"/>
+	                        </group>
+	                        <group attrs="{'invisible': [('dte_track','=',False)]}">
+	                        </group>
+	                        <group string="References" colspan="4">
+	                            <field name="reference_lines" nolabel="1" colspan="4"
+	                                    attrs="{'readonly': [('dte_status','=','1')]}">
+	                                <tree editable="bottom">
+	                                    <field name="tpo_doc_ref"/>
+	                                    <field name="ref_folio"/>
+	                                    <field name="ref_date"/>
+	                                </tree>
+	                            </field>
+	                        </group>
+	                    </group>
+	                </page>
+	                <page string="Ack's Information"
+	                        attrs="{'invisible': ['|',('state','!=','done'),'|',('sii_failed_text','!=',False),('dte_status','!=','1')]}">
+	                    <group>
+	                        <group string="Reception Ack">
+	                            <field name="reception_ack" readonly="1"/>
+	                            <label for="reception_ack_text" string="Reception Ack Text" class="oe_force_bold"
+	                                attrs="{'invisible': [('reception_ack_text','=',False)]}"/>
+	                            <field name="reception_ack_text"
+	                                readonly="1" colspan="4" nolabel="1"
+	                                attrs="{'invisible': [('reception_ack_text','=',False)]}"/>
+	                        </group>
+	                        <group string="Comercial Ack">
+	                            <field name="comercial_ack" readonly="1"/>
+	                            <label for="comercial_ack_text" string="Comercial Ack Text" class="oe_force_bold"
+	                                attrs="{'invisible': [('comercial_ack_text','=',False)]}"/>
+	                            <field name="comercial_ack_text"
+	                                readonly="1" colspan="4" nolabel="1"
+	                                attrs="{'invisible': [('comercial_ack_text','=',False)]}"/>
+	                        </group>
+	                    </group>
+	                </page>
+	            </notebook>
+		        <xpath expr="//page/field[@name='move_ids_without_package']/tree/field[@name='quantity_done']" position="after">
+                    <field name="sale_id"/>
+                    <field name="price_sale"/>
+                    <field name="price_subtotal"/>
+                    <field name="discount"/>
+                    <field name="tax_id"/>
+                    <field name="price_tax"/>
+                    <field name="price_total"/>
+                </xpath>
+	        </field>
+        </record>
+
+	</data>
+</odoo>
+

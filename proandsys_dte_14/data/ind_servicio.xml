@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="indicador_servicio_1" model="l10n_cl_dte.ind_servicio">
+			<field name="name">Factura de Servicios Periódicos Domiciliarios</field>
+			<field name="code">1</field>
+		</record>
+		<record id="indicador_servicio_2" model="l10n_cl_dte.ind_servicio">
+			<field name="name">Factura de Otros Servicios Periodicos</field>
+			<field name="code">2</field>
+		</record>
+		<record id="indicador_servicio_3" model="l10n_cl_dte.ind_servicio">
+			<field name="name">Factura de Servicios</field>
+			<field name="code">3</field>
+			<field name="description">En caso de Factura de Exportación: Servicios calificados como tal por Aduana.</field>
+		</record>
+		<record id="indicador_servicio_4" model="l10n_cl_dte.ind_servicio">
+			<field name="name">Servicios de Hotelería</field>
+			<field name="code">4</field>
+		</record>
+		<record id="indicador_servicio_5" model="l10n_cl_dte.ind_servicio">
+			<field name="name">Servicios de Transporte Terrestre Internacional</field>
+			<field name="code">5</field>
+		</record>
+	</data>
+</odoo>
+

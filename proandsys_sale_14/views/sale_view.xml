@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="proandsys_sale_ps_form" model="ir.ui.view">
+			<field name="name">proandsys.sale.form</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+			<field name="arch" type="xml">
+				<field name="partner_id" position="after">
+    				<field name="contacto_invoice_id" context="{'default_type':'contact', 'default_parent_id': partner_id}"/>
+                    <field name="contacto_collection_id" context="{'default_type':'contact', 'default_parent_id': partner_id}"/>
+                </field>
+
+				<field name="team_id" position="after">
+            		<field name="max_item_invoice" readonly="1"/>
+                    <field name="qty_item" readonly="1"/>
+                    <field name="user_id" required="1"/>
+            	</field>
+
+				<field name="payment_term_id" position="after">
+					<field name="l10n_latam_document_type_id"/>
+				</field>
+
+				<notebook position="inside">
+                    <page string="DTE">
+                        <group>
+                            <group string="Referencias" colspan="4">
+                                <field name="reference_lines" nolabel="1" colspan="4">
+                                    <tree editable="bottom">
+                                        <field name="tpo_doc_ref"/>
+                                        <field name="ref_folio"/>
+                                        <field name="ref_date"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+			</field>
+		</record>
+
+		<record id="cibrugg_view_quotation_tree" model="ir.ui.view">
+            <field name="name">cibrugg.view.quotation.tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="arch" type="xml">
+                <field name="state" position="after">
+	                <field name="client_order_ref" optional="show"/>
+                </field>
+	            <field name="create_date" position="replace">
+	                <field name="date_order"/>
+                </field>
+            </field>
+        </record>
+
+ 	</data>
+</odoo>

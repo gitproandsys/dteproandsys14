@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="res_config_settings_view_form_email_folios" model="ir.ui.view">
+	        <field name="name">res.config.settings.view.form.inherit.email.folios</field>
+	        <field name="model">res.config.settings</field>
+	        <field name="priority" eval="100"/>
+	        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+	        <field name="arch" type="xml">
+		        <xpath expr="//div[@id='invoicing_settings']" position="inside">
+			        <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="email_folios"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="email_folios"/>
+                            <div class="text-muted">
+                                Envia correo electrónico al agotarse los folios de los documentos.
+                            </div>
+                            <div>
+	                            <label for="qty_folios" string="Cant. de folios" class="col-3 col-lg-3 o_light_label" attrs="{'required': [('email_folios','=', True)], 'invisible': [('email_folios','=', False)]}"/>
+	                            <field name="qty_folios" class="oe_inline" attrs="{'required': [('email_folios','=', True)], 'invisible': [('email_folios','=', False)]}"/>
+                            </div>
+                        </div>
+                    </div>
+			        <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="email_validate"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="email_validate"/>
+                            <div class="text-muted">
+                                Envia correo electrónico al validar facturas de venta.
+                            </div>
+                        </div>
+                    </div>
+			        <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="email_to_due"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="email_to_due"/>
+                            <div class="text-muted">
+                                Envia correo electrónico dias antes del vencimiento de la facturas de venta.
+                            </div>
+	                        <div>
+	                            <label for="qty_days" string="Cant. de dias antes" class="col-3 col-lg-3 o_light_label" attrs="{'required': [('email_to_due','=', True)], 'invisible': [('email_to_due','=', False)]}"/>
+	                            <field name="qty_days" class="oe_inline" attrs="{'required': [('email_to_due','=', True)], 'invisible': [('email_to_due','=', False)]}"/>
+                            </div>
+                        </div>
+                    </div>
+			        <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="email_due_today"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="email_due_today"/>
+                            <div class="text-muted">
+                                Envia correo electrónico el dia de vencimiento de la facturas de venta.
+                            </div>
+                        </div>
+                    </div>
+			        <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="email_due_before"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="email_due_before"/>
+                            <div class="text-muted">
+                                Envia correo electrónico luego del vencimiento la facturas de venta.
+                            </div>
+                        </div>
+                    </div>
+			        <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="email_due_today_supplier"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="email_due_today_supplier"/>
+                            <div class="text-muted">
+                                Envia correo electrónico de facturas de compra vencidas.
+                            </div>
+                        </div>
+                    </div>
+			        <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="email_to_due_supplier"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="email_to_due_supplier"/>
+                            <div class="text-muted">
+                                Envia correo electrónico dias antes del vencimiento de la facturas de compra.
+                            </div>
+	                        <div>
+	                            <label for="qty_days_supplier" string="Cant. de dias antes" class="col-3 col-lg-3 o_light_label" attrs="{'required': [('email_to_due_supplier','=', True)], 'invisible': [('email_to_due_supplier','=', False)]}"/>
+	                            <field name="qty_days_supplier" class="oe_inline" attrs="{'required': [('email_to_due_supplier','=', True)], 'invisible': [('email_to_due_supplier','=', False)]}"/>
+                            </div>
+                        </div>
+                    </div>
+				</xpath>
+	        </field>
+	    </record>
+
+		<record id="email_template_edi_invoice_due" model="mail.template">
+            <field name="name">Facturas a vencerse</field>
+            <field name="subject">${object.company_id.name} Factura (Ref ${object.name or 'n/a'})</field>
+	        <field name="email_from">${object.user_id.email_formatted |safe}</field>
+	        <field name="partner_to">${object.partner_id.email}</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+	            <div>
+                    <p style="color: rgb(34, 34, 34)">Estimado ${object.partner_id.name}
+                    </p>
+                    <p style="color: rgb(34, 34, 34)"><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;">Un gusto en saludarle, a continuacion le notificamos el pronto vencimiento de la factura relacionada a</span> ${object.company_id.name}:<br/></p>
+                    <div>
+                        <font face="Lucida Grande, Ubuntu, Arial, Verdana, sans-serif" color="#222222">
+                            <span style="font-size: 12px;"><br/></span>
+                        </font>
+                    </div>
+                    <p style="margin-bottom: 10px; margin-left: 30px; font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; text-align: justify; color: rgb(34, 34, 34) !important; margin-block-start: 1em; margin-block-end: 1em; border-left: 1px solid rgb(142, 0, 0);"><strong></strong><span style="line-height: 18.5714px; color: rgb(34, 34, 34)">REFERENCIAS</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Nº de Factura: ${object.name} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Referencia: ${object.invoice_origin} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Total de la Factura: ${format_amount(object.amount_total, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Saldo Pendiente: ${format_amount(object.amount_residual_signed, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de la Factura: ${object.date_invoice}</span><br/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de vencimiento: ${object.date_due} </span><br/>
+                    </p><br/><br/>
+                    <p style="color: rgb(34, 34, 34)">Gracias por escogernos</p>
+
+                </div>
+            </field>
+	        <field name="report_template" ref="account.account_invoices"/>
+            <field name="report_name">Factura_${(object.name or '').replace('/','_')}${object.state == 'draft' and '_draft' or ''}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+        </record>
+
+        <record id="email_template_edi_invoice_due_today" model="mail.template">
+            <field name="name">Factura a vencer hoy</field>
+            <field name="subject">${object.company_id.name} Factura (Ref ${object.name or 'n/a'})</field>
+	        <field name="email_from">${object.user_id.email_formatted |safe}</field>
+	        <field name="partner_to">${object.partner_id.email}</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+                <div>
+                    <p style="color: rgb(34, 34, 34)">Estimado ${object.partner_id.name}
+                    </p>
+                    <p style="color: rgb(34, 34, 34)"><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;">Un gusto en saludarle, a continuacion le notificamos el vencimiento de la factura relacionada a</span> ${object.company_id.name}:<br/></p>
+                    <div>
+                        <font face="Lucida Grande, Ubuntu, Arial, Verdana, sans-serif" color="#222222">
+                            <span style="font-size: 12px;"><br/></span>
+                        </font>
+                    </div>
+                    <p style="margin-bottom: 10px; margin-left: 30px; font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; text-align: justify; color: rgb(34, 34, 34) !important; margin-block-start: 1em; margin-block-end: 1em; border-left: 1px solid rgb(142, 0, 0);"><strong></strong><span style="line-height: 18.5714px; color: rgb(34, 34, 34)">REFERENCIAS</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Nº de Factura: ${object.name} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Referencia: ${object.invoice_origin} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Total de la Factura: ${format_amount(object.amount_total, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Saldo Pendiente: ${format_amount(object.amount_residual_signed, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de la Factura: ${object.date_invoice}</span><br/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de vencimiento: ${object.date_due} </span><br/>
+                    </p><br/><br/>
+                    <p style="color: rgb(34, 34, 34)">Gracias por escogernos</p>
+
+                </div>
+            </field>
+	        <field name="report_template" ref="account.account_invoices"/>
+            <field name="report_name">Factura_${(object.name or '').replace('/','_')}${object.state == 'draft' and '_draft' or ''}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+        </record>
+
+        <record id="email_template_edi_invoice_due_before" model="mail.template">
+            <field name="name">Factura a vencida en dias anteriores</field>
+            <field name="subject">${object.company_id.name} Factura (Ref ${object.name or 'n/a'})</field>
+	        <field name="email_from">${object.user_id.email_formatted |safe}</field>
+	        <field name="partner_to">${object.partner_id.email}</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+	            <div>
+                    <p style="color: rgb(34, 34, 34)">Estimado ${object.partner_id.name}
+                    </p>
+                    <p style="color: rgb(34, 34, 34)"><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;">Un gusto en saludarle, a continuacion le notificamos que la factura relacionada a</span> ${object.company_id.name} se encuentra vencida:<br/></p>
+                    <div>
+                        <font face="Lucida Grande, Ubuntu, Arial, Verdana, sans-serif" color="#222222">
+                            <span style="font-size: 12px;"><br/></span>
+                        </font>
+                    </div>
+                    <p style="margin-bottom: 10px; margin-left: 30px; font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; text-align: justify; color: rgb(34, 34, 34) !important; margin-block-start: 1em; margin-block-end: 1em; border-left: 1px solid rgb(142, 0, 0);"><strong></strong><span style="line-height: 18.5714px; color: rgb(34, 34, 34)">REFERENCIAS</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Nº de Factura: ${object.name} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Referencia: ${object.invoice_origin} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Total de la Factura: ${format_amount(object.amount_total, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Saldo Pendiente: ${format_amount(object.amount_residual_signed, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de la Factura: ${object.date_invoice}</span><br/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de vencimiento: ${object.date_due} </span><br/>
+                    </p><br/><br/>
+                    <p style="color: rgb(34, 34, 34)">Gracias por escogernos</p>
+
+                </div>
+            </field>
+	        <field name="report_template" ref="account.account_invoices"/>
+            <field name="report_name">Factura_${(object.name or '').replace('/','_')}${object.state == 'draft' and '_draft' or ''}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+        </record>
+
+		<record id="email_template_end_of_folios" model="mail.template">
+            <field name="name">Finalización de Folios de Documento</field>
+            <field name="subject">Notificación de Finalización de Folios ${object.sii_doc_type_id.name}</field>
+	        <field name="email_from">${object.user_id.email_formatted |safe}</field>
+	        <field name="email_to">${object.company_id.email}</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+	            <div>
+                    <p style="color: rgb(34, 34, 34)">Estimado ${object.company_id.name}
+                    </p>
+                    <p style="color: rgb(34, 34, 34)"><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;">Un gusto en saludarle, a continuacion le notificamos la pronta finalización de los folios de las</span> ${object.sii_doc_type_id.name}:<br/></p>
+                    <div>
+                        <font face="Lucida Grande, Ubuntu, Arial, Verdana, sans-serif" color="#222222">
+                            <span style="font-size: 12px;"><br/></span>
+                        </font>
+                    </div>
+                    <p style="margin-bottom: 10px; margin-left: 30px; font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; text-align: justify; color: rgb(34, 34, 34) !important; margin-block-start: 1em; margin-block-end: 1em; border-left: 1px solid rgb(142, 0, 0);"><strong></strong><span style="line-height: 18.5714px; color: rgb(34, 34, 34)">INFORMACIÓN</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Tipo de Doc: ${object.sii_doc_type_id.name} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Folio Inicial: ${object.sii_doc_type_id.folio_ids[0].begin_folio} </span><br style="line-height: 18.5714px;"/>
+	                    <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Folio Final: ${object.sii_doc_type_id.folio_ids[0].end_folio} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Siguiente Folio: ${object.sii_doc_type_id.folio_ids[0].next_value} </span><br style="line-height: 18.5714px;"/>
+                    </p><br/><br/>
+                </div>
+            </field>
+            <field name="lang">${object.partner_id.lang}</field>
+        </record>
+
+		<record id="email_template_invoice_due_supplier" model="mail.template">
+            <field name="name">Facturas de Proveedor a vencerse</field>
+            <field name="subject">${object.partner_id.name} Factura de Proveedor (Ref ${object.name or 'n/a'})</field>
+	        <field name="email_from">${object.company_id.email}</field>
+	        <field name="email_to">${object.company_id.email}</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+	            <div>
+                    <p style="color: rgb(34, 34, 34)">Estimado ${object.company_id.name}
+                    </p>
+                    <p style="color: rgb(34, 34, 34)"><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;">Un gusto en saludarle, a continuacion le notificamos el pronto vencimiento de la factura de proveedor relacionada a</span> ${object.partner_id.name}:<br/></p>
+                    <div>
+                        <font face="Lucida Grande, Ubuntu, Arial, Verdana, sans-serif" color="#222222">
+                            <span style="font-size: 12px;"><br/></span>
+                        </font>
+                    </div>
+                    <p style="margin-bottom: 10px; margin-left: 30px; font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; text-align: justify; color: rgb(34, 34, 34) !important; margin-block-start: 1em; margin-block-end: 1em; border-left: 1px solid rgb(142, 0, 0);"><strong></strong><span style="line-height: 18.5714px; color: rgb(34, 34, 34)">REFERENCIAS</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Nº de Factura: ${object.name} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Referencia: ${object.invoice_origin} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Total de la Factura: ${format_amount(object.amount_total, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Saldo Pendiente: ${format_amount(object.amount_residual_signed, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de la Factura: ${object.date_invoice}</span><br/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de vencimiento: ${object.date_due} </span><br/>
+                    </p><br/><br/>
+                    <p style="color: rgb(34, 34, 34)">Gracias por escogernos</p>
+
+                </div>
+            </field>
+	        <field name="report_template" ref="account.account_invoices"/>
+            <field name="report_name">Factura_${(object.name or '').replace('/','_')}${object.state == 'draft' and '_draft' or ''}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+        </record>
+
+		<record id="email_template_invoice_before_supplier" model="mail.template">
+            <field name="name">Facturas de Proveedor vencidas</field>
+            <field name="subject">${object.partner_id.name} Factura de Proveedor (Ref ${object.name or 'n/a'})</field>
+	        <field name="email_from">${object.company_id.email}</field>
+	        <field name="email_to">${object.company_id.email}</field>
+            <field name="model_id" ref="account.model_account_move"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="html">
+	            <div>
+                    <p style="color: rgb(34, 34, 34)">Estimado ${object.company_id.name}
+                    </p>
+                    <p style="color: rgb(34, 34, 34)"><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;">Un gusto en saludarle, a continuacion le notificamos que la factura de proveedor relacionada a</span> ${object.partner_id.name} se encuentra vencida:<br/></p>
+                    <div>
+                        <font face="Lucida Grande, Ubuntu, Arial, Verdana, sans-serif" color="#222222">
+                            <span style="font-size: 12px;"><br/></span>
+                        </font>
+                    </div>
+                    <p style="margin-bottom: 10px; margin-left: 30px; font-family: &quot;Lucica Grande&quot;, Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; text-align: justify; color: rgb(34, 34, 34) !important; margin-block-start: 1em; margin-block-end: 1em; border-left: 1px solid rgb(142, 0, 0);"><strong></strong><span style="line-height: 18.5714px; color: rgb(34, 34, 34)">REFERENCIAS</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Nº de Factura: ${object.name} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Referencia: ${object.invoice_origin} </span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Total de la Factura: ${format_amount(object.amount_total, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Saldo Pendiente: ${format_amount(object.amount_residual_signed, object.currency_id)}</span><br style="line-height: 18.5714px;"/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de la Factura: ${object.date_invoice}</span><br/>
+                        <span style="line-height: 18.5714px; color: rgb(34, 34, 34)"> Fecha de vencimiento: ${object.date_due} </span><br/>
+                    </p><br/><br/>
+                    <p style="color: rgb(34, 34, 34)">Gracias por escogernos</p>
+                </div>
+            </field>
+	        <field name="report_template" ref="account.account_invoices"/>
+            <field name="report_name">Factura_${(object.name or '').replace('/','_')}${object.state == 'draft' and '_draft' or ''}</field>
+            <field name="lang">${object.partner_id.lang}</field>
+        </record>
+	</data>
+</odoo>
+

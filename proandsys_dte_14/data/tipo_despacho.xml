@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="tipo_despacho_1" model="l10n_cl_dte.tipo_despacho">
+			<field name="name">Despacho Receptor</field>
+			<field name="code">1</field>
+			<field name="description">Despacho por cuenta del receptor del documento (cliente o vendedor en caso de Facturas de compra.)</field>
+		</record>
+		<record id="tipo_despacho_2" model="l10n_cl_dte.tipo_despacho">
+			<field name="name">Despacho Emisor a Cliente</field>
+			<field name="code">2</field>
+			<field name="description">Despacho por cuenta del emisor a instalaciones del cliente</field>
+		</record>
+		<record id="tipo_despacho_3" model="l10n_cl_dte.tipo_despacho">
+			<field name="name">Despacho Emisor a Otras Instalaciones</field>
+			<field name="code">3</field>
+			<field name="description">Despacho por cuenta del emisor a otras instalaciones (Ejemplo: entrea en Obra)</field>
+		</record>
+	</data>
+</odoo>
+

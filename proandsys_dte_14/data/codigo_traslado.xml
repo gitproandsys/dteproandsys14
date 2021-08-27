@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="codigo_traslado_excep_1" model="l10n_cl_dte.codigo_traslado">
+			<field name="name">Exportador</field>
+			<field name="code">1</field>
+		</record>
+		<record id="codigo_traslado_excep_2" model="l10n_cl_dte.codigo_traslado">
+			<field name="name">Agente de Aduana</field>
+			<field name="code">2</field>
+			<field name="description">En la devolución de mercaderías de Aduanas.</field>
+		</record>
+		<record id="codigo_traslado_excep_3" model="l10n_cl_dte.codigo_traslado">
+			<field name="name">Vendedor</field>
+			<field name="code">3</field>
+			<field name="description">Entre otros, se refiere a aquel Productor que vende mercadería con entrega en Zona Primaria.</field>
+		</record>
+		<record id="codigo_traslado_excep_4" model="l10n_cl_dte.codigo_traslado">
+			<field name="name">Contribuyente Autorizado Expresamente por el SII</field>
+			<field name="code">4</field>
+		</record>
+	</data>
+</odoo>
+

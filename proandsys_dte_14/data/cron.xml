@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="True">
+
+        <record forcecreate="True" id="ir_cron_validate_invoice__action" model="ir.cron">
+            <field name="name">Validar Facturas</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="nextcall">2019-08-07 02:00:00</field>
+            <field ref="model_account_move" name="model_id" />
+            <field name="state">code</field>
+            <field name="code">model.consult_validate_invoice()</field>
+        </record>
+
+		<record forcecreate="True" id="ir_cron_get_invoice_xml_action" model="ir.cron">
+            <field name="name">Obtener Xml de compras</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="nextcall">2019-05-09 13:00:00</field>
+            <field ref="model_account_move" name="model_id" />
+            <field name="state">code</field>
+            <field name="code">model.cron_xml_compras()</field>
+        </record>
+
+		<record forcecreate="True" id="ir_cron_invoice_due_before_action" model="ir.cron">
+            <field name="name">Facturas vencida en dias anteriores</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="nextcall">2019-11-25 08:00:00</field>
+            <field ref="model_account_move" name="model_id" />
+            <field name="state">code</field>
+            <field name="code">model.invoice_due_before()</field>
+        </record>
+
+		<record forcecreate="True" id="ir_cron_invoice_due_action" model="ir.cron">
+            <field name="name">Facturas por vencerse</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="nextcall">2019-11-25 08:00:00</field>
+            <field ref="model_account_move" name="model_id" />
+            <field name="state">code</field>
+            <field name="code">model.invoice_to_due()</field>
+        </record>
+
+        <record forcecreate="True" id="ir_cron_invoice_due_today_action" model="ir.cron">
+            <field name="name">Facturas vencida hoy</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="nextcall">2019-11-25 08:00:00</field>
+            <field ref="model_account_move" name="model_id" />
+            <field name="state">code</field>
+            <field name="code">model.invoice_due_today()</field>
+        </record>
+
+		<record forcecreate="True" id="ir_cron_invoice_supplier_action" model="ir.cron">
+            <field name="name">Facturas de proveedor vencidas</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="nextcall">2019-11-25 08:00:00</field>
+            <field ref="model_account_move" name="model_id" />
+            <field name="state">code</field>
+            <field name="code">model.invoice_supplier_due()</field>
+        </record>
+
+		<record forcecreate="True" id="ir_cron_invoice_supplier_before_action" model="ir.cron">
+            <field name="name">Facturas de proveedor a vencerse</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="nextcall">2019-11-25 08:00:00</field>
+            <field ref="model_account_move" name="model_id" />
+            <field name="state">code</field>
+            <field name="code">model.invoice_supplier_due_before()</field>
+        </record>
+
+	</data>
+</odoo>
+

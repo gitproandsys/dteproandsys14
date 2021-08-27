@@ -1,0 +1,25 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_folio_history_group_user,Hitorico de Folios Group User,model_l10n_cl_dte_folio_history,base.group_user,1,0,0,0
+
+access_payment_type_manager,Tipo Pago DTE Manager,model_l10n_cl_dte_payment_type,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_folio_history_manager,Hitorico de Folios DTE Manager,model_l10n_cl_dte_folio_history,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_tipo_despacho_manager,Tipo Despacho DTE Manager,model_l10n_cl_dte_tipo_despacho,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_tipo_traslado_manager,Tipo Traslado DTE Manager,model_l10n_cl_dte_tipo_traslado,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_tipo_imp_guia_type_manager,Tipo Imp Guia DTE Manager,model_l10n_cl_dte_tipo_imp_guia,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_ind_servicio_manager,Indicador Servicio DTE Manager,model_l10n_cl_dte_ind_servicio,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_forma_pago_manager,Foma Pago DTE Manager,model_l10n_cl_dte_forma_pago,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_codigo_traslado_manager,Codigo Traslado DTE Manager,model_l10n_cl_dte_codigo_traslado,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_sucursal_manager,Sucursal DTE Manager,model_l10n_cl_dte_sucursal,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_reference_manager,Referencias DTE Manager,model_l10n_cl_dte_reference,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_book_manager,Book DTE Manager,model_l10n_cl_dte_electronic_books,proandsys_partner_14.group_dte_manager,1,1,1,1
+
+access_document_xml_manager,Document XML DTE Manager,model_l10n_cl_dte_document_xml,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_document_xml_lines_manager,Document XML Lines DTE Manager,model_l10n_cl_dte_document_xml_lines,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_document_xml_reference_manager,Document XML References DTE Manager,model_l10n_cl_dte_document_xml_references,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_document_transporte_xml_manager,Document XML Transporte DTE Manager,model_l10n_cl_dte_document_transporte_xml,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_code_type_xml_manager,Code Items XML DTE Manager,model_l10n_cl_dte_code_items_xml,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_subqty_xml_manager,SubQty XML DTE Manager,model_l10n_cl_dte_subqty_xml,proandsys_partner_14.group_dte_manager,1,1,1,1
+
+access_import_xml_timbre_manager,Import XML Timbre DTE Manager,model_import_xml_timbre_dte,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_internal_folio_manager,Folios Internos DTE Manager,model_internal_folio,proandsys_partner_14.group_dte_manager,1,1,1,1
+access_ack_manager,Acuse de xml Manager,model_send_ack_wizard,proandsys_partner_14.group_dte_manager,1,1,1,1

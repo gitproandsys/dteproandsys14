@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="tipo_imp_guia_1" model="l10n_cl_dte.tipo_imp_guia">
+			<field name="name">Normal</field>
+			<field name="code">N</field>
+		</record>
+		<record id="tipo_imp_guia_2" model="l10n_cl_dte.tipo_imp_guia">
+			<field name="name">Ticket</field>
+			<field name="code">T</field>
+		</record>
+	</data>
+</odoo>
+

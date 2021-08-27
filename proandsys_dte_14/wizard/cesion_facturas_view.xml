@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="view_cesion_factura_wizard_form" model="ir.ui.view">
+			<field name="name">cesion.factura.wizard.form</field>
+			<field name="model">cesion.facturas</field>
+			<field name="arch" type="xml">
+				<form string="Cesion Factura" version="7.0">
+					<sheet>
+						<group>
+							<group>
+								<field name="partner_id"/>
+								<field name="amount_cesion"/>
+							</group>
+							<group>
+								<field name="company_id"/>
+							</group>
+						</group>
+					</sheet>
+					<footer>
+						<button name="cesion_facturas" type="object" string="Ceder Factura" class="oe_highlight"/>
+						or
+						<button string="Cancelar" class="oe_link" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="cesion_factura_wizard_action">
+			<field name="name">Cesion Factura</field>
+			<field name="res_model">cesion.facturas</field>
+			<field name="binding_view_types">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="view_id" ref="view_cesion_factura_wizard_form"/>
+		</record>
+
+	</data>
+</odoo>

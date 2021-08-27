@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<odoo>
+    <report 
+        id="libro_compra"
+        string="Libro de Compra"
+        model="wizard.reportes.chile"
+        report_type="qweb-pdf"
+        name="proandsys_reportes_chile_14.libro_compras"
+        paperformat="paperformat_proandsys_reportes_chile_14"
+    />
+    <template id="libro_compras">
+        <t t-name="proandsys_reportes_chile_14.libro_compras">
+            <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div class="header">
+                        <table class="table-condensed table-bordered" style="width:100%;font-size:10px">
+                            <tr>
+                                <td>
+                                    <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % to_text(o.company_id.logo)" style="max-height: 45px;"/>
+                                </td> 
+                                <td>
+                                    <b>Informe: </b><span>Libro de Compras</span>                        
+                                </td>
+                                <td>
+                                    <b>Periodo: </b>
+                                    <span t-field="o.fecha_inicio"/>
+                                    <span> hasta </span>
+                                    <span t-field="o.fecha_term"/>                
+                                </td>
+                                <td>                  
+                                    <span>Pagina </span>
+                                    <span class="page"/>
+                                    <span>de </span>
+                                    <span class="topage"/>                        
+                                </td>
+                            </tr>               
+                        </table>
+                    </div> 
+                    <div class="page">
+                        <style>
+                            th,td{ white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+                            thead { display: table-header-group }
+                            tfoot { display: table-row-group }
+                            tr { page-break-inside: avoid }
+                        </style>
+                        <t t-set="resumen" t-value="o._resumen_libro_compra()"/>
+                        <t t-if="resumen.empty">
+                            <h2>No hay datos para mostrar</h2>
+                        </t>
+
+                        <t t-set="facturas" t-value="o._facturas_libro_compra()"/>            
+                        <t t-if="not facturas.empty">
+                            <t t-foreach="facturas['Tipo'].unique().tolist()" t-as="tipo">
+                                <br/>            
+                                <span t-esc="tipo"/>
+                                <table class="table-condensed table-bordered" style="width:100%;font-size:10px;table-layout: fixed">
+                                    <thead>
+                                        <tr> 
+                                            <t t-foreach="facturas.columns.values.tolist()" t-as="p">
+                                                <th>
+                                                    <span t-esc="p"/>
+                                                </th>
+                                            </t>
+                                        </tr>                        
+                                    </thead> 
+                                    <t t-set="subtabla" t-value="facturas.loc[facturas['Tipo'] == tipo]"/>
+                                    <t t-foreach="subtabla.values.tolist()" t-as="p">
+                                        <tr>
+                                            <t t-foreach="p[:5]" t-as="q">
+                                                <td>
+                                                    <span t-esc="q"/>
+                                                </td>
+                                            </t>
+                                            <t t-foreach="p[5:]" t-as="q">
+                                                <td style="text-align: right">
+                                                    <span t-esc="q" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                                </td>
+                                            </t>                                                     
+                                        </tr> 
+                                    </t>
+                                    <tr>
+                                        <th colspan="5">                                    
+                                            Total
+                                        </th>
+                                        <t t-foreach="subtabla[subtabla.columns[5:]].sum().values.tolist()" t-as="p">
+                                            <th style="text-align: right">
+                                                <span t-esc="p" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                            </th>  
+                                        </t>                            
+                                    </tr>                                                    
+                                </table>                         
+                            </t>
+                        </t>
+
+                        <t t-set="notas_dc" t-value="o._nc_libro_compra()"/>
+                        <t t-if="not notas_dc.empty">
+                            <t t-foreach="notas_dc['Tipo'].unique().tolist()" t-as="tipo"> 
+                                <br/>           
+                                <span t-esc="tipo"/>
+                                <table class="table-condensed table-bordered" style="width:100%;font-size:10px;table-layout: fixed">
+                                    <thead>
+                                        <tr> 
+                                            <t t-foreach="notas_dc.columns.values.tolist()" t-as="p">
+                                                <th><span t-esc="p"/></th>
+                                            </t>
+                                        </tr>                        
+                                    </thead> 
+                                    <t t-set="subtabla" t-value="notas_dc.loc[notas_dc['Tipo'] == tipo]"/>
+                                    <t t-foreach="subtabla.values.tolist()" t-as="p">
+                                        <tr>
+                                            <t t-foreach="p[:5]" t-as="q">
+                                                <td>
+                                                    <span t-esc="q"/>
+                                                </td>
+                                            </t>
+                                            <t t-foreach="p[5:]" t-as="q">
+                                                <td style="text-align: right">
+                                                    <span t-esc="q" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                                </td>
+                                            </t>                                                     
+                                        </tr> 
+                                    </t>
+                                    <tr>
+                                        <th colspan="5">                                    
+                                            Total
+                                        </th>
+                                        <t t-foreach="subtabla[subtabla.columns[5:]].sum().values.tolist()" t-as="p">
+                                            <th style="text-align: right">
+                                                <span t-esc="p" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                            </th>  
+                                        </t>                            
+                                    </tr>                                                    
+                                </table>                         
+                            </t>
+                        </t>
+
+                        <t t-set="din" t-value="o._din_libro_compra()"/>
+                        <t t-if="not din.empty">
+                            <t t-foreach="din['Tipo'].unique().tolist()" t-as="tipo"> 
+                                <br/>           
+                                <span t-esc="tipo"/>
+                                <table class="table-condensed table-bordered" style="width:100%;font-size:10px;table-layout: fixed">
+                                    <thead>
+                                        <tr> 
+                                            <t t-foreach="din.columns.values.tolist()" t-as="p">
+                                                <th><span t-esc="p"/></th>
+                                            </t>
+                                        </tr>                        
+                                    </thead> 
+                                    <t t-set="subtabla" t-value="din.loc[din['Tipo'] == tipo]"/>
+                                    <t t-foreach="subtabla.values.tolist()" t-as="p">
+                                        <tr>
+                                            <t t-foreach="p[:5]" t-as="q">
+                                                <td>
+                                                    <span t-esc="q"/>
+                                                </td>
+                                            </t>
+                                            <t t-foreach="p[5:]" t-as="q">
+                                                <td style="text-align: right">
+                                                    <span t-esc="q" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                                </td>
+                                            </t>                                                     
+                                        </tr> 
+                                    </t>
+                                    <tr>
+                                        <th colspan="5">                                    
+                                            Total
+                                        </th>
+                                        <t t-foreach="subtabla[subtabla.columns[5:]].sum().values.tolist()" t-as="p">
+                                            <th style="text-align: right">
+                                                <span t-esc="p" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                            </th>  
+                                        </t>                            
+                                    </tr>                                                    
+                                </table>                         
+                            </t>
+                        </t>
+
+                        <t t-set="fac_terceros" t-value="o._facturas_terceros()"/>
+                        <t t-if="not fac_terceros.empty">
+                            <t t-as="tipo" t-foreach="list(fac_terceros['Tipo'].unique())">
+                                <br/>
+                                <span t-esc="tipo"/>
+                                <table class="table-condensed table-bordered" style="width:100%;font-size:10px;table-layout: fixed">
+                                    <thead>
+                                        <tr>
+                                            <t t-as="p" t-foreach="fac_terceros.columns.values.tolist()">
+                                                <th>
+                                                    <span t-esc="p"/>
+                                                </th>
+                                            </t>
+                                        </tr>
+                                    </thead>
+                                    <t t-set="subtabla" t-value="fac_terceros.loc[fac_terceros['Tipo'] == tipo]"/>
+                                    <t t-as="p" t-foreach="subtabla.values.tolist()">
+                                        <tr>
+                                            <t t-as="q" t-foreach="p[:5]">
+                                                <td>
+                                                    <span t-esc="q"/>
+                                                </td>
+                                            </t>
+                                            <t t-as="q" t-foreach="p[5:]">
+                                                <td style="text-align: right">
+                                                    <span t-esc="q" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                                </td>
+                                            </t>
+                                        </tr>
+                                    </t>
+                                    <tr>
+                                        <th colspan="5">Total</th>
+                                        <t t-as="p" t-foreach="subtabla[subtabla.columns[5:]].sum().values.tolist()">
+                                            <th style="text-align: right">
+                                                <span t-esc="p" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                            </th>
+                                        </t>
+                                    </tr>
+                                </table>
+                            </t>
+                        </t>
+                        
+                        <t t-if="not resumen.empty">
+                            <br/>
+                            <span>Resumen del Libro</span>           
+                            <table class="table-condensed table-bordered" style="width:100%;font-size:10px;table-layout: fixed">
+                                <thead>
+                                    <tr> 
+                                        <t t-foreach="resumen.columns.values.tolist()" t-as="p">
+                                            <th><span t-esc="p"/></th>
+                                        </t>
+                                    </tr>                        
+                                </thead>                 
+                                <t t-foreach="resumen.values.tolist()" t-as="p">
+                                    <tr>
+                                        <t t-foreach="p[:2]" t-as="q">
+                                            <td>
+                                                <span t-esc="q"/>
+                                            </td>
+                                        </t>
+                                        <t t-foreach="p[2:]" t-as="q">
+                                            <td style="text-align: right">
+                                                <span t-esc="q" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                            </td>
+                                        </t>                                                     
+                                    </tr> 
+                                </t>
+                                <tr>
+                                    <th colspan="1">                                    
+                                        Total
+                                    </th>
+                                    <th>
+                                        <span t-esc="resumen['Numero'].sum()"/>
+                                    </th>
+                                    <t t-foreach="resumen[resumen.columns[2:]].sum().values.tolist()" t-as="p">
+                                        <th style="text-align: right">
+                                            <span t-esc="p" t-options='{"widget": "monetary","display_currency":o.company_id.currency_id}'/>
+                                        </th>  
+                                    </t>                            
+                                </tr>                                                    
+                            </table> 
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

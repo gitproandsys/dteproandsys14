@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_send_ack_dte_wizard_form" model="ir.ui.view">
+			<field name="name">send.ack.dte.form</field>
+			<field name="model">send.ack.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Send ACK Form" version="7.0">
+						<sheet>
+						<group>
+							<group>
+								<field name="ack_type" required="1" string="Tipo Acuse"/>
+								<field name="state" required="1" string="Acuse"/>
+							</group>
+							<group>
+								<field name="contact_name" required="1"/>
+								<field name="contact_email" required="1"/>
+								<field name="company_id" required="1"/>
+							</group>
+						</group>
+						<group string="Glosa">
+							<field name="note" attrs="{'required': [('state','=','2')]}" nolabel="1"/>
+						</group>
+					</sheet>
+					<footer>
+						<button name="send_ack" type="object" string="Send" class="oe_highlight"/>
+						or
+						<button string="Cancel" class="oe_link" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="send_ack_action">
+			<field name="name">Send ACK</field>
+			<field name="res_model">send.ack.wizard</field>
+			<field name="binding_view_types">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="view_id" ref="view_send_ack_dte_wizard_form"/>
+		</record>
+	</data>
+</odoo>
