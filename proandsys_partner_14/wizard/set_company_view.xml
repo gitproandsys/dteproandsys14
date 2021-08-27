@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_set_company_wizard_form" model="ir.ui.view">
+			<field name="name">Set Company Form</field>
+			<field name="model">set.company.dte</field>
+			<field name="arch" type="xml">
+				<form string="Ingresar Compañia" version="7.0">
+					<sheet>
+						<group>
+							<group>
+								<field name="resolution_date"/>
+							</group>
+							<group>
+								<field name="resolution_number"/>
+							</group>
+						</group>
+					</sheet>
+					<footer>
+						<button name="set_company" type="object" string="Ingresar Compañia" class="oe_highlight"/>
+						or
+						<button string="Cancelar" class="oe_link" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="set_company_action">
+			<field name="name">Ingresar Compañia</field>
+			<field name="res_model">set.company.dte</field>
+			<field name="binding_view_types">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="view_id" ref="view_set_company_wizard_form"/>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem name="DTE" id="root_menu_DTE" parent="base.menu_custom"/>
+		<menuitem name="DTE" id="root_menu_account_DTE" parent="account.menu_finance_configuration"/>
+	</data>
+</odoo>

@@ -1,0 +1,2825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="eco_act_1" model="economic.activity">
+			<field name="name">CULTIVO DE TRIGO</field>
+			<field name="code">11111</field>
+		</record>
+		<record id="eco_act_2" model="economic.activity">
+			<field name="name">CULTIVO DE MAIZ</field>
+			<field name="code">11112</field>
+		</record>
+		<record id="eco_act_3" model="economic.activity">
+			<field name="name">CULTIVO DE AVENA</field>
+			<field name="code">11113</field>
+		</record>
+		<record id="eco_act_4" model="economic.activity">
+			<field name="name">CULTIVO DE ARROZ</field>
+			<field name="code">11114</field>
+		</record>
+		<record id="eco_act_5" model="economic.activity">
+			<field name="name">CULTIVO DE CEBADA</field>
+			<field name="code">11115</field>
+		</record>
+		<record id="eco_act_6" model="economic.activity">
+			<field name="name">CULTIVO DE OTROS CEREALES</field>
+			<field name="code">11119</field>
+		</record>
+		<record id="eco_act_7" model="economic.activity">
+			<field name="name">CULTIVO FORRAJEROS EN PRADERAS NATURALES</field>
+			<field name="code">11121</field>
+		</record>
+		<record id="eco_act_8" model="economic.activity">
+			<field name="name">CULTIVO FORRAJEROS EN PRADERAS MEJORADAS O SEMBRADAS</field>
+			<field name="code">11122</field>
+		</record>
+		<record id="eco_act_9" model="economic.activity">
+			<field name="name">CULTIVO DE POROTOS O FRIJOL</field>
+			<field name="code">11131</field>
+		</record>
+		<record id="eco_act_10" model="economic.activity">
+			<field name="name">CULTIVO, PRODUCCIÓN DE LUPINO</field>
+			<field name="code">11132</field>
+		</record>
+		<record id="eco_act_11" model="economic.activity">
+			<field name="name">CULTIVO DE OTRAS LEGUMBRES</field>
+			<field name="code">11139</field>
+		</record>
+		<record id="eco_act_12" model="economic.activity">
+			<field name="name">CULTIVO DE PAPAS</field>
+			<field name="code">11141</field>
+		</record>
+		<record id="eco_act_13" model="economic.activity">
+			<field name="name">CULTIVO DE CAMOTES O BATATAS</field>
+			<field name="code">11142</field>
+		</record>
+		<record id="eco_act_14" model="economic.activity">
+			<field name="name">CULTIVO DE OTROS TUBÉRCULOS N.C.P</field>
+			<field name="code">11149</field>
+		</record>
+		<record id="eco_act_15" model="economic.activity">
+			<field name="name">CULTIVO DE RAPS</field>
+			<field name="code">11151</field>
+		</record>
+		<record id="eco_act_16" model="economic.activity">
+			<field name="name">CULTIVO DE MARAVILLA</field>
+			<field name="code">11152</field>
+		</record>
+		<record id="eco_act_17" model="economic.activity">
+			<field name="name">CULTIVO DE OTRAS OLEAGINOSAS N.C.P.</field>
+			<field name="code">11159</field>
+		</record>
+		<record id="eco_act_18" model="economic.activity">
+			<field name="name">PRODUCCIÓN DE SEMILLAS DE CEREALES, LEGUMBRES, OLEAGINOSAS</field>
+			<field name="code">11160</field>
+		</record>
+		<record id="eco_act_19" model="economic.activity">
+			<field name="name">CULTIVO DE REMOLACHA</field>
+			<field name="code">11191</field>
+		</record>
+		<record id="eco_act_20" model="economic.activity">
+			<field name="name">CULTIVO DE TABACO</field>
+			<field name="code">11192</field>
+		</record>
+		<record id="eco_act_21" model="economic.activity">
+			<field name="name">CULTIVO DE FIBRAS VEGETALES INDUSTRIALES</field>
+			<field name="code">11193</field>
+		</record>
+		<record id="eco_act_22" model="economic.activity">
+			<field name="name">CULTIVO DE PLANTAS AROMÁTICAS O MEDICINALES</field>
+			<field name="code">11194</field>
+		</record>
+		<record id="eco_act_23" model="economic.activity">
+			<field name="name">OTROS CULTIVOS N.C.P.</field>
+			<field name="code">11199</field>
+		</record>
+		<record id="eco_act_24" model="economic.activity">
+			<field name="name">CULTIVO TRADICIONAL DE HORTALIZAS FRESCAS</field>
+			<field name="code">11211</field>
+		</record>
+		<record id="eco_act_25" model="economic.activity">
+			<field name="name">CULTIVO DE HORTALIZAS EN INVERNADEROS Y CULTIVOS HIDROPONICOS</field>
+			<field name="code">11212</field>
+		</record>
+		<record id="eco_act_26" model="economic.activity">
+			<field name="name">CULTIVO ORGÁNICO DE HORTALIZAS</field>
+			<field name="code">11213</field>
+		</record>
+		<record id="eco_act_27" model="economic.activity">
+			<field name="name">CULTIVO DE PLANTAS VIVAS Y PRODUCTOS DE LA FLORICULTURA</field>
+			<field name="code">11220</field>
+		</record>
+		<record id="eco_act_28" model="economic.activity">
+			<field name="name">PRODUCCIÓN DE SEMILLAS DE FLORES, PRADOS, FRUTAS Y HORTALIZAS</field>
+			<field name="code">11230</field>
+		</record>
+		<record id="eco_act_29" model="economic.activity">
+			<field name="name">PRODUCCIÓN EN VIVEROS; EXCEPTO ESPECIES FORESTALES</field>
+			<field name="code">11240</field>
+		</record>
+		<record id="eco_act_30" model="economic.activity">
+			<field name="name">CULTIVO Y RECOLECCIÓN DE HONGOS, TRUFAS Y SAVIA; PRODUCCIÓN DE JARABE DE ARCE DE AZÚCAR Y AZÚCAR</field>
+			<field name="code">11250</field>
+		</record>
+		<record id="eco_act_31" model="economic.activity">
+			<field name="name">CULTIVO DE UVA DESTINADA A PRODUCCIÓN DE PISCO Y AGUARDIENTE</field>
+			<field name="code">11311</field>
+		</record>
+		<record id="eco_act_32" model="economic.activity">
+			<field name="name">CULTIVO DE UVA DESTINADA A PRODUCCIÓN DE VINO</field>
+			<field name="code">11312</field>
+		</record>
+		<record id="eco_act_33" model="economic.activity">
+			<field name="name">CULTIVO DE UVA DE MESA</field>
+			<field name="code">11313</field>
+		</record>
+		<record id="eco_act_34" model="economic.activity">
+			<field name="name">CULTIVO DE FRUTALES EN ÁRBOLES O ARBUSTOS CON CICLO DE VIDA MAYOR A UNA TEMPORADA</field>
+			<field name="code">11321</field>
+		</record>
+		<record id="eco_act_35" model="economic.activity">
+			<field name="name">CULTIVO DE FRUTALES MENORES EN PLANTAS CON CICLO DE VIDA DE UNA TEMPORADA</field>
+			<field name="code">11322</field>
+		</record>
+		<record id="eco_act_36" model="economic.activity">
+			<field name="name">CULTIVO DE PLANTAS CUYAS HOJAS O FRUTAS SE UTILIZAN PARA PREPARAR BEBIDAS</field>
+			<field name="code">11330</field>
+		</record>
+		<record id="eco_act_37" model="economic.activity">
+			<field name="name">CULTIVO DE ESPECIAS</field>
+			<field name="code">11340</field>
+		</record>
+		<record id="eco_act_38" model="economic.activity">
+			<field name="name">CRÍA DE GANADO BOVINO PARA LA PRODUCCIÓN LECHERA</field>
+			<field name="code">12111</field>
+		</record>
+		<record id="eco_act_39" model="economic.activity">
+			<field name="name">CRÍA DE GANADO PARA PRODUCCIÓN DE CARNE, O COMO GANADO REPRODUCTOR</field>
+			<field name="code">12112</field>
+		</record>
+		<record id="eco_act_40" model="economic.activity">
+			<field name="name">CRÍA DE GANADO OVINO Y/O EXPLOTACIÓN LANERA</field>
+			<field name="code">12120</field>
+		</record>
+		<record id="eco_act_41" model="economic.activity">
+			<field name="name">CRÍA DE EQUINOS (CABALLARES, MULARES)</field>
+			<field name="code">12130</field>
+		</record>
+		<record id="eco_act_42" model="economic.activity">
+			<field name="name">CRÍA DE PORCINOS</field>
+			<field name="code">12210</field>
+		</record>
+		<record id="eco_act_43" model="economic.activity">
+			<field name="name">CRÍA DE AVES DE CORRAL PARA LA PRODUCCIÓN DE CARNE</field>
+			<field name="code">12221</field>
+		</record>
+		<record id="eco_act_44" model="economic.activity">
+			<field name="name">CRÍA DE AVES DE CORRAL PARA LA PRODUCCIÓN DE HUEVOS</field>
+			<field name="code">12222</field>
+		</record>
+		<record id="eco_act_45" model="economic.activity">
+			<field name="name">CRÍA DE AVES FINAS O NO TRADICIONALES</field>
+			<field name="code">12223</field>
+		</record>
+		<record id="eco_act_46" model="economic.activity">
+			<field name="name">CRÍA DE ANIMALES DOMÉSTICOS; PERROS Y GATOS</field>
+			<field name="code">12230</field>
+		</record>
+		<record id="eco_act_47" model="economic.activity">
+			<field name="name">APICULTURA</field>
+			<field name="code">12240</field>
+		</record>
+		<record id="eco_act_48" model="economic.activity">
+			<field name="name">RANICULTURA, HELICICULTURA U OTRA ACTIVIDAD CON ANIMALES MENORES O INSECTOS</field>
+			<field name="code">12250</field>
+		</record>
+		<record id="eco_act_49" model="economic.activity">
+			<field name="name">OTRAS EXPLOTACIONES DE ANIMALES NO CLASIFICADOS EN OTRA PARTE, INCLUIDO SUS SUBPRODUCTOS</field>
+			<field name="code">12290</field>
+		</record>
+		<record id="eco_act_50" model="economic.activity">
+			<field name="name">EXPLOTACIÓN MIXTA</field>
+			<field name="code">13000</field>
+		</record>
+		<record id="eco_act_51" model="economic.activity">
+			<field name="name">SERVICIO DE CORTE Y ENFARDADO DE FORRAJE</field>
+			<field name="code">14011</field>
+		</record>
+		<record id="eco_act_52" model="economic.activity">
+			<field name="name">SERVICIO DE RECOLECCIÓN, EMPACADO, TRILLA, DESCASCARAMIENTO Y DESGRANE; Y SIMILARES</field>
+			<field name="code">14012</field>
+		</record>
+		<record id="eco_act_53" model="economic.activity">
+			<field name="name">SERVICIO DE ROTURACIÓN SIEMBRA Y SIMILARES</field>
+			<field name="code">14013</field>
+		</record>
+		<record id="eco_act_54" model="economic.activity">
+			<field name="name">DESTRUCCIÓN DE PLAGAS; PULVERIZACIONES, FUMIGACIONES U OTRAS</field>
+			<field name="code">14014</field>
+		</record>
+		<record id="eco_act_55" model="economic.activity">
+			<field name="name">COSECHA, PODA, AMARRE Y LABORES DE ADECUACIÓN DE LA PLANTA U OTRAS</field>
+			<field name="code">14015</field>
+		</record>
+		<record id="eco_act_56" model="economic.activity">
+			<field name="name">OTROS SERVICIOS AGRÍCOLAS N.C.P.</field>
+			<field name="code">14019</field>
+		</record>
+		<record id="eco_act_57" model="economic.activity">
+			<field name="name">SERVICIOS DE ADIESTRAMIENTO, GUARDERÍA Y CUIDADOS DE MASCOTAS; EXCEPTO ACTIVIDADES VETERINARIAS</field>
+			<field name="code">14021</field>
+		</record>
+		<record id="eco_act_58" model="economic.activity">
+			<field name="name">SERVICIOS GANADEROS, EXCEPTO ACTIVIDADES VETERINARIAS</field>
+			<field name="code">14022</field>
+		</record>
+		<record id="eco_act_59" model="economic.activity">
+			<field name="name">CAZA DE MAMÍFEROS MARINOS; EXCEPTO BALLENAS</field>
+			<field name="code">15010</field>
+		</record>
+		<record id="eco_act_60" model="economic.activity">
+			<field name="name">CAZA ORDINARIA Y MEDIANTE TRAMPAS, Y ACTIVIDADES DE SERVICIOS CONEXAS</field>
+			<field name="code">15090</field>
+		</record>
+		<record id="eco_act_61" model="economic.activity">
+			<field name="name">EXPLOTACIÓN DE BOSQUES</field>
+			<field name="code">20010</field>
+		</record>
+		<record id="eco_act_62" model="economic.activity">
+			<field name="name">RECOLECCIÓN DE PRODUCTOS FORESTALES SILVESTRES</field>
+			<field name="code">20020</field>
+		</record>
+		<record id="eco_act_63" model="economic.activity">
+			<field name="name">EXPLOTACIÓN DE VIVEROS DE ESPECIES FORESTALES</field>
+			<field name="code">20030</field>
+		</record>
+		<record id="eco_act_64" model="economic.activity">
+			<field name="name">SERVICIOS DE FORESTACIÓN</field>
+			<field name="code">20041</field>
+		</record>
+		<record id="eco_act_65" model="economic.activity">
+			<field name="name">SERVICIOS DE CORTA DE MADERA</field>
+			<field name="code">20042</field>
+		</record>
+		<record id="eco_act_66" model="economic.activity">
+			<field name="name">SERVICIOS DE CONTROL DE INCENDIOS FORESTALES</field>
+			<field name="code">20043</field>
+		</record>
+		<record id="eco_act_67" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES DE SERVICIOS CONEXAS A LA SILVICULTURA N.C.P.</field>
+			<field name="code">20049</field>
+		</record>
+		<record id="eco_act_68" model="economic.activity">
+			<field name="name">CULTIVO DE ESPECIES ACUÁTICAS EN CUERPO DE AGUA DULCE</field>
+			<field name="code">51010</field>
+		</record>
+		<record id="eco_act_69" model="economic.activity">
+			<field name="name">REPRODUCCIÓN Y CRIANZAS DE PECES MARINOS</field>
+			<field name="code">51020</field>
+		</record>
+		<record id="eco_act_70" model="economic.activity">
+			<field name="name">CULTIVO, REPRODUCCIÓN Y CRECIMIENTOS DE VEGETALES ACUÁTICOS</field>
+			<field name="code">51030</field>
+		</record>
+		<record id="eco_act_71" model="economic.activity">
+			<field name="name">REPRODUCCIÓN Y CRÍA DE MOLUSCOS Y CRUSTACEOS.</field>
+			<field name="code">51040</field>
+		</record>
+		<record id="eco_act_72" model="economic.activity">
+			<field name="name">SERVICIOS RELACIONADOS CON LA ACUICULTURA, NO INCLUYE SERVICIOS PROFESIONALES Y DE EXTRACCIÓN</field>
+			<field name="code">51090</field>
+		</record>
+		<record id="eco_act_73" model="economic.activity">
+			<field name="name">PESCA INDUSTRIAL</field>
+			<field name="code">52010</field>
+		</record>
+		<record id="eco_act_74" model="economic.activity">
+			<field name="name">ACTIVIDAD PESQUERA DE BARCOS FACTORÍAS</field>
+			<field name="code">52020</field>
+		</record>
+		<record id="eco_act_75" model="economic.activity">
+			<field name="name">PESCA ARTESANAL. EXTRACCIÓN DE RECURSOS ACUÁTICOS EN GENERAL; INCLUYE BALLENAS</field>
+			<field name="code">52030</field>
+		</record>
+		<record id="eco_act_76" model="economic.activity">
+			<field name="name">RECOLECCIÓN DE PRODUCTOS MARINOS, COMO PERLAS NATURALES, ESPONJAS, CORALES Y ALGAS.</field>
+			<field name="code">52040</field>
+		</record>
+		<record id="eco_act_77" model="economic.activity">
+			<field name="name">SERVICIOS RELACIONADOS CON LA PESCA, NO INCLUYE SERVICIOS PROFESIONALES</field>
+			<field name="code">52050</field>
+		</record>
+		<record id="eco_act_78" model="economic.activity">
+			<field name="name">EXTRACCIÓN, AGLOMERACIÓN DE CARBÓN DE PIEDRA, LIGNITO Y TURBA</field>
+			<field name="code">100000</field>
+		</record>
+		<record id="eco_act_79" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE PETRÓLEO CRUDO Y GAS NATURAL</field>
+			<field name="code">111000</field>
+		</record>
+		<record id="eco_act_80" model="economic.activity">
+			<field name="name">ACTIVIDADES DE SERVICIOS RELACIONADAS CON LA EXTRACCIÓN DE PETRÓLEO Y GAS</field>
+			<field name="code">112000</field>
+		</record>
+		<record id="eco_act_81" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE MINERALES DE URANIO Y TORIO</field>
+			<field name="code">120000</field>
+		</record>
+		<record id="eco_act_82" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE MINERALES DE HIERRO</field>
+			<field name="code">131000</field>
+		</record>
+		<record id="eco_act_83" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE ORO Y PLATA</field>
+			<field name="code">132010</field>
+		</record>
+		<record id="eco_act_84" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE ZINC Y PLOMO</field>
+			<field name="code">132020</field>
+		</record>
+		<record id="eco_act_85" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE MANGANESO</field>
+			<field name="code">132030</field>
+		</record>
+		<record id="eco_act_86" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE OTROS MINERALES METALÍFEROS N.C.P.</field>
+			<field name="code">132090</field>
+		</record>
+		<record id="eco_act_87" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE COBRE</field>
+			<field name="code">133000</field>
+		</record>
+		<record id="eco_act_88" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE PIEDRA, ARENA Y ARCILLA</field>
+			<field name="code">141000</field>
+		</record>
+		<record id="eco_act_89" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE NITRATOS Y YODO</field>
+			<field name="code">142100</field>
+		</record>
+		<record id="eco_act_90" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE SAL</field>
+			<field name="code">142200</field>
+		</record>
+		<record id="eco_act_91" model="economic.activity">
+			<field name="name">EXTRACCIÓN DE LITIO Y CLORUROS, EXCEPTO SAL</field>
+			<field name="code">142300</field>
+		</record>
+		<record id="eco_act_92" model="economic.activity">
+			<field name="name">EXPLOTACIÓN DE OTRAS MINAS Y CANTERAS N.C.P.</field>
+			<field name="code">142900</field>
+		</record>
+		<record id="eco_act_93" model="economic.activity">
+			<field name="name">PRODUCCIÓN, PROCESAMIENTO DE CARNES ROJAS Y PRODUCTOS CÁRNICOS</field>
+			<field name="code">151110</field>
+		</record>
+		<record id="eco_act_94" model="economic.activity">
+			<field name="name">CONSERVACIÓN DE CARNES ROJAS (FRIGORÍFICOS)</field>
+			<field name="code">151120</field>
+		</record>
+		<record id="eco_act_95" model="economic.activity">
+			<field name="name">PRODUCCIÓN, PROCESAMIENTO Y CONSERVACIÓN DE CARNES DE AVE Y OTRAS CARNES DISTINTAS A LAS ROJAS</field>
+			<field name="code">151130</field>
+		</record>
+		<record id="eco_act_96" model="economic.activity">
+			<field name="name">ELABORACIÓN DE CECINAS, EMBUTIDOS Y CARNES EN CONSERVA.</field>
+			<field name="code">151140</field>
+		</record>
+		<record id="eco_act_97" model="economic.activity">
+			<field name="name">PRODUCCIÓN DE HARINA DE PESCADO</field>
+			<field name="code">151210</field>
+		</record>
+		<record id="eco_act_98" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS ENLATADOS DE PESCADO Y MARISCOS</field>
+			<field name="code">151221</field>
+		</record>
+		<record id="eco_act_99" model="economic.activity">
+			<field name="name">ELABORACIÓN DE CONGELADOS DE PESCADOS Y MARISCOS</field>
+			<field name="code">151222</field>
+		</record>
+		<record id="eco_act_100" model="economic.activity">
+			<field name="name">ELABORACIÓN DE PRODUCTOS AHUMADOS, SALADOS, DESHIDRATADOS Y OTROS PROCESOS SIMILARES</field>
+			<field name="code">151223</field>
+		</record>
+		<record id="eco_act_101" model="economic.activity">
+			<field name="name">ELABORACIÓN DE PRODUCTOS EN BASE A VEGETALES ACUÁTICOS</field>
+			<field name="code">151230</field>
+		</record>
+		<record id="eco_act_102" model="economic.activity">
+			<field name="name">ELABORACIÓN Y CONSERVACIÓN DE FRUTAS, LEGUMBRES Y HORTALIZAS</field>
+			<field name="code">151300</field>
+		</record>
+		<record id="eco_act_103" model="economic.activity">
+			<field name="name">ELABORACIÓN DE ACEITES Y GRASAS DE ORIGEN VEGETAL</field>
+			<field name="code">151410</field>
+		</record>
+		<record id="eco_act_104" model="economic.activity">
+			<field name="name">ELABORACIÓN DE ACEITES Y GRASAS DE ORIGEN ANIMAL, EXCEPTO LAS MANTEQUILLAS</field>
+			<field name="code">151420</field>
+		</record>
+		<record id="eco_act_105" model="economic.activity">
+			<field name="name">ELABORACIÓN DE ACEITES Y GRASAS DE ORIGEN MARINO</field>
+			<field name="code">151430</field>
+		</record>
+		<record id="eco_act_106" model="economic.activity">
+			<field name="name">ELABORACIÓN DE LECHE, MANTEQUILLA, PRODUCTOS LÁCTEOS Y DERIVADOS</field>
+			<field name="code">152010</field>
+		</record>
+		<record id="eco_act_107" model="economic.activity">
+			<field name="name">ELABORACIÓN DE QUESOS</field>
+			<field name="code">152020</field>
+		</record>
+		<record id="eco_act_108" model="economic.activity">
+			<field name="name">FABRICACIÓN DE POSTRES A BASE DE LECHE (HELADOS, SORBETES Y OTROS SIMILARES)</field>
+			<field name="code">152030</field>
+		</record>
+		<record id="eco_act_109" model="economic.activity">
+			<field name="name">ELABORACIÓN DE HARINAS DE TRIGO</field>
+			<field name="code">153110</field>
+		</record>
+		<record id="eco_act_110" model="economic.activity">
+			<field name="name">ACTIVIDADES DE MOLIENDA DE ARROZ</field>
+			<field name="code">153120</field>
+		</record>
+		<record id="eco_act_111" model="economic.activity">
+			<field name="name">ELABORACIÓN DE OTRAS MOLINERAS Y ALIMENTOS A BASE DE CEREALES</field>
+			<field name="code">153190</field>
+		</record>
+		<record id="eco_act_112" model="economic.activity">
+			<field name="name">ELABORACIÓN DE ALMIDONES Y PRODUCTOS DERIVADOS DEL ALMIDÓN</field>
+			<field name="code">153210</field>
+		</record>
+		<record id="eco_act_113" model="economic.activity">
+			<field name="name">ELABORACIÓN DE GLUCOSA Y OTROS AZÚCARES DIFERENTES DE LA REMOLACHA</field>
+			<field name="code">153220</field>
+		</record>
+		<record id="eco_act_114" model="economic.activity">
+			<field name="name">ELABORACIÓN DE ALIMENTOS PREPARADOS PARA ANIMALES</field>
+			<field name="code">153300</field>
+		</record>
+		<record id="eco_act_115" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PAN, PRODUCTOS DE PANADERÍA Y PASTELERÍA</field>
+			<field name="code">154110</field>
+		</record>
+		<record id="eco_act_116" model="economic.activity">
+			<field name="name">FABRICACIÓN DE GALLETAS</field>
+			<field name="code">154120</field>
+		</record>
+		<record id="eco_act_117" model="economic.activity">
+			<field name="name">ELABORACIÓN DE AZÚCAR DE REMOLACHA O CANA</field>
+			<field name="code">154200</field>
+		</record>
+		<record id="eco_act_118" model="economic.activity">
+			<field name="name">ELABORACIÓN DE CACAO Y CHOCOLATES</field>
+			<field name="code">154310</field>
+		</record>
+		<record id="eco_act_119" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS DE CONFITERÍA</field>
+			<field name="code">154320</field>
+		</record>
+		<record id="eco_act_120" model="economic.activity">
+			<field name="name">ELABORACIÓN DE MACARRONES, FIDEOS, ALCUZCUZ Y PRODUCTOS FARINACEOS SIMILARES</field>
+			<field name="code">154400</field>
+		</record>
+		<record id="eco_act_121" model="economic.activity">
+			<field name="name">ELABORACIÓN DE TE, CAFÉ, INFUSIONES</field>
+			<field name="code">154910</field>
+		</record>
+		<record id="eco_act_122" model="economic.activity">
+			<field name="name">ELABORACIÓN DE LEVADURAS NATURALES O ARTIFICIALES</field>
+			<field name="code">154920</field>
+		</record>
+		<record id="eco_act_123" model="economic.activity">
+			<field name="name">ELABORACIÓN DE VINAGRES, MOSTAZAS, MAYONESAS Y CONDIMENTOS EN GENERAL</field>
+			<field name="code">154930</field>
+		</record>
+		<record id="eco_act_124" model="economic.activity">
+			<field name="name">ELABORACIÓN DE OTROS PRODUCTOS ALIMENTICIOS NO CLASIFICADOS EN OTRA PARTE</field>
+			<field name="code">154990</field>
+		</record>
+		<record id="eco_act_125" model="economic.activity">
+			<field name="name">ELABORACIÓN DE PISCOS (INDUSTRIAS PISQUERAS)</field>
+			<field name="code">155110</field>
+		</record>
+		<record id="eco_act_126" model="economic.activity">
+			<field name="name">ELABORACIÓN DE BEBIDAS ALCOHÓLICAS Y DE ALCOHOL ETÍLICO A PARTIR DE SUSTANCIAS FERMENTADAS Y OTROS</field>
+			<field name="code">155120</field>
+		</record>
+		<record id="eco_act_127" model="economic.activity">
+			<field name="name">ELABORACIÓN DE VINOS</field>
+			<field name="code">155200</field>
+		</record>
+		<record id="eco_act_128" model="economic.activity">
+			<field name="name">ELABORACIÓN DE BEBIDAS MALTEADAS, CERVEZAS Y MALTAS</field>
+			<field name="code">155300</field>
+		</record>
+		<record id="eco_act_129" model="economic.activity">
+			<field name="name">ELABORACIÓN DE BEBIDAS NO ALCOHÓLICAS</field>
+			<field name="code">155410</field>
+		</record>
+		<record id="eco_act_130" model="economic.activity">
+			<field name="name">ENVASADO DE AGUA MINERAL NATURAL, DE MANANTIAL Y POTABLE PREPARADA</field>
+			<field name="code">155420</field>
+		</record>
+		<record id="eco_act_131" model="economic.activity">
+			<field name="name">ELABORACIÓN DE HIELO</field>
+			<field name="code">155430</field>
+		</record>
+		<record id="eco_act_132" model="economic.activity">
+			<field name="name">FABRICACIÓN DE CIGARROS Y CIGARRILLOS</field>
+			<field name="code">160010</field>
+		</record>
+		<record id="eco_act_133" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS PRODUCTOS DEL TABACO</field>
+			<field name="code">160090</field>
+		</record>
+		<record id="eco_act_134" model="economic.activity">
+			<field name="name">PREPARACIÓN DE HILATURA DE FIBRAS TEXTILES; TEJEDURA PROD. TEXTILES</field>
+			<field name="code">171100</field>
+		</record>
+		<record id="eco_act_135" model="economic.activity">
+			<field name="name">ACABADO DE PRODUCTOS TEXTIL</field>
+			<field name="code">171200</field>
+		</record>
+		<record id="eco_act_136" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ARTÍCULOS CONFECCIONADOS DE MATERIAS TEXTILES, EXCEPTO PRENDAS DE VESTIR</field>
+			<field name="code">172100</field>
+		</record>
+		<record id="eco_act_137" model="economic.activity">
+			<field name="name">FABRICACIÓN DE TAPICES Y ALFOMBRA</field>
+			<field name="code">172200</field>
+		</record>
+		<record id="eco_act_138" model="economic.activity">
+			<field name="name">FABRICACIÓN DE CUERDAS, CORDELES, BRAMANTES Y REDES</field>
+			<field name="code">172300</field>
+		</record>
+		<record id="eco_act_139" model="economic.activity">
+			<field name="name">FABRICACIÓN DE TEJIDOS DE USO INDUSTRIAL COMO TEJIDOS IMPREGNADOS, MOLTOPRENE, BATISTA, ETC.</field>
+			<field name="code">172910</field>
+		</record>
+		<record id="eco_act_140" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS PRODUCTOS TEXTILES N.C.P.</field>
+			<field name="code">172990</field>
+		</record>
+		<record id="eco_act_141" model="economic.activity">
+			<field name="name">FABRICACIÓN DE TEJIDOS DE PUNTO</field>
+			<field name="code">173000</field>
+		</record>
+		<record id="eco_act_142" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRENDAS DE VESTIR TEXTILES Y SIMILARES</field>
+			<field name="code">181010</field>
+		</record>
+		<record id="eco_act_143" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRENDAS DE VESTIR DE CUERO NATURAL, ARTIFICIAL, PLÁSTICO</field>
+			<field name="code">181020</field>
+		</record>
+		<record id="eco_act_144" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ACCESORIOS DE VESTIR</field>
+			<field name="code">181030</field>
+		</record>
+		<record id="eco_act_145" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ROPA DE TRABAJO</field>
+			<field name="code">181040</field>
+		</record>
+		<record id="eco_act_146" model="economic.activity">
+			<field name="name">ADOBO Y TENIDOS DE PIELES; FABRICACIÓN DE ARTÍCULOS DE PIEL</field>
+			<field name="code">182000</field>
+		</record>
+		<record id="eco_act_147" model="economic.activity">
+			<field name="name">CURTIDO Y ADOBO DE CUEROS</field>
+			<field name="code">191100</field>
+		</record>
+		<record id="eco_act_148" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MALETAS, BOLSOS DE MANO Y SIMILARES; ARTÍCULOS DE TALABARTERÍA Y GUARNICIONERÍA</field>
+			<field name="code">191200</field>
+		</record>
+		<record id="eco_act_149" model="economic.activity">
+			<field name="name">FABRICACIÓN DE CALZADO</field>
+			<field name="code">192000</field>
+		</record>
+		<record id="eco_act_150" model="economic.activity">
+			<field name="name">ASERRADO Y ACEPILLADURA DE MADERAS</field>
+			<field name="code">201000</field>
+		</record>
+		<record id="eco_act_151" model="economic.activity">
+			<field name="name">FABRICACIÓN DE TABLEROS, PANELES Y HOJAS DE MADERA PARA ENCHAPADO</field>
+			<field name="code">202100</field>
+		</record>
+		<record id="eco_act_152" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PARTES Y PIEZAS DE CARPINTERÍA PARA EDIFICIOS Y CONSTRUCCIONES</field>
+			<field name="code">202200</field>
+		</record>
+		<record id="eco_act_153" model="economic.activity">
+			<field name="name">FABRICACIÓN DE RECIPIENTES DE MADERA</field>
+			<field name="code">202300</field>
+		</record>
+		<record id="eco_act_154" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS PRODUCTOS DE MADERA; ARTÍCULOS DE CORCHO, PAJA Y MATERIALES TRENZABLES</field>
+			<field name="code">202900</field>
+		</record>
+		<record id="eco_act_155" model="economic.activity">
+			<field name="name">FABRICACIÓN DE CELULOSA Y OTRAS PASTAS DE MADERA</field>
+			<field name="code">210110</field>
+		</record>
+		<record id="eco_act_156" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PAPEL DE PERIÓDICO</field>
+			<field name="code">210121</field>
+		</record>
+		<record id="eco_act_157" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PAPEL Y CARTÓN N.C.P.</field>
+			<field name="code">210129</field>
+		</record>
+		<record id="eco_act_158" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PAPEL Y CARTÓN ONDULADO Y DE ENVASES DE PAPEL Y CARTÓN</field>
+			<field name="code">210200</field>
+		</record>
+		<record id="eco_act_159" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS ARTÍCULOS DE PAPEL Y CARTÓN</field>
+			<field name="code">210900</field>
+		</record>
+		<record id="eco_act_160" model="economic.activity">
+			<field name="name">EDICIÓN PRINCIPALMENTE DE LIBROS</field>
+			<field name="code">221101</field>
+		</record>
+		<record id="eco_act_161" model="economic.activity">
+			<field name="name">EDICIÓN DE FOLLETOS, PARTITURAS Y OTRAS PUBLICACIONES</field>
+			<field name="code">221109</field>
+		</record>
+		<record id="eco_act_162" model="economic.activity">
+			<field name="name">EDICIÓN DE PERIÓDICOS, REVISTAS Y PUBLICACIONES PERIÓDICAS</field>
+			<field name="code">221200</field>
+		</record>
+		<record id="eco_act_163" model="economic.activity">
+			<field name="name">EDICIÓN DE GRABACIONES</field>
+			<field name="code">221300</field>
+		</record>
+		<record id="eco_act_164" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES DE EDICIÓN</field>
+			<field name="code">221900</field>
+		</record>
+		<record id="eco_act_165" model="economic.activity">
+			<field name="name">IMPRESIÓN PRINCIPALMENTE DE LIBROS</field>
+			<field name="code">222101</field>
+		</record>
+		<record id="eco_act_166" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES DE IMPRESIÓN N.C.P.</field>
+			<field name="code">222109</field>
+		</record>
+		<record id="eco_act_167" model="economic.activity">
+			<field name="name">ACTIVIDADES DE SERVICIO RELACIONADA CON LA IMPRESIÓN</field>
+			<field name="code">222200</field>
+		</record>
+		<record id="eco_act_168" model="economic.activity">
+			<field name="name">REPRODUCCIÓN DE GRABACIONES</field>
+			<field name="code">223000</field>
+		</record>
+		<record id="eco_act_169" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS DE HORNOS COQUE</field>
+			<field name="code">231000</field>
+		</record>
+		<record id="eco_act_170" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS DE REFINACIÓN DE PETRÓLEO</field>
+			<field name="code">232000</field>
+		</record>
+		<record id="eco_act_171" model="economic.activity">
+			<field name="name">ELABORACIÓN DE COMBUSTIBLE NUCLEAR</field>
+			<field name="code">233000</field>
+		</record>
+		<record id="eco_act_172" model="economic.activity">
+			<field name="name">FABRICACIÓN DE CARBÓN VEGETAL, Y BRIQUETAS DE CARBÓN VEGETAL</field>
+			<field name="code">241110</field>
+		</record>
+		<record id="eco_act_173" model="economic.activity">
+			<field name="name">FABRICACIÓN DE SUSTANCIAS QUÍMICAS BÁSICAS, EXCEPTO ABONOS Y COMPUESTOS DE NITRÓGENO</field>
+			<field name="code">241190</field>
+		</record>
+		<record id="eco_act_174" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ABONOS Y COMPUESTOS DE NITRÓGENO</field>
+			<field name="code">241200</field>
+		</record>
+		<record id="eco_act_175" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PLÁSTICOS EN FORMAS PRIMARIAS Y DE CAUCHO SINTÉTICO</field>
+			<field name="code">241300</field>
+		</record>
+		<record id="eco_act_176" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PLAGUICIDAS Y OTROS PRODUCTOS QUÍMICOS DE USO AGROPECUARIO</field>
+			<field name="code">242100</field>
+		</record>
+		<record id="eco_act_177" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PINTURAS, BARNICES Y PRODUCTOS DE REVESTIMIENTO SIMILARES</field>
+			<field name="code">242200</field>
+		</record>
+		<record id="eco_act_178" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS FARMACEUTICOS, SUSTANCIAS QUÍMICAS MEDICINALES Y PRODUCTOS BOTÁNICOS</field>
+			<field name="code">242300</field>
+		</record>
+		<record id="eco_act_179" model="economic.activity">
+			<field name="name">FABRICACIONES DE JABONES Y DETERGENTES, PREPARADOS PARA LIMPIAR, PERFUMES Y PREPARADOS DE TOCADOR</field>
+			<field name="code">242400</field>
+		</record>
+		<record id="eco_act_180" model="economic.activity">
+			<field name="name">FABRICACIÓN DE EXPLOSIVOS Y PRODUCTOS DE PIROTECNIA</field>
+			<field name="code">242910</field>
+		</record>
+		<record id="eco_act_181" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS PRODUCTOS QUÍMICOS N.C.P.</field>
+			<field name="code">242990</field>
+		</record>
+		<record id="eco_act_182" model="economic.activity">
+			<field name="name">FABRICACIÓN DE FIBRAS MANUFACTURADAS</field>
+			<field name="code">243000</field>
+		</record>
+		<record id="eco_act_183" model="economic.activity">
+			<field name="name">FABRICACIÓN DE CUBIERTAS Y CÁMARAS DE CAUCHO</field>
+			<field name="code">251110</field>
+		</record>
+		<record id="eco_act_184" model="economic.activity">
+			<field name="name">RECAUCHADO Y RENOVACIÓN DE CUBIERTAS DE CAUCHO</field>
+			<field name="code">251120</field>
+		</record>
+		<record id="eco_act_185" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS PRODUCTOS DE CAUCHO</field>
+			<field name="code">251900</field>
+		</record>
+		<record id="eco_act_186" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PLANCHAS, LÁMINAS, CINTAS, TIRAS DE PLÁSTICO</field>
+			<field name="code">252010</field>
+		</record>
+		<record id="eco_act_187" model="economic.activity">
+			<field name="name">FABRICACIÓN DE TUBOS, MANGUERAS PARA LA CONSTRUCCIÓN</field>
+			<field name="code">252020</field>
+		</record>
+		<record id="eco_act_188" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS ARTÍCULOS DE PLÁSTICO</field>
+			<field name="code">252090</field>
+		</record>
+		<record id="eco_act_189" model="economic.activity">
+			<field name="name">FABRICACIÓN, MANIPULADO Y TRANSFORMACIÓN DE VIDRIO PLANO</field>
+			<field name="code">261010</field>
+		</record>
+		<record id="eco_act_190" model="economic.activity">
+			<field name="name">FABRICACIÓN DE VIDRIO HUECO</field>
+			<field name="code">261020</field>
+		</record>
+		<record id="eco_act_191" model="economic.activity">
+			<field name="name">FABRICACIÓN DE FIBRAS DE VIDRIO</field>
+			<field name="code">261030</field>
+		</record>
+		<record id="eco_act_192" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ARTÍCULOS DE VIDRIO N.C.P.</field>
+			<field name="code">261090</field>
+		</record>
+		<record id="eco_act_193" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS DE CERÁMICA NO REFRACTARIA PARA USO NO ESTRUCTURAL CON FINES ORNAMENTALES</field>
+			<field name="code">269101</field>
+		</record>
+		<record id="eco_act_194" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS DE CERÁMICA NO REFRACTARIA PARA USO NO ESTRUCTURAL N.C.P.</field>
+			<field name="code">269109</field>
+		</record>
+		<record id="eco_act_195" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS DE CERÁMICAS REFRACTARIA</field>
+			<field name="code">269200</field>
+		</record>
+		<record id="eco_act_196" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS DE ARCILLA Y CERÁMICAS NO REFRACTARIAS PARA USO ESTRUCTURAL</field>
+			<field name="code">269300</field>
+		</record>
+		<record id="eco_act_197" model="economic.activity">
+			<field name="name">FABRICACIÓN DE CEMENTO, CAL Y YESO</field>
+			<field name="code">269400</field>
+		</record>
+		<record id="eco_act_198" model="economic.activity">
+			<field name="name">ELABORACIÓN DE HORMIGÓN, ARTÍCULOS DE HORMIGÓN Y MORTERO (MEZCLA PARA CONSTRUCCIÓN)</field>
+			<field name="code">269510</field>
+		</record>
+		<record id="eco_act_199" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS DE FIBROCEMENTO Y ASBESTOCEMENTO</field>
+			<field name="code">269520</field>
+		</record>
+		<record id="eco_act_200" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PANELES DE YESO PARA LA CONSTRUCCIÓN</field>
+			<field name="code">269530</field>
+		</record>
+		<record id="eco_act_201" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ARTÍCULOS DE CEMENTO Y YESO N.C.P.</field>
+			<field name="code">269590</field>
+		</record>
+		<record id="eco_act_202" model="economic.activity">
+			<field name="name">CORTE, TALLADO Y ACABADO DE LA PIEDRA</field>
+			<field name="code">269600</field>
+		</record>
+		<record id="eco_act_203" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MEZCLAS BITUMINOSAS A BASE DE ASFALTO, DE BETUNES NATURALES, Y PRODUCTOS SIMILARES</field>
+			<field name="code">269910</field>
+		</record>
+		<record id="eco_act_204" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS PRODUCTOS MINERALES NO METÁLICOS N.C.P</field>
+			<field name="code">269990</field>
+		</record>
+		<record id="eco_act_205" model="economic.activity">
+			<field name="name">INDUSTRIAS BASICAS DE HIERRO Y ACERO</field>
+			<field name="code">271000</field>
+		</record>
+		<record id="eco_act_206" model="economic.activity">
+			<field name="name">ELABORACIÓN DE PRODUCTOS DE COBRE EN FORMAS PRIMARIAS.</field>
+			<field name="code">272010</field>
+		</record>
+		<record id="eco_act_207" model="economic.activity">
+			<field name="name">ELABORACIÓN DE PRODUCTOS DE ALUMINIO EN FORMAS PRIMARIAS</field>
+			<field name="code">272020</field>
+		</record>
+		<record id="eco_act_208" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS PRIMARIOS DE METALES PRECIOSOS Y DE OTROS METALES NO FERROSOS N.C.P.</field>
+			<field name="code">272090</field>
+		</record>
+		<record id="eco_act_209" model="economic.activity">
+			<field name="name">FUNDICIÓN DE HIERRO Y ACERO</field>
+			<field name="code">273100</field>
+		</record>
+		<record id="eco_act_210" model="economic.activity">
+			<field name="name">FUNDICIÓN DE METALES NO FERROSOS</field>
+			<field name="code">273200</field>
+		</record>
+		<record id="eco_act_211" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PRODUCTOS METÁLICOS DE USO ESTRUCTURAL</field>
+			<field name="code">281100</field>
+		</record>
+		<record id="eco_act_212" model="economic.activity">
+			<field name="name">FABRICACIÓN DE RECIPIENTES DE GAS COMPRIMIDO O LICUADO</field>
+			<field name="code">281211</field>
+		</record>
+		<record id="eco_act_213" model="economic.activity">
+			<field name="name">FABRICACIÓN DE TANQUES, DEPÓSITOS Y RECIPIENTES DE METAL N.C.P.</field>
+			<field name="code">281219</field>
+		</record>
+		<record id="eco_act_214" model="economic.activity">
+			<field name="name">REPARACIÓN DE TANQUES, DEPÓSITOS Y RECIPIENTES DE METAL</field>
+			<field name="code">281280</field>
+		</record>
+		<record id="eco_act_215" model="economic.activity">
+			<field name="name">FABRICACIÓN DE GENERADORES DE VAPOR, EXCEPTO CALDERAS DE AGUA CALIENTE PARA CALEFACCIÓN</field>
+			<field name="code">281310</field>
+		</record>
+		<record id="eco_act_216" model="economic.activity">
+			<field name="name">REPARACIÓN DE GENERADORES DE VAPOR, EXCEPTO CALDERAS DE AGUA CALIENTE PARA CALEFACCIÓN CENTRAL</field>
+			<field name="code">281380</field>
+		</record>
+		<record id="eco_act_217" model="economic.activity">
+			<field name="name">FORJA, PRENSADO, ESTAMPADO Y LAMINADO DE METAL; INCLUYE PULVIMETALURGIA</field>
+			<field name="code">289100</field>
+		</record>
+		<record id="eco_act_218" model="economic.activity">
+			<field name="name">TRATAMIENTOS Y REVESTIMIENTOS DE METALES; OBRAS DE INGENIERÍA MECÁNICA EN GENERAL</field>
+			<field name="code">289200</field>
+		</record>
+		<record id="eco_act_219" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ARTÍCULOS DE CUCHILLERÍA</field>
+			<field name="code">289310</field>
+		</record>
+		<record id="eco_act_220" model="economic.activity">
+			<field name="name">FABRICACIÓN DE HERRAMIENTAS DE MANO Y ARTÍCULOS DE FERRETERÍA</field>
+			<field name="code">289320</field>
+		</record>
+		<record id="eco_act_221" model="economic.activity">
+			<field name="name">FABRICACIÓN DE CABLES, ALAMBRES Y PRODUCTOS DE ALAMBRE</field>
+			<field name="code">289910</field>
+		</record>
+		<record id="eco_act_222" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS PRODUCTOS ELABORADOS DE METAL N.C.P.</field>
+			<field name="code">289990</field>
+		</record>
+		<record id="eco_act_223" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MOTORES Y TURBINAS, EXCEPTO PARA AERONAVES, VEHÍCULOS AUTOMOTORES Y MOTOCICLETAS</field>
+			<field name="code">291110</field>
+		</record>
+		<record id="eco_act_224" model="economic.activity">
+			<field name="name">REPARACIÓN DE MOTORES Y TURBINAS, EXCEPTO PARA AERONAVES, VEHÍCULOS AUTOMOTORES Y MOTOCICLETAS</field>
+			<field name="code">291180</field>
+		</record>
+		<record id="eco_act_225" model="economic.activity">
+			<field name="name">FABRICACIÓN DE BOMBAS, GRIFOS, VÁLVULAS, COMPRESORES, SISTEMAS HIDRÁULICOS</field>
+			<field name="code">291210</field>
+		</record>
+		<record id="eco_act_226" model="economic.activity">
+			<field name="name">REPARACIÓN DE BOMBAS, COMPRESORES, SISTEMAS HIDRÁULICOS, VÁLVULAS Y ARTÍCULOS DE GRIFERÍA</field>
+			<field name="code">291280</field>
+		</record>
+		<record id="eco_act_227" model="economic.activity">
+			<field name="name">FABRICACIÓN DE COJINETES, ENGRANAJES, TRENES DE ENGRANAJES Y PIEZAS DE TRANSMISIÓN</field>
+			<field name="code">291310</field>
+		</record>
+		<record id="eco_act_228" model="economic.activity">
+			<field name="name">REPARACIÓN DE COJINETES, ENGRANAJES, TRENES DE ENGRANAJES Y PIEZAS DE TRANSMISIÓN</field>
+			<field name="code">291380</field>
+		</record>
+		<record id="eco_act_229" model="economic.activity">
+			<field name="name">FABRICACIÓN DE HORNOS, HOGARES Y QUEMADORES</field>
+			<field name="code">291410</field>
+		</record>
+		<record id="eco_act_230" model="economic.activity">
+			<field name="name">REPARACIÓN DE HORNOS, HOGARES Y QUEMADORES</field>
+			<field name="code">291480</field>
+		</record>
+		<record id="eco_act_231" model="economic.activity">
+			<field name="name">FABRICACIÓN DE EQUIPO DE ELEVACIÓN Y MANIPULACIÓN</field>
+			<field name="code">291510</field>
+		</record>
+		<record id="eco_act_232" model="economic.activity">
+			<field name="name">REPARACIÓN DE EQUIPO DE ELEVACIÓN Y MANIPULACIÓN</field>
+			<field name="code">291580</field>
+		</record>
+		<record id="eco_act_233" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTRO TIPO DE MAQUINARIAS DE USO GENERAL</field>
+			<field name="code">291910</field>
+		</record>
+		<record id="eco_act_234" model="economic.activity">
+			<field name="name">REPARACIÓN OTROS TIPOS DE MAQUINARIA Y EQUIPOS DE USO GENERAL</field>
+			<field name="code">291980</field>
+		</record>
+		<record id="eco_act_235" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MAQUINARIA AGROPECUARIA Y FORESTAL</field>
+			<field name="code">292110</field>
+		</record>
+		<record id="eco_act_236" model="economic.activity">
+			<field name="name">REPARACIÓN DE MAQUINARIA AGROPECUARIA Y FORESTAL</field>
+			<field name="code">292180</field>
+		</record>
+		<record id="eco_act_237" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MÁQUINAS HERRAMIENTAS</field>
+			<field name="code">292210</field>
+		</record>
+		<record id="eco_act_238" model="economic.activity">
+			<field name="name">REPARACIÓN DE MÁQUINAS HERRAMIENTAS</field>
+			<field name="code">292280</field>
+		</record>
+		<record id="eco_act_239" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MAQUINARIA METALÚRGICA</field>
+			<field name="code">292310</field>
+		</record>
+		<record id="eco_act_240" model="economic.activity">
+			<field name="name">REPARACIÓN DE MAQUINARIA PARA LA INDUSTRIA METALÚRGICA</field>
+			<field name="code">292380</field>
+		</record>
+		<record id="eco_act_241" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MAQUINARIA PARA MINAS Y CANTERAS Y PARA OBRAS DE CONSTRUCCIÓN</field>
+			<field name="code">292411</field>
+		</record>
+		<record id="eco_act_242" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PARTES PARA MÁQUINAS DE SONDEO O PERFORACIÓN</field>
+			<field name="code">292412</field>
+		</record>
+		<record id="eco_act_243" model="economic.activity">
+			<field name="name">REPARACIÓN DE MAQUINARIA PARA LA EXPLOTACIÓN DE PETRÓLEO, MINAS, CANTERAS, Y OBRAS DE CONSTRUCCIÓN</field>
+			<field name="code">292480</field>
+		</record>
+		<record id="eco_act_244" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MAQUINARIA PARA LA ELABORACIÓN DE ALIMENTOS, BEBIDAS Y TABACOS</field>
+			<field name="code">292510</field>
+		</record>
+		<record id="eco_act_245" model="economic.activity">
+			<field name="name">REPARACIÓN DE MAQUINARIA PARA LA ELABORACIÓN DE ALIMENTOS, BEBIDAS Y TABACOS</field>
+			<field name="code">292580</field>
+		</record>
+		<record id="eco_act_246" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MAQUINARIA PARA LA ELABORACIÓN DE PRENDAS TEXTILES, PRENDAS DE VESTIR Y CUEROS</field>
+			<field name="code">292610</field>
+		</record>
+		<record id="eco_act_247" model="economic.activity">
+			<field name="name">REPARACIÓN DE MAQUINARIA PARA LA INDUSTRIA TEXTIL, DE LA CONFECCIÓN, DEL CUERO Y DEL CALZADO</field>
+			<field name="code">292680</field>
+		</record>
+		<record id="eco_act_248" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ARMAS Y MUNICIONES</field>
+			<field name="code">292710</field>
+		</record>
+		<record id="eco_act_249" model="economic.activity">
+			<field name="name">REPARACIÓN DE ARMAS</field>
+			<field name="code">292780</field>
+		</record>
+		<record id="eco_act_250" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS TIPOS DE MAQUINARIAS DE USO ESPECIAL</field>
+			<field name="code">292910</field>
+		</record>
+		<record id="eco_act_251" model="economic.activity">
+			<field name="name">REPARACIÓN DE OTROS TIPOS DE MAQUINARIA DE USO ESPECIAL</field>
+			<field name="code">292980</field>
+		</record>
+		<record id="eco_act_252" model="economic.activity">
+			<field name="name">FABRICACIÓN DE APARATOS DE USO DOMÉSTICO N.C.P.</field>
+			<field name="code">293000</field>
+		</record>
+		<record id="eco_act_253" model="economic.activity">
+			<field name="name">FABRICACIÓN Y ARMADO DE COMPUTADORES Y HARDWARE EN GENERAL</field>
+			<field name="code">300010</field>
+		</record>
+		<record id="eco_act_254" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MAQUINARIA DE OFICINA, CONTABILIDAD, N.C.P.</field>
+			<field name="code">300020</field>
+		</record>
+		<record id="eco_act_255" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MOTORES, GENERADORES Y TRANSFORMADORES ELÉCTRICOS</field>
+			<field name="code">311010</field>
+		</record>
+		<record id="eco_act_256" model="economic.activity">
+			<field name="name">REPARACIÓN DE MOTORES, GENERADORES Y TRANSFORMADORES ELÉCTRICOS</field>
+			<field name="code">311080</field>
+		</record>
+		<record id="eco_act_257" model="economic.activity">
+			<field name="name">FABRICACIÓN DE APARATOS DE DISTRIBUCIÓN Y CONTROL</field>
+			<field name="code">312010</field>
+		</record>
+		<record id="eco_act_258" model="economic.activity">
+			<field name="name">REPARACIÓN DE APARATOS DE DISTRIBUCIÓN Y CONTROL</field>
+			<field name="code">312080</field>
+		</record>
+		<record id="eco_act_259" model="economic.activity">
+			<field name="name">FABRICACIÓN DE HILOS Y CABLES AISLADOS</field>
+			<field name="code">313000</field>
+		</record>
+		<record id="eco_act_260" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ACUMULADORES DE PILAS Y BATERÍAS PRIMARIAS</field>
+			<field name="code">314000</field>
+		</record>
+		<record id="eco_act_261" model="economic.activity">
+			<field name="name">FABRICACIÓN DE LÁMPARAS Y EQUIPO DE ILUMINACIÓN</field>
+			<field name="code">315010</field>
+		</record>
+		<record id="eco_act_262" model="economic.activity">
+			<field name="name">REPARACIÓN DE EQUIPO DE ILUMINACIÓN</field>
+			<field name="code">315080</field>
+		</record>
+		<record id="eco_act_263" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS TIPOS DE EQUIPO ELÉCTRICO N.C.P.</field>
+			<field name="code">319010</field>
+		</record>
+		<record id="eco_act_264" model="economic.activity">
+			<field name="name">REPARACIÓN DE OTROS TIPOS DE EQUIPO ELÉCTRICO N.C.P.</field>
+			<field name="code">319080</field>
+		</record>
+		<record id="eco_act_265" model="economic.activity">
+			<field name="name">FABRICACIÓN DE COMPONENTES ELECTRÓNICOS</field>
+			<field name="code">321010</field>
+		</record>
+		<record id="eco_act_266" model="economic.activity">
+			<field name="name">REPARACIÓN DE COMPONENTES ELECTRÓNICOS</field>
+			<field name="code">321080</field>
+		</record>
+		<record id="eco_act_267" model="economic.activity">
+			<field name="name">FABRICACIÓN DE TRANSMISORES DE RADIO Y TELEVISIÓN, APARATOS PARA TELEFONÍA Y TELEGRAFÍA CON HILOS</field>
+			<field name="code">322010</field>
+		</record>
+		<record id="eco_act_268" model="economic.activity">
+			<field name="name">REPARACIÓN DE TRANSMISORES DE RADIO Y TELEVISIÓN, APARATOS PARA TELEFONÍA Y TELEGRAFÍA CON HILOS</field>
+			<field name="code">322080</field>
+		</record>
+		<record id="eco_act_269" model="economic.activity">
+			<field name="name">FABRICACIÓN DE RECEPTORES (RADIO Y TV); APARATOS DE GRABACIÓN Y REPRODUCCIÓN (AUDIO Y VIDEO)</field>
+			<field name="code">323000</field>
+		</record>
+		<record id="eco_act_270" model="economic.activity">
+			<field name="name">FABRICACIÓN DE EQUIPO MÉDICO Y QUIRÚRGICO, Y DE APARATOS ORTOPÉDICOS</field>
+			<field name="code">331110</field>
+		</record>
+		<record id="eco_act_271" model="economic.activity">
+			<field name="name">LABORATORIOS DENTALES</field>
+			<field name="code">331120</field>
+		</record>
+		<record id="eco_act_272" model="economic.activity">
+			<field name="name">REPARACIÓN DE EQUIPO MÉDICO Y QUIRÚRGICO, Y DE APARATOS ORTOPÉDICOS</field>
+			<field name="code">331180</field>
+		</record>
+		<record id="eco_act_273" model="economic.activity">
+			<field name="name">FABRICACIÓN DE INSTRUMENTOS Y APARATOS PARA MEDIR, VERIFICAR, ENSAYAR, NAVEGAR Y OTROS FINES</field>
+			<field name="code">331210</field>
+		</record>
+		<record id="eco_act_274" model="economic.activity">
+			<field name="name">REPARACIÓN DE INSTRUMENTOS Y APARATOS PARA MEDIR, VERIFICAR, ENSAYAR, NAVEGAR Y OTROS FINES</field>
+			<field name="code">331280</field>
+		</record>
+		<record id="eco_act_275" model="economic.activity">
+			<field name="name">FABRICACIÓN DE EQUIPOS DE CONTROL DE PROCESOS INDUSTRIALES</field>
+			<field name="code">331310</field>
+		</record>
+		<record id="eco_act_276" model="economic.activity">
+			<field name="name">REPARACIÓN DE EQUIPOS DE CONTROL DE PROCESOS INDUSTRIALES</field>
+			<field name="code">331380</field>
+		</record>
+		<record id="eco_act_277" model="economic.activity">
+			<field name="name">FABRICACIÓN Y/O REPARACIÓN DE LENTES Y ARTÍCULOS OFTALMOLÓGICOS</field>
+			<field name="code">332010</field>
+		</record>
+		<record id="eco_act_278" model="economic.activity">
+			<field name="name">FABRICACIÓN DE INSTRUMENTOS DE OPTICA N.C.P. Y EQUIPOS FOTOGRÁFICOS</field>
+			<field name="code">332020</field>
+		</record>
+		<record id="eco_act_279" model="economic.activity">
+			<field name="name">REPARACIÓN DE INSTRUMENTOS DE OPTICA N.C.P Y EQUIPO FOTOGRÁFICOS</field>
+			<field name="code">332080</field>
+		</record>
+		<record id="eco_act_280" model="economic.activity">
+			<field name="name">FABRICACIÓN DE RELOJES</field>
+			<field name="code">Código</field>
+		</record>
+		<record id="eco_act_281" model="economic.activity">
+			<field name="name">FABRICACIÓN DE RELOJES</field>
+			<field name="code">333000</field>
+		</record>
+		<record id="eco_act_282" model="economic.activity">
+			<field name="name">FABRICACIÓN DE VEHÍCULOS AUTOMOTORES</field>
+			<field name="code">341000</field>
+		</record>
+		<record id="eco_act_283" model="economic.activity">
+			<field name="name">FABRICACIÓN DE CARROCERÍAS PARA VEHÍCULOS AUTOMOTORES; FABRICACIÓN DE REMOLQUES Y SEMI REMOLQUES</field>
+			<field name="code">342000</field>
+		</record>
+		<record id="eco_act_284" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PARTES Y ACCESORIOS PARA VEHÍCULOS AUTOMOTORES Y SUS MOTORES</field>
+			<field name="code">343000</field>
+		</record>
+		<record id="eco_act_285" model="economic.activity">
+			<field name="name">CONSTRUCCIÓN Y REPARACIÓN DE BUQUES; ASTILLEROS</field>
+			<field name="code">351110</field>
+		</record>
+		<record id="eco_act_286" model="economic.activity">
+			<field name="name">CONSTRUCCIÓN DE EMBARCACIONES MENORES</field>
+			<field name="code">351120</field>
+		</record>
+		<record id="eco_act_287" model="economic.activity">
+			<field name="name">REPARACIÓN DE EMBARCACIONES MENORES</field>
+			<field name="code">351180</field>
+		</record>
+		<record id="eco_act_288" model="economic.activity">
+			<field name="name">CONSTRUCCIÓN DE EMBARCACIONES DE RECREO Y DEPORTE</field>
+			<field name="code">351210</field>
+		</record>
+		<record id="eco_act_289" model="economic.activity">
+			<field name="name">REPARACIÓN DE EMBARCACIONES DE RECREO Y DEPORTES</field>
+			<field name="code">351280</field>
+		</record>
+		<record id="eco_act_290" model="economic.activity">
+			<field name="name">FABRICACIÓN DE LOCOMOTORAS Y DE MATERIAL RODANTE PARA FERROCARRILES Y TRANVÍAS</field>
+			<field name="code">352000</field>
+		</record>
+		<record id="eco_act_291" model="economic.activity">
+			<field name="name">FABRICACIÓN DE AERONAVES Y NAVES ESPACIALES; SUS REPARACIONES</field>
+			<field name="code">Código</field>
+		</record>
+		<record id="eco_act_292" model="economic.activity">
+			<field name="name">FABRICACIÓN DE AERONAVES Y NAVES ESPACIALES</field>
+			<field name="code">353010</field>
+		</record>
+		<record id="eco_act_293" model="economic.activity">
+			<field name="name">REPARACIÓN DE AERONAVES Y NAVES ESPACIALES</field>
+			<field name="code">353080</field>
+		</record>
+		<record id="eco_act_294" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MOTOCICLETAS</field>
+			<field name="code">359100</field>
+		</record>
+		<record id="eco_act_295" model="economic.activity">
+			<field name="name">FABRICACIÓN DE BICICLETAS Y DE SILLONES DE RUEDAS PARA INVALIDOS</field>
+			<field name="code">359200</field>
+		</record>
+		<record id="eco_act_296" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS EQUIPOS DE TRANSPORTE N.C.P.</field>
+			<field name="code">359900</field>
+		</record>
+		<record id="eco_act_297" model="economic.activity">
+			<field name="name">FABRICACIÓN DE MUEBLES PRINCIPALMENTE DE MADERA</field>
+			<field name="code">361010</field>
+		</record>
+		<record id="eco_act_298" model="economic.activity">
+			<field name="name">FABRICACIÓN DE OTROS MUEBLES N.C.P., INCLUSO COLCHONES</field>
+			<field name="code">361020</field>
+		</record>
+		<record id="eco_act_299" model="economic.activity">
+			<field name="name">FABRICACIÓN DE JOYAS Y PRODUCTOS CONEXOS</field>
+			<field name="code">369100</field>
+		</record>
+		<record id="eco_act_300" model="economic.activity">
+			<field name="name">FABRICACIÓN DE INSTRUMENTOS DE MÚSICA</field>
+			<field name="code">369200</field>
+		</record>
+		<record id="eco_act_301" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ARTÍCULOS DE DEPORTE</field>
+			<field name="code">369300</field>
+		</record>
+		<record id="eco_act_302" model="economic.activity">
+			<field name="name">FABRICACIÓN DE JUEGOS Y JUGUETES</field>
+			<field name="code">369400</field>
+		</record>
+		<record id="eco_act_303" model="economic.activity">
+			<field name="name">FABRICACIÓN DE PLUMAS Y LÁPICES DE TODA CLASE Y ARTÍCULOS DE ESCRITORIO EN GENERAL</field>
+			<field name="code">369910</field>
+		</record>
+		<record id="eco_act_304" model="economic.activity">
+			<field name="name">FABRICACIÓN DE BROCHAS, ESCOBAS Y CEPILLOS</field>
+			<field name="code">369920</field>
+		</record>
+		<record id="eco_act_305" model="economic.activity">
+			<field name="name">FABRICACIÓN DE FÓSFOROS</field>
+			<field name="code">369930</field>
+		</record>
+		<record id="eco_act_306" model="economic.activity">
+			<field name="name">FABRICACIÓN DE ARTÍCULOS DE OTRAS INDUSTRIAS N.C.P.</field>
+			<field name="code">369990</field>
+		</record>
+		<record id="eco_act_307" model="economic.activity">
+			<field name="name">RECICLAMIENTO DE DESPERDICIOS Y DESECHOS METÁLICOS</field>
+			<field name="code">371000</field>
+		</record>
+		<record id="eco_act_308" model="economic.activity">
+			<field name="name">RECICLAMIENTO DE PAPEL</field>
+			<field name="code">372010</field>
+		</record>
+		<record id="eco_act_309" model="economic.activity">
+			<field name="name">RECICLAMIENTO DE VIDRIO</field>
+			<field name="code">372020</field>
+		</record>
+		<record id="eco_act_310" model="economic.activity">
+			<field name="name">RECICLAMIENTO DE OTROS DESPERDICIOS Y DESECHOS N.C.P.</field>
+			<field name="code">372090</field>
+		</record>
+		<record id="eco_act_311" model="economic.activity">
+			<field name="name">GENERACIÓN HIDROELÉCTRICA</field>
+			<field name="code">401011</field>
+		</record>
+		<record id="eco_act_312" model="economic.activity">
+			<field name="name">GENERACIÓN EN CENTRALES TERMOELÉCTRICA DE CICLOS COMBINADOS</field>
+			<field name="code">401012</field>
+		</record>
+		<record id="eco_act_313" model="economic.activity">
+			<field name="name">GENERACIÓN EN OTRAS CENTRALES TERMOELÉCTRICAS</field>
+			<field name="code">401013</field>
+		</record>
+		<record id="eco_act_314" model="economic.activity">
+			<field name="name">GENERACIÓN EN OTRAS CENTRALES N.C.P.</field>
+			<field name="code">401019</field>
+		</record>
+		<record id="eco_act_315" model="economic.activity">
+			<field name="name">TRANSMISIÓN DE ENERGÍA ELÉCTRICA</field>
+			<field name="code">401020</field>
+		</record>
+		<record id="eco_act_316" model="economic.activity">
+			<field name="name">DISTRIBUCIÓN DE ENERGIA ELÉCTRICA</field>
+			<field name="code">401030</field>
+		</record>
+		<record id="eco_act_317" model="economic.activity">
+			<field name="name">FABRICACIÓN DE GAS; DISTRIBUCIÓN DE COMBUSTIBLES GASEOSOS POR TUBERÍAS</field>
+			<field name="code">402000</field>
+		</record>
+		<record id="eco_act_318" model="economic.activity">
+			<field name="name">SUMINISTRO DE VAPOR Y AGUA CALIENTE</field>
+			<field name="code">403000</field>
+		</record>
+		<record id="eco_act_319" model="economic.activity">
+			<field name="name">CAPTACIÓN, DEPURACIÓN Y DISTRIBUCIÓN DE AGUA</field>
+			<field name="code">410000</field>
+		</record>
+		<record id="eco_act_320" model="economic.activity">
+			<field name="name">PREPARACIÓN DEL TERRENO, EXCAVACIONES Y MOVIMIENTOS DE TIERRAS</field>
+			<field name="code">451010</field>
+		</record>
+		<record id="eco_act_321" model="economic.activity">
+			<field name="name">SERVICIOS DE DEMOLICIÓN Y EL DERRIBO DE EDIFICIOS Y OTRAS ESTRUCTURAS</field>
+			<field name="code">451020</field>
+		</record>
+		<record id="eco_act_322" model="economic.activity">
+			<field name="name">CONSTRUCCIÓN DE EDIFICIOS COMPLETOS O DE PARTES DE EDIFICIOS</field>
+			<field name="code">452010</field>
+		</record>
+		<record id="eco_act_323" model="economic.activity">
+			<field name="name">OBRAS DE INGENIERÍA</field>
+			<field name="code">452020</field>
+		</record>
+		<record id="eco_act_324" model="economic.activity">
+			<field name="name">ACONDICIONAMIENTO DE EDIFICIOS</field>
+			<field name="code">453000</field>
+		</record>
+		<record id="eco_act_325" model="economic.activity">
+			<field name="name">OBRAS MENORES EN CONSTRUCCIÓN (CONTRATISTAS, ALBANILES, CARPINTEROS)</field>
+			<field name="code">454000</field>
+		</record>
+		<record id="eco_act_326" model="economic.activity">
+			<field name="name">ALQUILER DE EQUIPO DE CONSTRUCCIÓN O DEMOLICIÓN DOTADO DE OPERARIOS</field>
+			<field name="code">455000</field>
+		</record>
+		<record id="eco_act_327" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE VEHÍCULOS AUTOMOTORES (IMPORTACIÓN, DISTRIBUCIÓN) EXCEPTO MOTOCICLETAS</field>
+			<field name="code">501010</field>
+		</record>
+		<record id="eco_act_328" model="economic.activity">
+			<field name="name">VENTA O COMPRAVENTA AL POR MENOR DE VEHÍCULOS AUTOMOTORES NUEVOS O USADOS; EXCEPTO MOTOCICLETAS</field>
+			<field name="code">501020</field>
+		</record>
+		<record id="eco_act_329" model="economic.activity">
+			<field name="name">SERVICIO DE LAVADO DE VEHÍCULOS AUTOMOTORES</field>
+			<field name="code">502010</field>
+		</record>
+		<record id="eco_act_330" model="economic.activity">
+			<field name="name">SERVICIOS DE REMOLQUE DE VEHÍCULOS (GRUAS)</field>
+			<field name="code">502020</field>
+		</record>
+		<record id="eco_act_331" model="economic.activity">
+			<field name="name">MANTENIMIENTO Y REPARACIÓN DE VEHÍCULOS AUTOMOTORES</field>
+			<field name="code">502080</field>
+		</record>
+		<record id="eco_act_332" model="economic.activity">
+			<field name="name">VENTA DE PARTES, PIEZAS Y ACCESORIOS DE VEHÍCULOS AUTOMOTORES</field>
+			<field name="code">503000</field>
+		</record>
+		<record id="eco_act_333" model="economic.activity">
+			<field name="name">VENTA DE MOTOCICLETAS</field>
+			<field name="code">504010</field>
+		</record>
+		<record id="eco_act_334" model="economic.activity">
+			<field name="name">VENTA DE PIEZAS Y ACCESORIOS DE MOTOCICLETAS</field>
+			<field name="code">504020</field>
+		</record>
+		<record id="eco_act_335" model="economic.activity">
+			<field name="name">REPARACIÓN DE MOTOCICLETAS</field>
+			<field name="code">504080</field>
+		</record>
+		<record id="eco_act_336" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE COMBUSTIBLE PARA AUTOMOTORES</field>
+			<field name="code">505000</field>
+		</record>
+		<record id="eco_act_337" model="economic.activity">
+			<field name="name">CORRETAJE DE PRODUCTOS AGRÍCOLAS</field>
+			<field name="code">511010</field>
+		</record>
+		<record id="eco_act_338" model="economic.activity">
+			<field name="name">CORRETAJE DE GANADO (FERIAS DE GANADO)</field>
+			<field name="code">511020</field>
+		</record>
+		<record id="eco_act_339" model="economic.activity">
+			<field name="name">OTROS TIPOS DE CORRETAJES O REMATES N.C.P. (NO INCLUYE SERVICIOS DE MARTILLERO)</field>
+			<field name="code">511030</field>
+		</record>
+		<record id="eco_act_340" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE ANIMALES VIVOS</field>
+			<field name="code">512110</field>
+		</record>
+		<record id="eco_act_341" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE PRODUCTOS PECUARIOS (LANAS, PIELES, CUEROS SIN PROCESAR); EXCEPTO ALIMENTOS</field>
+			<field name="code">512120</field>
+		</record>
+		<record id="eco_act_342" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MATERIAS PRIMAS AGRÍCOLAS</field>
+			<field name="code">512130</field>
+		</record>
+		<record id="eco_act_343" model="economic.activity">
+			<field name="name">MAYORISTA DE FRUTAS Y VERDURAS</field>
+			<field name="code">512210</field>
+		</record>
+		<record id="eco_act_344" model="economic.activity">
+			<field name="name">MAYORISTAS DE CARNES</field>
+			<field name="code">512220</field>
+		</record>
+		<record id="eco_act_345" model="economic.activity">
+			<field name="name">MAYORISTAS DE PRODUCTOS DEL MAR (PESCADO, MARISCOS, ALGAS)</field>
+			<field name="code">512230</field>
+		</record>
+		<record id="eco_act_346" model="economic.activity">
+			<field name="name">MAYORISTAS DE VINOS Y BEBIDAS ALCOHÓLICAS Y DE FANTASÍA</field>
+			<field name="code">512240</field>
+		</record>
+		<record id="eco_act_347" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE CONFITES</field>
+			<field name="code">512250</field>
+		</record>
+		<record id="eco_act_348" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE TABACO Y PRODUCTOS DERIVADOS</field>
+			<field name="code">512260</field>
+		</record>
+		<record id="eco_act_349" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE HUEVOS, LECHE, ABARROTES, Y OTROS ALIMENTOS N.C.P.</field>
+			<field name="code">512290</field>
+		</record>
+		<record id="eco_act_350" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE PRODUCTOS TEXTILES, PRENDAS DE VESTIR Y CALZADO</field>
+			<field name="code">513100</field>
+		</record>
+		<record id="eco_act_351" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MUEBLES</field>
+			<field name="code">513910</field>
+		</record>
+		<record id="eco_act_352" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE ARTÍCULOS ELÉCTRICOS Y ELECTRÓNICOS PARA EL HOGAR</field>
+			<field name="code">513920</field>
+		</record>
+		<record id="eco_act_353" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE ARTÍCULOS DE PERFUMERÍA, COSMÉTICOS, JABONES Y PRODUCTOS DE LIMPIEZA</field>
+			<field name="code">513930</field>
+		</record>
+		<record id="eco_act_354" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE PAPEL Y CARTÓN</field>
+			<field name="code">513940</field>
+		</record>
+		<record id="eco_act_355" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE LIBROS</field>
+			<field name="code">513951</field>
+		</record>
+		<record id="eco_act_356" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE REVISTAS Y PERIÓDICOS</field>
+			<field name="code">513952</field>
+		</record>
+		<record id="eco_act_357" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE PRODUCTOS FARMACEUTICOS</field>
+			<field name="code">513960</field>
+		</record>
+		<record id="eco_act_358" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE INSTRUMENTOS CIENTÍFICOS Y QUIRÚRGICOS</field>
+			<field name="code">513970</field>
+		</record>
+		<record id="eco_act_359" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE OTROS ENSERES DOMÉSTICOS N.C.P.</field>
+			<field name="code">513990</field>
+		</record>
+		<record id="eco_act_360" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE COMBUSTIBLES LÍQUIDOS</field>
+			<field name="code">514110</field>
+		</record>
+		<record id="eco_act_361" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE COMBUSTIBLES SÓLIDOS</field>
+			<field name="code">514120</field>
+		</record>
+		<record id="eco_act_362" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE COMBUSTIBLES GASEOSOS</field>
+			<field name="code">514130</field>
+		</record>
+		<record id="eco_act_363" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE PRODUCTOS CONEXOS A LOS COMBUSTIBLES</field>
+			<field name="code">514140</field>
+		</record>
+		<record id="eco_act_364" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE METALES Y MINERALES METALÍFEROS</field>
+			<field name="code">514200</field>
+		</record>
+		<record id="eco_act_365" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MADERA NO TRABAJADA Y PRODUCTOS RESULTANTES DE SU ELABORACIÓN PRIMARIA</field>
+			<field name="code">514310</field>
+		</record>
+		<record id="eco_act_366" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MATERIALES DE CONSTRUCCIÓN, ARTÍCULOS DE FERRETERÍA Y RELACIONADOS</field>
+			<field name="code">514320</field>
+		</record>
+		<record id="eco_act_367" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE PRODUCTOS QUÍMICOS</field>
+			<field name="code">514910</field>
+		</record>
+		<record id="eco_act_368" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE DESECHOS METÁLICOS (CHATARRA)</field>
+			<field name="code">514920</field>
+		</record>
+		<record id="eco_act_369" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE INSUMOS VETERINARIOS</field>
+			<field name="code">514930</field>
+		</record>
+		<record id="eco_act_370" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE OTROS PRODUCTOS INTERMEDIOS, DESPERDICIOS Y DESECHOS N.C.P.</field>
+			<field name="code">514990</field>
+		</record>
+		<record id="eco_act_371" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MAQUINARIA AGRÍCOLA Y FORESTAL</field>
+			<field name="code">515001</field>
+		</record>
+		<record id="eco_act_372" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MAQUINARIA METALÚRGICA</field>
+			<field name="code">515002</field>
+		</record>
+		<record id="eco_act_373" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MAQUINARIA PARA LA MINERÍA</field>
+			<field name="code">515003</field>
+		</record>
+		<record id="eco_act_374" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MAQUINARIA PARA LA CONSTRUCCIÓN</field>
+			<field name="code">515004</field>
+		</record>
+		<record id="eco_act_375" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MAQUINARIA PARA LA ELABORACIÓN DE ALIMENTOS, BEBIDAS Y TABACO</field>
+			<field name="code">515005</field>
+		</record>
+		<record id="eco_act_376" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MAQUINARIA PARA TEXTILES Y CUEROS</field>
+			<field name="code">515006</field>
+		</record>
+		<record id="eco_act_377" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MÁQUINAS Y EQUIPOS DE OFICINA; INCLUYE MATERIALES CONEXOS</field>
+			<field name="code">515007</field>
+		</record>
+		<record id="eco_act_378" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MAQUINARIA Y EQUIPO DE TRANSPORTE EXCEPTO VEHÍCULOS AUTOMOTORES</field>
+			<field name="code">515008</field>
+		</record>
+		<record id="eco_act_379" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE MAQUINARIA, HERRAMIENTAS, EQUIPO Y MATERIALES N.C.P.</field>
+			<field name="code">515009</field>
+		</record>
+		<record id="eco_act_380" model="economic.activity">
+			<field name="name">VENTA AL POR MAYOR DE OTROS PRODUCTOS N.C.P.</field>
+			<field name="code">519000</field>
+		</record>
+		<record id="eco_act_381" model="economic.activity">
+			<field name="name">GRANDES ESTABLECIMIENTOS (VENTA DE ALIMENTOS); HIPERMERCADOS</field>
+			<field name="code">521111</field>
+		</record>
+		<record id="eco_act_382" model="economic.activity">
+			<field name="name">ALMACENES MEDIANOS (VENTA DE ALIMENTOS); SUPERMERCADOS, MINIMARKETS</field>
+			<field name="code">521112</field>
+		</record>
+		<record id="eco_act_383" model="economic.activity">
+			<field name="name">ALMACENES PEQUENOS (VENTA DE ALIMENTOS)</field>
+			<field name="code">521120</field>
+		</record>
+		<record id="eco_act_384" model="economic.activity">
+			<field name="name">GRANDES TIENDAS - PRODUCTOS DE FERRETERÍA Y PARA EL HOGAR</field>
+			<field name="code">521200</field>
+		</record>
+		<record id="eco_act_385" model="economic.activity">
+			<field name="name">GRANDES TIENDAS - VESTUARIO Y PRODUCTOS PARA EL HOGAR</field>
+			<field name="code">521300</field>
+		</record>
+		<record id="eco_act_386" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE OTROS PRODUCTOS EN PEQUENOS ALMACENES NO ESPECIALIZADOS</field>
+			<field name="code">521900</field>
+		</record>
+		<record id="eco_act_387" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE BEBIDAS Y LICORES (BOTILLERÍAS)</field>
+			<field name="code">522010</field>
+		</record>
+		<record id="eco_act_388" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE CARNES (ROJAS, BLANCAS, OTRAS) PRODUCTOS CÁRNICOS Y SIMILARES</field>
+			<field name="code">522020</field>
+		</record>
+		<record id="eco_act_389" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE VERDURAS Y FRUTAS (VERDULERÍA)</field>
+			<field name="code">522030</field>
+		</record>
+		<record id="eco_act_390" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE PESCADOS, MARISCOS Y PRODUCTOS CONEXOS</field>
+			<field name="code">522040</field>
+		</record>
+		<record id="eco_act_391" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE PRODUCTOS DE PANADERÍA Y PASTELERÍA</field>
+			<field name="code">522050</field>
+		</record>
+		<record id="eco_act_392" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE ALIMENTOS PARA MASCOTAS Y ANIMALES EN GENERAL</field>
+			<field name="code">522060</field>
+		</record>
+		<record id="eco_act_393" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE AVES Y HUEVOS</field>
+			<field name="code">522070</field>
+		</record>
+		<record id="eco_act_394" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE PRODUCTOS DE CONFITERÍAS, CIGARRILLOS, Y OTROS</field>
+			<field name="code">522090</field>
+		</record>
+		<record id="eco_act_395" model="economic.activity">
+			<field name="name">FARMACIAS - PERTENECIENTES A CADENA DE ESTABLECIMIENTOS</field>
+			<field name="code">523111</field>
+		</record>
+		<record id="eco_act_396" model="economic.activity">
+			<field name="name">FARMACIAS INDEPENDIENTES</field>
+			<field name="code">523112</field>
+		</record>
+		<record id="eco_act_397" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE PRODUCTOS MEDICINALES</field>
+			<field name="code">523120</field>
+		</record>
+		<record id="eco_act_398" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE ARTÍCULOS ORTOPÉDICOS</field>
+			<field name="code">523130</field>
+		</record>
+		<record id="eco_act_399" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE ARTÍCULOS DE TOCADOR Y COSMÉTICOS</field>
+			<field name="code">523140</field>
+		</record>
+		<record id="eco_act_400" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE CALZADO</field>
+			<field name="code">523210</field>
+		</record>
+		<record id="eco_act_401" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE PRENDAS DE VESTIR EN GENERAL, INCLUYE ACCESORIOS</field>
+			<field name="code">523220</field>
+		</record>
+		<record id="eco_act_402" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE LANAS, HILOS Y SIMILARES</field>
+			<field name="code">523230</field>
+		</record>
+		<record id="eco_act_403" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE MALETERÍAS, TALABARTERÍAS Y ARTÍCULOS DE CUERO</field>
+			<field name="code">523240</field>
+		</record>
+		<record id="eco_act_404" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE ROPA INTERIOR Y PRENDAS DE USO PERSONAL</field>
+			<field name="code">523250</field>
+		</record>
+		<record id="eco_act_405" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE TEXTILES PARA EL HOGAR Y OTROS PRODUCTOS TEXTILES N.C.P.</field>
+			<field name="code">523290</field>
+		</record>
+		<record id="eco_act_406" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE ARTÍCULOS ELECTRODOMÉSTICOS Y ELECTRÓNICOS PARA EL HOGAR</field>
+			<field name="code">523310</field>
+		</record>
+		<record id="eco_act_407" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE CRISTALES, LOZAS, PORCELANA, MENAJE (CRISTALERÍAS)</field>
+			<field name="code">523320</field>
+		</record>
+		<record id="eco_act_408" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE MUEBLES; INCLUYE COLCHONES</field>
+			<field name="code">523330</field>
+		</record>
+		<record id="eco_act_409" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE INSTRUMENTOS MUSICALES (CASA DE MÚSICA)</field>
+			<field name="code">523340</field>
+		</record>
+		<record id="eco_act_410" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE DISCOS, CASSETTES, DVD Y VIDEOS</field>
+			<field name="code">523350</field>
+		</record>
+		<record id="eco_act_411" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE LÁMPARAS, APLIQUÉS Y SIMILARES</field>
+			<field name="code">523360</field>
+		</record>
+		<record id="eco_act_412" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE APARATOS, ARTÍCULOS, EQUIPO DE USO DOMÉSTICO N.C.P.</field>
+			<field name="code">523390</field>
+		</record>
+		<record id="eco_act_413" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE ARTÍCULOS DE FERRETERÍA Y MATERIALES DE CONSTRUCCIÓN</field>
+			<field name="code">523410</field>
+		</record>
+		<record id="eco_act_414" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE PINTURAS, BARNICES Y LACAS</field>
+			<field name="code">523420</field>
+		</record>
+		<record id="eco_act_415" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE PRODUCTOS DE VIDRIO</field>
+			<field name="code">523430</field>
+		</record>
+		<record id="eco_act_416" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE ARTÍCULOS FOTOGRÁFICOS</field>
+			<field name="code">523911</field>
+		</record>
+		<record id="eco_act_417" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE ARTÍCULOS ÓPTICOS</field>
+			<field name="code">523912</field>
+		</record>
+		<record id="eco_act_418" model="economic.activity">
+			<field name="name">COMERCIO POR MENOR DE JUGUETES</field>
+			<field name="code">523921</field>
+		</record>
+		<record id="eco_act_419" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE LIBROS</field>
+			<field name="code">523922</field>
+		</record>
+		<record id="eco_act_420" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE REVISTAS Y DIARIOS</field>
+			<field name="code">523923</field>
+		</record>
+		<record id="eco_act_421" model="economic.activity">
+			<field name="name">COMERCIO DE ARTÍCULOS DE SUMINISTROS DE OFICINAS Y ARTÍCULOS DE ESCRITORIO EN GENERAL</field>
+			<field name="code">523924</field>
+		</record>
+		<record id="eco_act_422" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE COMPUTADORAS, SOFTWARES Y SUMINISTROS</field>
+			<field name="code">523930</field>
+		</record>
+		<record id="eco_act_423" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE ARMERÍAS, ARTÍCULOS DE CAZA Y PESCA</field>
+			<field name="code">523941</field>
+		</record>
+		<record id="eco_act_424" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE BICICLETAS Y SUS REPUESTOS</field>
+			<field name="code">523942</field>
+		</record>
+		<record id="eco_act_425" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE ARTÍCULOS DEPORTIVOS</field>
+			<field name="code">523943</field>
+		</record>
+		<record id="eco_act_426" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE ARTÍCULOS DE JOYERÍA, FANTASÍAS Y RELOJERÍAS</field>
+			<field name="code">523950</field>
+		</record>
+		<record id="eco_act_427" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE GAS LICUADO EN BOMBONAS</field>
+			<field name="code">523961</field>
+		</record>
+		<record id="eco_act_428" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE CARBÓN, LENA Y OTROS COMBUSTIBLES DE USO DOMÉSTICO</field>
+			<field name="code">523969</field>
+		</record>
+		<record id="eco_act_429" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE ARTÍCULOS TÍPICOS (ARTESANÍAS)</field>
+			<field name="code">523991</field>
+		</record>
+		<record id="eco_act_430" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE FLORES, PLANTAS, ÁRBOLES, SEMILLAS, ABONOS</field>
+			<field name="code">523992</field>
+		</record>
+		<record id="eco_act_431" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR DE MASCOTAS Y ACCESORIOS</field>
+			<field name="code">523993</field>
+		</record>
+		<record id="eco_act_432" model="economic.activity">
+			<field name="name">VENTAS AL POR MENOR DE OTROS PRODUCTOS EN ALMACENES ESPECIALIZADOS N.C.P.</field>
+			<field name="code">523999</field>
+		</record>
+		<record id="eco_act_433" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE ANTIGUEDADES</field>
+			<field name="code">524010</field>
+		</record>
+		<record id="eco_act_434" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE ROPA USADA</field>
+			<field name="code">524020</field>
+		</record>
+		<record id="eco_act_435" model="economic.activity">
+			<field name="name">COMERCIO AL POR MENOR DE ARTÍCULOS Y ARTEFACTOS USADOS N.C.P.</field>
+			<field name="code">524090</field>
+		</record>
+		<record id="eco_act_436" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR EN EMPRESAS DE VENTA A DISTANCIA POR CORREO</field>
+			<field name="code">525110</field>
+		</record>
+		<record id="eco_act_437" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR EN EMPRESAS DE VENTA A DISTANCIA VÍA TELEFÓNICA</field>
+			<field name="code">525120</field>
+		</record>
+		<record id="eco_act_438" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR EN EMPRESAS DE VENTA A DISTANCIA VÍA INTERNET; COMERCIO ELECTRÓNICO</field>
+			<field name="code">525130</field>
+		</record>
+		<record id="eco_act_439" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR EN PUESTOS DE VENTA Y MERCADOS</field>
+			<field name="code">525200</field>
+		</record>
+		<record id="eco_act_440" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR REALIZADA POR INDEPENDIENTES EN TRANSPORTE PÚBLICO (LEY 20.388)</field>
+			<field name="code">525911</field>
+		</record>
+		<record id="eco_act_441" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR NO REALIZADA EN ALMACENES DE PRODUCTOS PROPIOS N.C.P.</field>
+			<field name="code">525919</field>
+		</record>
+		<record id="eco_act_442" model="economic.activity">
+			<field name="name">MÁQUINAS EXPENDEDORAS</field>
+			<field name="code">525920</field>
+		</record>
+		<record id="eco_act_443" model="economic.activity">
+			<field name="name">VENTA AL POR MENOR A CAMBIO DE UNA RETRIBUCIÓN O POR CONTRATA</field>
+			<field name="code">525930</field>
+		</record>
+		<record id="eco_act_444" model="economic.activity">
+			<field name="name">OTROS TIPOS DE VENTA AL POR MENOR NO REALIZADA EN ALMACENES N.C.P.</field>
+			<field name="code">525990</field>
+		</record>
+		<record id="eco_act_445" model="economic.activity">
+			<field name="name">REPARACIÓN DE CALZADO Y OTROS ARTÍCULOS DE CUERO</field>
+			<field name="code">526010</field>
+		</record>
+		<record id="eco_act_446" model="economic.activity">
+			<field name="name">REPARACIONES ELÉCTRICAS Y ELECTRÓNICAS</field>
+			<field name="code">526020</field>
+		</record>
+		<record id="eco_act_447" model="economic.activity">
+			<field name="name">REPARACIÓN DE RELOJES Y JOYAS</field>
+			<field name="code">526030</field>
+		</record>
+		<record id="eco_act_448" model="economic.activity">
+			<field name="name">OTRAS REPARACIONES DE EFECTOS PERSONALES Y ENSERES DOMÉSTICOS N.C.P.</field>
+			<field name="code">526090</field>
+		</record>
+		<record id="eco_act_449" model="economic.activity">
+			<field name="name">HOTELES</field>
+			<field name="code">551010</field>
+		</record>
+		<record id="eco_act_450" model="economic.activity">
+			<field name="name">MOTELES</field>
+			<field name="code">551020</field>
+		</record>
+		<record id="eco_act_451" model="economic.activity">
+			<field name="name">RESIDENCIALES</field>
+			<field name="code">551030</field>
+		</record>
+		<record id="eco_act_452" model="economic.activity">
+			<field name="name">OTROS TIPOS DE HOSPEDAJE TEMPORAL COMO CAMPING, ALBERGUES, POSADAS, REFUGIOS Y SIMILARES</field>
+			<field name="code">551090</field>
+		</record>
+		<record id="eco_act_453" model="economic.activity">
+			<field name="name">RESTAURANTES, BARES Y CANTINAS</field>
+			<field name="code">Código</field>
+		</record>
+		<record id="eco_act_454" model="economic.activity">
+			<field name="name">RESTAURANTES</field>
+			<field name="code">552010</field>
+		</record>
+		<record id="eco_act_455" model="economic.activity">
+			<field name="name">ESTABLECIMIENTOS DE COMIDA RÁPIDA (BARES, FUENTES DE SODA, GELATERÍAS, PIZZERÍAS Y SIMILARES)</field>
+			<field name="code">552020</field>
+		</record>
+		<record id="eco_act_456" model="economic.activity">
+			<field name="name">CASINOS Y CLUBES SOCIALES</field>
+			<field name="code">552030</field>
+		</record>
+		<record id="eco_act_457" model="economic.activity">
+			<field name="name">SERVICIOS DE COMIDA PREPARADA EN FORMA INDUSTRIAL</field>
+			<field name="code">552040</field>
+		</record>
+		<record id="eco_act_458" model="economic.activity">
+			<field name="name">SERVICIOS DE BANQUETES, BODAS Y OTRAS CELEBRACIONES</field>
+			<field name="code">552050</field>
+		</record>
+		<record id="eco_act_459" model="economic.activity">
+			<field name="name">SERVICIOS DE OTROS ESTABLECIMIENTOS QUE EXPENDEN COMIDAS Y BEBIDAS</field>
+			<field name="code">552090</field>
+		</record>
+		<record id="eco_act_460" model="economic.activity">
+			<field name="name">TRANSPORTE INTERURBANO DE PASAJEROS POR FERROCARRILES</field>
+			<field name="code">601001</field>
+		</record>
+		<record id="eco_act_461" model="economic.activity">
+			<field name="name">TRANSPORTE DE CARGA POR FERROCARRILES</field>
+			<field name="code">601002</field>
+		</record>
+		<record id="eco_act_462" model="economic.activity">
+			<field name="name">TRANSPORTE URBANO DE PASAJEROS VÍA FERROCARRIL (INCLUYE METRO)</field>
+			<field name="code">602110</field>
+		</record>
+		<record id="eco_act_463" model="economic.activity">
+			<field name="name">TRANSPORTE URBANO DE PASAJEROS VÍA AUTOBUS (LOCOMOCIÓN COLECTIVA)</field>
+			<field name="code">602120</field>
+		</record>
+		<record id="eco_act_464" model="economic.activity">
+			<field name="name">TRANSPORTE INTERURBANO DE PASAJEROS VÍA AUTOBUS</field>
+			<field name="code">602130</field>
+		</record>
+		<record id="eco_act_465" model="economic.activity">
+			<field name="name">TRANSPORTE URBANO DE PASAJEROS VÍA TAXI COLECTIVO</field>
+			<field name="code">602140</field>
+		</record>
+		<record id="eco_act_466" model="economic.activity">
+			<field name="name">SERVICIOS DE TRANSPORTE ESCOLAR</field>
+			<field name="code">602150</field>
+		</record>
+		<record id="eco_act_467" model="economic.activity">
+			<field name="name">SERVICIOS DE TRANSPORTE DE TRABAJADORES</field>
+			<field name="code">602160</field>
+		</record>
+		<record id="eco_act_468" model="economic.activity">
+			<field name="name">OTROS TIPOS DE TRANSPORTE REGULAR DE PASAJEROS POR VÍA TERRESTRE N.C.P.</field>
+			<field name="code">602190</field>
+		</record>
+		<record id="eco_act_469" model="economic.activity">
+			<field name="name">TRANSPORTES POR TAXIS LIBRES Y RADIOTAXIS</field>
+			<field name="code">602210</field>
+		</record>
+		<record id="eco_act_470" model="economic.activity">
+			<field name="name">SERVICIOS DE TRANSPORTE A TURISTAS</field>
+			<field name="code">602220</field>
+		</record>
+		<record id="eco_act_471" model="economic.activity">
+			<field name="name">TRANSPORTE DE PASAJEROS EN VEHÍCULOS DE TRACCIÓN HUMANA Y ANIMAL</field>
+			<field name="code">602230</field>
+		</record>
+		<record id="eco_act_472" model="economic.activity">
+			<field name="name">OTROS TIPOS DE TRANSPORTE NO REGULAR DE PASAJEROS N.C.P.</field>
+			<field name="code">602290</field>
+		</record>
+		<record id="eco_act_473" model="economic.activity">
+			<field name="name">TRANSPORTE DE CARGA POR CARRETERA</field>
+			<field name="code">602300</field>
+		</record>
+		<record id="eco_act_474" model="economic.activity">
+			<field name="name">TRANSPORTE POR TUBERÍAS</field>
+			<field name="code">603000</field>
+		</record>
+		<record id="eco_act_475" model="economic.activity">
+			<field name="name">TRANSPORTE MARÍTIMO Y DE CABOTAJE DE PASAJEROS</field>
+			<field name="code">611001</field>
+		</record>
+		<record id="eco_act_476" model="economic.activity">
+			<field name="name">TRANSPORTE MARÍTIMO Y DE CABOTAJE DE CARGA</field>
+			<field name="code">611002</field>
+		</record>
+		<record id="eco_act_477" model="economic.activity">
+			<field name="name">TRANSPORTE DE PASAJEROS POR VÍAS DE NAVEGACIÓN INTERIORES</field>
+			<field name="code">612001</field>
+		</record>
+		<record id="eco_act_478" model="economic.activity">
+			<field name="name">TRANSPORTE DE CARGA POR VÍAS DE NAVEGACIÓN INTERIORES</field>
+			<field name="code">612002</field>
+		</record>
+		<record id="eco_act_479" model="economic.activity">
+			<field name="name">TRANSPORTE REGULAR POR VÍA AÉREA DE PASAJEROS</field>
+			<field name="code">621010</field>
+		</record>
+		<record id="eco_act_480" model="economic.activity">
+			<field name="name">TRANSPORTE REGULAR POR VÍA AÉREA DE CARGA</field>
+			<field name="code">621020</field>
+		</record>
+		<record id="eco_act_481" model="economic.activity">
+			<field name="name">TRANSPORTE NO REGULAR POR VÍA AÉREA DE PASAJEROS</field>
+			<field name="code">622001</field>
+		</record>
+		<record id="eco_act_482" model="economic.activity">
+			<field name="name">TRANSPORTE NO REGULAR POR VÍA AÉREA DE CARGA</field>
+			<field name="code">622002</field>
+		</record>
+		<record id="eco_act_483" model="economic.activity">
+			<field name="name">MANIPULACIÓN DE LA CARGA</field>
+			<field name="code">630100</field>
+		</record>
+		<record id="eco_act_484" model="economic.activity">
+			<field name="name">SERVICIOS DE ALMACENAMIENTO Y DEPÓSITO</field>
+			<field name="code">630200</field>
+		</record>
+		<record id="eco_act_485" model="economic.activity">
+			<field name="name">TERMINALES TERRESTRES DE PASAJEROS</field>
+			<field name="code">630310</field>
+		</record>
+		<record id="eco_act_486" model="economic.activity">
+			<field name="name">ESTACIONAMIENTO DE VEHÍCULOS Y PARQUÍMETROS</field>
+			<field name="code">630320</field>
+		</record>
+		<record id="eco_act_487" model="economic.activity">
+			<field name="name">PUERTOS Y AEROPUERTOS</field>
+			<field name="code">630330</field>
+		</record>
+		<record id="eco_act_488" model="economic.activity">
+			<field name="name">SERVICIOS PRESTADOS POR CONCESIONARIOS DE CARRETERAS</field>
+			<field name="code">630340</field>
+		</record>
+		<record id="eco_act_489" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES CONEXAS AL TRANSPORTE N.C.P.</field>
+			<field name="code">630390</field>
+		</record>
+		<record id="eco_act_490" model="economic.activity">
+			<field name="name">AGENCIAS Y ORGANIZADORES DE VIAJES; ACTIVIDADES DE ASISTENCIA A TURISTAS N.C.P.</field>
+			<field name="code">630400</field>
+		</record>
+		<record id="eco_act_491" model="economic.activity">
+			<field name="name">AGENCIAS DE ADUANAS</field>
+			<field name="code">630910</field>
+		</record>
+		<record id="eco_act_492" model="economic.activity">
+			<field name="name">AGENCIAS DE TRANSPORTE</field>
+			<field name="code">630920</field>
+		</record>
+		<record id="eco_act_493" model="economic.activity">
+			<field name="name">ACTIVIDADES POSTALES NACIONALES</field>
+			<field name="code">641100</field>
+		</record>
+		<record id="eco_act_494" model="economic.activity">
+			<field name="name">ACTIVIDADES DE CORREO DISTINTAS DE LAS ACTIVIDADES POSTALES NACIONALES</field>
+			<field name="code">641200</field>
+		</record>
+		<record id="eco_act_495" model="economic.activity">
+			<field name="name">SERVICIOS DE TELEFONÍA FIJA</field>
+			<field name="code">642010</field>
+		</record>
+		<record id="eco_act_496" model="economic.activity">
+			<field name="name">SERVICIOS DE TELEFONÍA MÓVIL</field>
+			<field name="code">642020</field>
+		</record>
+		<record id="eco_act_497" model="economic.activity">
+			<field name="name">PORTADORES TELEFÓNICOS (LARGA DISTANCIA NACIONAL E INTERNACIONAL)</field>
+			<field name="code">642030</field>
+		</record>
+		<record id="eco_act_498" model="economic.activity">
+			<field name="name">SERVICIOS DE TELEVISIÓN NO ABIERTA</field>
+			<field name="code">642040</field>
+		</record>
+		<record id="eco_act_499" model="economic.activity">
+			<field name="name">PROVEEDORES DE INTERNET</field>
+			<field name="code">642050</field>
+		</record>
+		<record id="eco_act_500" model="economic.activity">
+			<field name="name">CENTROS DE LLAMADOS; INCLUYE ENVÍO DE FAX</field>
+			<field name="code">642061</field>
+		</record>
+		<record id="eco_act_501" model="economic.activity">
+			<field name="name">CENTROS DE ACCESO A INTERNET</field>
+			<field name="code">642062</field>
+		</record>
+		<record id="eco_act_502" model="economic.activity">
+			<field name="name">OTROS SERVICIOS DE TELECOMUNICACIONES N.C.P.</field>
+			<field name="code">642090</field>
+		</record>
+		<record id="eco_act_503" model="economic.activity">
+			<field name="name">BANCA CENTRAL</field>
+			<field name="code">651100</field>
+		</record>
+		<record id="eco_act_504" model="economic.activity">
+			<field name="name">BANCOS</field>
+			<field name="code">651910</field>
+		</record>
+		<record id="eco_act_505" model="economic.activity">
+			<field name="name">FINANCIERAS</field>
+			<field name="code">651920</field>
+		</record>
+		<record id="eco_act_506" model="economic.activity">
+			<field name="name">OTROS TIPOS DE INTERMEDIACIÓN MONETARIA N.C.P.</field>
+			<field name="code">651990</field>
+		</record>
+		<record id="eco_act_507" model="economic.activity">
+			<field name="name">LEASING FINANCIERO</field>
+			<field name="code">659110</field>
+		</record>
+		<record id="eco_act_508" model="economic.activity">
+			<field name="name">LEASING HABITACIONAL</field>
+			<field name="code">659120</field>
+		</record>
+		<record id="eco_act_509" model="economic.activity">
+			<field name="name">FINANCIAMIENTO DEL FOMENTO DE LA PRODUCCIÓN</field>
+			<field name="code">659210</field>
+		</record>
+		<record id="eco_act_510" model="economic.activity">
+			<field name="name">ACTIVIDADES DE CRÉDITO PRENDARIO</field>
+			<field name="code">659220</field>
+		</record>
+		<record id="eco_act_511" model="economic.activity">
+			<field name="name">FACTORING</field>
+			<field name="code">659231</field>
+		</record>
+		<record id="eco_act_512" model="economic.activity">
+			<field name="name">SECURITIZADORAS</field>
+			<field name="code">659232</field>
+		</record>
+		<record id="eco_act_513" model="economic.activity">
+			<field name="name">OTROS INSTITUCIONES FINANCIERAS N.C.P.</field>
+			<field name="code">659290</field>
+		</record>
+		<record id="eco_act_514" model="economic.activity">
+			<field name="name">ADMINISTRADORAS DE FONDOS DE INVERSIÓN</field>
+			<field name="code">659911</field>
+		</record>
+		<record id="eco_act_515" model="economic.activity">
+			<field name="name">ADMINISTRADORAS DE FONDOS MUTUOS</field>
+			<field name="code">659912</field>
+		</record>
+		<record id="eco_act_516" model="economic.activity">
+			<field name="name">ADMINISTRADORAS DE FICES (FONDOS DE INVERSIÓN DE CAPITAL EXTRANJERO)</field>
+			<field name="code">659913</field>
+		</record>
+		<record id="eco_act_517" model="economic.activity">
+			<field name="name">ADMINISTRADORAS DE FONDOS PARA LA VIVIENDA</field>
+			<field name="code">659914</field>
+		</record>
+		<record id="eco_act_518" model="economic.activity">
+			<field name="name">ADMINISTRADORAS DE FONDOS PARA OTROS FINES Y/O GENERALES</field>
+			<field name="code">659915</field>
+		</record>
+		<record id="eco_act_519" model="economic.activity">
+			<field name="name">SOCIEDADES DE INVERSIÓN Y RENTISTAS DE CAPITALES MOBILIARIOS EN GENERAL</field>
+			<field name="code">659920</field>
+		</record>
+		<record id="eco_act_520" model="economic.activity">
+			<field name="name">PLANES DE SEGURO DE VIDA</field>
+			<field name="code">660101</field>
+		</record>
+		<record id="eco_act_521" model="economic.activity">
+			<field name="name">PLANES DE REASEGUROS DE VIDA</field>
+			<field name="code">660102</field>
+		</record>
+		<record id="eco_act_522" model="economic.activity">
+			<field name="name">ADMINISTRADORAS DE FONDOS DE PENSIONES (AFP)</field>
+			<field name="code">660200</field>
+		</record>
+		<record id="eco_act_523" model="economic.activity">
+			<field name="name">PLANES DE SEGUROS GENERALES</field>
+			<field name="code">660301</field>
+		</record>
+		<record id="eco_act_524" model="economic.activity">
+			<field name="name">PLANES DE REASEGUROS GENERALES</field>
+			<field name="code">660302</field>
+		</record>
+		<record id="eco_act_525" model="economic.activity">
+			<field name="name">ISAPRES</field>
+			<field name="code">660400</field>
+		</record>
+		<record id="eco_act_526" model="economic.activity">
+			<field name="name">ADMINISTRACIÓN DE MERCADOS FINANCIEROS</field>
+			<field name="code">671100</field>
+		</record>
+		<record id="eco_act_527" model="economic.activity">
+			<field name="name">CORREDORES DE BOLSA</field>
+			<field name="code">671210</field>
+		</record>
+		<record id="eco_act_528" model="economic.activity">
+			<field name="name">AGENTES DE VALORES</field>
+			<field name="code">671220</field>
+		</record>
+		<record id="eco_act_529" model="economic.activity">
+			<field name="name">OTROS SERVICIOS DE CORRETAJE</field>
+			<field name="code">671290</field>
+		</record>
+		<record id="eco_act_530" model="economic.activity">
+			<field name="name">CÁMARA DE COMPENSACIÓN</field>
+			<field name="code">671910</field>
+		</record>
+		<record id="eco_act_531" model="economic.activity">
+			<field name="name">ADMINISTRADORA DE TARJETAS DE CRÉDITO</field>
+			<field name="code">671921</field>
+		</record>
+		<record id="eco_act_532" model="economic.activity">
+			<field name="name">EMPRESAS DE ASESORÍA, CONSULTORÍA FINANCIERA Y DE APOYO AL GIRO</field>
+			<field name="code">671929</field>
+		</record>
+		<record id="eco_act_533" model="economic.activity">
+			<field name="name">CLASIFICADORES DE RIESGOS</field>
+			<field name="code">671930</field>
+		</record>
+		<record id="eco_act_534" model="economic.activity">
+			<field name="name">CASAS DE CAMBIO Y OPERADORES DE DIVISA</field>
+			<field name="code">671940</field>
+		</record>
+		<record id="eco_act_535" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES AUXILIARES DE LA INTERMEDIACIÓN FINANCIERA N.C.P.</field>
+			<field name="code">671990</field>
+		</record>
+		<record id="eco_act_536" model="economic.activity">
+			<field name="name">CORREDORES DE SEGUROS</field>
+			<field name="code">672010</field>
+		</record>
+		<record id="eco_act_537" model="economic.activity">
+			<field name="name">AGENTES Y LIQUIDADORES DE SEGUROS</field>
+			<field name="code">672020</field>
+		</record>
+		<record id="eco_act_538" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES AUXILIARES DE LA FINANCIACIÓN DE PLANES DE SEGUROS Y DE PENSIONES N.C.P.</field>
+			<field name="code">672090</field>
+		</record>
+		<record id="eco_act_539" model="economic.activity">
+			<field name="name">ARRIENDO DE INMUEBLES AMOBLADOS O CON EQUIPOS Y MAQUINARIAS</field>
+			<field name="code">701001</field>
+		</record>
+		<record id="eco_act_540" model="economic.activity">
+			<field name="name">COMPRA, VENTA Y ALQUILER (EXCEPTO AMOBLADOS) DE INMUEBLES PROPIOS O ARRENDADOS</field>
+			<field name="code">701009</field>
+		</record>
+		<record id="eco_act_541" model="economic.activity">
+			<field name="name">ACT. INMOBILIARIAS REALIZADAS A CAMBIO DE RETRIBUCIÓN O POR CONTRATA</field>
+			<field name="code">Código</field>
+		</record>
+		<record id="eco_act_542" model="economic.activity">
+			<field name="name">CORREDORES DE PROPIEDADES</field>
+			<field name="code">702000</field>
+		</record>
+		<record id="eco_act_543" model="economic.activity">
+			<field name="name">ALQUILER DE AUTOS Y CAMIONETAS SIN CHOFER</field>
+			<field name="code">711101</field>
+		</record>
+		<record id="eco_act_544" model="economic.activity">
+			<field name="name">ALQUILER DE OTROS EQUIPOS DE TRANSPORTE POR VÍA TERRESTRE SIN OPERARIOS</field>
+			<field name="code">711102</field>
+		</record>
+		<record id="eco_act_545" model="economic.activity">
+			<field name="name">ALQUILER DE TRANSPORTE POR VÍA ACUÁTICA SIN TRIPULACIÓN</field>
+			<field name="code">711200</field>
+		</record>
+		<record id="eco_act_546" model="economic.activity">
+			<field name="name">ALQUILER DE EQUIPO DE TRANSPORTE POR VÍA AÉREA SIN TRIPULANTES</field>
+			<field name="code">711300</field>
+		</record>
+		<record id="eco_act_547" model="economic.activity">
+			<field name="name">ALQUILER DE MAQUINARIA Y EQUIPO AGROPECUARIO</field>
+			<field name="code">712100</field>
+		</record>
+		<record id="eco_act_548" model="economic.activity">
+			<field name="name">ALQUILER DE MAQUINARIA Y EQUIPO DE CONSTRUCCIÓN E INGENIERÍA CIVIL</field>
+			<field name="code">712200</field>
+		</record>
+		<record id="eco_act_549" model="economic.activity">
+			<field name="name">ALQUILER DE MAQUINARIA Y EQUIPO DE OFICINA (SIN OPERARIOS NI SERVICIO ADMINISTRATIVO)</field>
+			<field name="code">712300</field>
+		</record>
+		<record id="eco_act_550" model="economic.activity">
+			<field name="name">ALQUILER DE OTROS TIPOS DE MAQUINARIAS Y EQUIPOS N.C.P.</field>
+			<field name="code">712900</field>
+		</record>
+		<record id="eco_act_551" model="economic.activity">
+			<field name="name">ALQUILER DE BICICLETAS Y ARTÍCULOS PARA DEPORTES</field>
+			<field name="code">713010</field>
+		</record>
+		<record id="eco_act_552" model="economic.activity">
+			<field name="name">ARRIENDO DE VIDEOS, JUEGOS DE VIDEO, Y EQUIPOS REPRODUCTORES DE VIDEO, MÚSICA Y SIMILARES</field>
+			<field name="code">713020</field>
+		</record>
+		<record id="eco_act_553" model="economic.activity">
+			<field name="name">ALQUILER DE MOBILIARIO PARA EVENTOS (SILLAS, MESAS, MESONES, VAJILLAS, TOLDOS Y RELACIONADOS)</field>
+			<field name="code">713030</field>
+		</record>
+		<record id="eco_act_554" model="economic.activity">
+			<field name="name">ALQUILER DE OTROS EFECTOS PERSONALES Y ENSERES DOMÉSTICOS N.C.P.</field>
+			<field name="code">713090</field>
+		</record>
+		<record id="eco_act_555" model="economic.activity">
+			<field name="name">ASESORES Y CONSULTORES EN INFORMÁTICA (SOFTWARE)</field>
+			<field name="code">722000</field>
+		</record>
+		<record id="eco_act_556" model="economic.activity">
+			<field name="name">PROCESAMIENTO DE DATOS Y ACTIVIDADES RELACIONADAS CON BASES DE DATOS</field>
+			<field name="code">724000</field>
+		</record>
+		<record id="eco_act_557" model="economic.activity">
+			<field name="name">EMPRESAS DE SERVICIOS INTEGRALES DE INFORMÁTICA</field>
+			<field name="code">726000</field>
+		</record>
+		<record id="eco_act_558" model="economic.activity">
+			<field name="name">MANTENIMIENTO Y REPARACIÓN DE MAQUINARIA DE OFICINA, CONTABILIDAD E INFORMÁTICA</field>
+			<field name="code">725000</field>
+		</record>
+		<record id="eco_act_559" model="economic.activity">
+			<field name="name">INVESTIGACIONES Y DESARROLLO EXPERIMENTAL EN EL CAMPO DE LAS CIENCIAS NATURALES Y LA INGENIERÍA</field>
+			<field name="code">731000</field>
+		</record>
+		<record id="eco_act_560" model="economic.activity">
+			<field name="name">INVESTIGACIONES Y DESARROLLO EXPERIMENTAL EN EL CAMPO DE LAS CIENCIAS SOCIALES Y LAS HUMANIDADES</field>
+			<field name="code">732000</field>
+		</record>
+		<record id="eco_act_561" model="economic.activity">
+			<field name="name">SERVICIOS JURÍDICOS</field>
+			<field name="code">741110</field>
+		</record>
+		<record id="eco_act_562" model="economic.activity">
+			<field name="name">SERVICIO NOTARIAL</field>
+			<field name="code">741120</field>
+		</record>
+		<record id="eco_act_563" model="economic.activity">
+			<field name="name">CONSERVADOR DE BIENES RAICES</field>
+			<field name="code">741130</field>
+		</record>
+		<record id="eco_act_564" model="economic.activity">
+			<field name="name">RECEPTORES JUDICIALES</field>
+			<field name="code">741140</field>
+		</record>
+		<record id="eco_act_565" model="economic.activity">
+			<field name="name">ARBITRAJES, SÍNDICOS, PERITOS Y OTROS</field>
+			<field name="code">741190</field>
+		</record>
+		<record id="eco_act_566" model="economic.activity">
+			<field name="name">ACTIVIDADES DE CONTABILIDAD, TENEDURÍA DE LIBROS Y AUDITORÍA; ASESORAMIENTOS TRIBUTARIOS</field>
+			<field name="code">741200</field>
+		</record>
+		<record id="eco_act_567" model="economic.activity">
+			<field name="name">INVESTIGACIÓN DE MERCADOS Y REALIZACIÓN DE ENCUESTAS DE OPINIÓN PÚBLICA</field>
+			<field name="code">741300</field>
+		</record>
+		<record id="eco_act_568" model="economic.activity">
+			<field name="name">ACTIVIDADES DE ASESORAMIENTO EMPRESARIAL Y EN MATERIA DE GESTIÓN</field>
+			<field name="code">741400</field>
+		</record>
+		<record id="eco_act_569" model="economic.activity">
+			<field name="name">SERVICIOS DE ARQUITECTURA Y TÉCNICO RELACIONADO</field>
+			<field name="code">742110</field>
+		</record>
+		<record id="eco_act_570" model="economic.activity">
+			<field name="name">EMPRESAS DE SERVICIOS GEOLÓGICOS Y DE PROSPECCIÓN</field>
+			<field name="code">742121</field>
+		</record>
+		<record id="eco_act_571" model="economic.activity">
+			<field name="name">SERVICIOS PROFESIONALES EN GEOLOGÍA Y PROSPECCIÓN</field>
+			<field name="code">742122</field>
+		</record>
+		<record id="eco_act_572" model="economic.activity">
+			<field name="name">EMPRESAS DE SERVICIOS DE TOPOGRAFÍA Y AGRIMENSURA</field>
+			<field name="code">742131</field>
+		</record>
+		<record id="eco_act_573" model="economic.activity">
+			<field name="name">SERVICIOS PROFESIONALES DE TOPOGRAFÍA Y AGRIMENSURA</field>
+			<field name="code">742132</field>
+		</record>
+		<record id="eco_act_574" model="economic.activity">
+			<field name="name">SERVICIOS DE INGENIERÍA PRESTADOS POR EMPRESAS N.C.P.</field>
+			<field name="code">742141</field>
+		</record>
+		<record id="eco_act_575" model="economic.activity">
+			<field name="name">SERVICIOS DE INGENIERÍA PRESTADOS POR PROFESIONALES N.C.P.</field>
+			<field name="code">742142</field>
+		</record>
+		<record id="eco_act_576" model="economic.activity">
+			<field name="name">OTROS SERVICIOS DESARROLLADOS POR PROFESIONALES</field>
+			<field name="code">742190</field>
+		</record>
+		<record id="eco_act_577" model="economic.activity">
+			<field name="name">SERVICIO DE REVISIÓN TÉCNICA DE VEHÍCULOS AUTOMOTORES</field>
+			<field name="code">742210</field>
+		</record>
+		<record id="eco_act_578" model="economic.activity">
+			<field name="name">OTROS SERVICIOS DE ENSAYOS Y ANALISIS TÉCNICOS</field>
+			<field name="code">742290</field>
+		</record>
+		<record id="eco_act_579" model="economic.activity">
+			<field name="name">EMPRESAS DE PUBLICIDAD</field>
+			<field name="code">743001</field>
+		</record>
+		<record id="eco_act_580" model="economic.activity">
+			<field name="name">SERVICIOS PERSONALES EN PUBLICIDAD</field>
+			<field name="code">743002</field>
+		</record>
+		<record id="eco_act_581" model="economic.activity">
+			<field name="name">SERVICIOS SUMINISTRO DE PERSONAL; EMPRESAS SERVICIOS TRANSITORIOS</field>
+			<field name="code">749110</field>
+		</record>
+		<record id="eco_act_582" model="economic.activity">
+			<field name="name">SERVICIOS DE RECLUTAMIENTO DE PERSONAL</field>
+			<field name="code">749190</field>
+		</record>
+		<record id="eco_act_583" model="economic.activity">
+			<field name="name">ACTIVIDADES DE INVESTIGACIÓN</field>
+			<field name="code">749210</field>
+		</record>
+		<record id="eco_act_584" model="economic.activity">
+			<field name="name">SERVICIOS INTEGRALES DE SEGURIDAD</field>
+			<field name="code">749221</field>
+		</record>
+		<record id="eco_act_585" model="economic.activity">
+			<field name="name">TRANSPORTE DE VALORES</field>
+			<field name="code">749222</field>
+		</record>
+		<record id="eco_act_586" model="economic.activity">
+			<field name="name">SERVICIOS PERSONALES RELACIONADOS CON SEGURIDAD</field>
+			<field name="code">749229</field>
+		</record>
+		<record id="eco_act_587" model="economic.activity">
+			<field name="name">EMPRESAS DE LIMPIEZA DE EDIFICIOS RESIDENCIALES Y NO RESIDENCIALES</field>
+			<field name="code">749310</field>
+		</record>
+		<record id="eco_act_588" model="economic.activity">
+			<field name="name">DESRATIZACIÓN Y FUMIGACIÓN NO AGRÍCOLA</field>
+			<field name="code">749320</field>
+		</record>
+		<record id="eco_act_589" model="economic.activity">
+			<field name="name">SERVICIOS DE REVELADO, IMPRESIÓN, AMPLIACIÓN DE FOTOGRAFÍAS</field>
+			<field name="code">749401</field>
+		</record>
+		<record id="eco_act_590" model="economic.activity">
+			<field name="name">ACTIVIDADES DE FOTOGRAFÍA PUBLICITARIA</field>
+			<field name="code">749402</field>
+		</record>
+		<record id="eco_act_591" model="economic.activity">
+			<field name="name">SERVICIOS PERSONALES DE FOTOGRAFÍA</field>
+			<field name="code">749409</field>
+		</record>
+		<record id="eco_act_592" model="economic.activity">
+			<field name="name">SERVICIOS DE ENVASADO Y EMPAQUE</field>
+			<field name="code">749500</field>
+		</record>
+		<record id="eco_act_593" model="economic.activity">
+			<field name="name">SERVICIOS DE COBRANZA DE CUENTAS</field>
+			<field name="code">749911</field>
+		</record>
+		<record id="eco_act_594" model="economic.activity">
+			<field name="name">EVALUACIÓN Y CALIFICACIÓN DEL GRADO DE SOLVENCIA</field>
+			<field name="code">749912</field>
+		</record>
+		<record id="eco_act_595" model="economic.activity">
+			<field name="name">ASESORÍAS EN LA GESTIÓN DE LA COMPRA O VENTA DE PEQUENAS Y MEDIANAS EMPRESAS</field>
+			<field name="code">749913</field>
+		</record>
+		<record id="eco_act_596" model="economic.activity">
+			<field name="name">DISENADORES DE VESTUARIO</field>
+			<field name="code">749921</field>
+		</record>
+		<record id="eco_act_597" model="economic.activity">
+			<field name="name">DISENADORES DE INTERIORES</field>
+			<field name="code">749922</field>
+		</record>
+		<record id="eco_act_598" model="economic.activity">
+			<field name="name">OTROS DISENADORES N.C.P.</field>
+			<field name="code">749929</field>
+		</record>
+		<record id="eco_act_599" model="economic.activity">
+			<field name="name">EMPRESAS DE TAQUIGRAFÍA, REPRODUCCIÓN, DESPACHO DE CORRESPONDENCIA, Y OTRAS LABORES DE OFICINA</field>
+			<field name="code">749931</field>
+		</record>
+		<record id="eco_act_600" model="economic.activity">
+			<field name="name">SERVICIOS PERSONALES DE TRADUCCIÓN, INTERPRETACIÓN Y LABORES DE OFICINA</field>
+			<field name="code">749932</field>
+		</record>
+		<record id="eco_act_601" model="economic.activity">
+			<field name="name">EMPRESAS DE TRADUCCIÓN E INTERPRETACIÓN</field>
+			<field name="code">749933</field>
+		</record>
+		<record id="eco_act_602" model="economic.activity">
+			<field name="name">SERVICIOS DE FOTOCOPIAS</field>
+			<field name="code">749934</field>
+		</record>
+		<record id="eco_act_603" model="economic.activity">
+			<field name="name">AGENCIAS DE CONTRATACIÓN DE ACTORES</field>
+			<field name="code">749940</field>
+		</record>
+		<record id="eco_act_604" model="economic.activity">
+			<field name="name">ACTIVIDADES DE SUBASTA (MARTILLEROS)</field>
+			<field name="code">749950</field>
+		</record>
+		<record id="eco_act_605" model="economic.activity">
+			<field name="name">GALERÍAS DE ARTE</field>
+			<field name="code">749961</field>
+		</record>
+		<record id="eco_act_606" model="economic.activity">
+			<field name="name">FERIAS DE EXPOSICIONES CON FINES EMPRESARIALES</field>
+			<field name="code">749962</field>
+		</record>
+		<record id="eco_act_607" model="economic.activity">
+			<field name="name">SERVICIOS DE CONTESTACIÓN DE LLAMADAS (CALL CENTER)</field>
+			<field name="code">749970</field>
+		</record>
+		<record id="eco_act_608" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES EMPRESARIALES N.C.P.</field>
+			<field name="code">749990</field>
+		</record>
+		<record id="eco_act_609" model="economic.activity">
+			<field name="name">GOBIERNO CENTRAL</field>
+			<field name="code">751110</field>
+		</record>
+		<record id="eco_act_610" model="economic.activity">
+			<field name="name">MUNICIPALIDADES</field>
+			<field name="code">751120</field>
+		</record>
+		<record id="eco_act_611" model="economic.activity">
+			<field name="name">ACTIVIDADES DEL PODER JUDICIAL</field>
+			<field name="code">751200</field>
+		</record>
+		<record id="eco_act_612" model="economic.activity">
+			<field name="name">ACTIVIDADES DEL PODER LEGISLATIVO</field>
+			<field name="code">751300</field>
+		</record>
+		<record id="eco_act_613" model="economic.activity">
+			<field name="name">RELACIONES EXTERIORES</field>
+			<field name="code">752100</field>
+		</record>
+		<record id="eco_act_614" model="economic.activity">
+			<field name="name">ACTIVIDADES DE DEFENSA</field>
+			<field name="code">752200</field>
+		</record>
+		<record id="eco_act_615" model="economic.activity">
+			<field name="name">ACTIVIDADES DE MANTENIMIENTO DEL ORDEN PÚBLICO Y DE SEGURIDAD</field>
+			<field name="code">752300</field>
+		</record>
+		<record id="eco_act_616" model="economic.activity">
+			<field name="name">ACTIVIDADES DE PLANES DE SEGURIDAD SOCIAL DE AFILIACIÓN OBLIGATORIA RELACIONADOS CON SALUD</field>
+			<field name="code">753010</field>
+		</record>
+		<record id="eco_act_617" model="economic.activity">
+			<field name="name">CAJAS DE COMPENSACIÓN</field>
+			<field name="code">753020</field>
+		</record>
+		<record id="eco_act_618" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES DE PLANES DE SEGURIDAD SOCIAL DE AFILIACIÓN OBLIGATORIA</field>
+			<field name="code">753090</field>
+		</record>
+		<record id="eco_act_619" model="economic.activity">
+			<field name="name">ESTABLECIMIENTOS DE ENSEÑANZA PREESCOLAR</field>
+			<field name="code">801010</field>
+		</record>
+		<record id="eco_act_620" model="economic.activity">
+			<field name="name">ESTABLECIMIENTOS DE ENSEÑANZA PRIMARIA</field>
+			<field name="code">801020</field>
+		</record>
+		<record id="eco_act_621" model="economic.activity">
+			<field name="name">ESTABLECIMIENTOS DE ENSEÑANZA SECUNDARIA DE FORMACIÓN GENERAL</field>
+			<field name="code">802100</field>
+		</record>
+		<record id="eco_act_622" model="economic.activity">
+			<field name="name">ESTABLECIMIENTOS DE ENSEÑANZA SECUNDARIA DE FORMACIÓN TÉCNICA Y PROFESIONAL</field>
+			<field name="code">802200</field>
+		</record>
+		<record id="eco_act_623" model="economic.activity">
+			<field name="name">UNIVERSIDADES</field>
+			<field name="code">803010</field>
+		</record>
+		<record id="eco_act_624" model="economic.activity">
+			<field name="name">INSTITUTOS PROFESIONALES</field>
+			<field name="code">803020</field>
+		</record>
+		<record id="eco_act_625" model="economic.activity">
+			<field name="name">CENTROS DE FORMACIÓN TÉCNICA</field>
+			<field name="code">803030</field>
+		</record>
+		<record id="eco_act_626" model="economic.activity">
+			<field name="name">ESTABLECIMIENTOS DE ENSEÑANZA PRIMARIA Y SECUNDARIA PARA ADULTOS</field>
+			<field name="code">809010</field>
+		</record>
+		<record id="eco_act_627" model="economic.activity">
+			<field name="name">ESTABLECIMIENTOS DE ENSEÑANZA PREUNIVERSITARIA</field>
+			<field name="code">809020</field>
+		</record>
+		<record id="eco_act_628" model="economic.activity">
+			<field name="name">EDUCACIÓN EXTRAESCOLAR (ESCUELA DE CONDUCCIÓN, MÚSICA, MODELAJE, ETC.)</field>
+			<field name="code">809030</field>
+		</record>
+		<record id="eco_act_629" model="economic.activity">
+			<field name="name">EDUCACIÓN A DISTANCIA (INTERNET, CORRESPONDENCIA, OTRAS)</field>
+			<field name="code">809041</field>
+		</record>
+		<record id="eco_act_630" model="economic.activity">
+			<field name="name">SERVICIOS PERSONALES DE EDUCACIÓN</field>
+			<field name="code">809049</field>
+		</record>
+		<record id="eco_act_631" model="economic.activity">
+			<field name="name">HOSPITALES Y CLÍNICAS</field>
+			<field name="code">851110</field>
+		</record>
+		<record id="eco_act_632" model="economic.activity">
+			<field name="name">CLÍNICAS PSIQUIATRICAS, CENTROS DE REHABILITACIÓN, ASILOS Y CLÍNICAS DE REPOSO</field>
+			<field name="code">851120</field>
+		</record>
+		<record id="eco_act_633" model="economic.activity">
+			<field name="name">SERVICIOS DE MÉDICOS EN FORMA INDEPENDIENTE</field>
+			<field name="code">851211</field>
+		</record>
+		<record id="eco_act_634" model="economic.activity">
+			<field name="name">ESTABLECIMIENTOS MÉDICOS DE ATENCIÓN AMBULATORIA (CENTROS MÉDICOS)</field>
+			<field name="code">851212</field>
+		</record>
+		<record id="eco_act_635" model="economic.activity">
+			<field name="name">SERVICIOS DE ODONTÓLOGOS EN FORMA INDEPENDIENTE</field>
+			<field name="code">851221</field>
+		</record>
+		<record id="eco_act_636" model="economic.activity">
+			<field name="name">CENTROS DE ATENCIÓN ODONTOLÓGICA</field>
+			<field name="code">851222</field>
+		</record>
+		<record id="eco_act_637" model="economic.activity">
+			<field name="name">LABORATORIOS CLÍNICOS; INCLUYE BANCOS DE SANGRE</field>
+			<field name="code">851910</field>
+		</record>
+		<record id="eco_act_638" model="economic.activity">
+			<field name="name">OTROS PROFESIONALES DE LA SALUD</field>
+			<field name="code">851920</field>
+		</record>
+		<record id="eco_act_639" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES EMPRESARIALES RELACIONADAS CON LA SALUD HUMANA</field>
+			<field name="code">851990</field>
+		</record>
+		<record id="eco_act_640" model="economic.activity">
+			<field name="name">ACTIVIDADES DE CLÍNICAS VETERINARIAS</field>
+			<field name="code">852010</field>
+		</record>
+		<record id="eco_act_641" model="economic.activity">
+			<field name="name">SERVICIOS DE MÉDICOS VETERINARIOS EN FORMA INDEPENDIENTE</field>
+			<field name="code">852021</field>
+		</record>
+		<record id="eco_act_642" model="economic.activity">
+			<field name="name">SERVICIOS DE OTROS PROFESIONALES INDEPENDIENTES EN EL ÁREA VETERINARIA</field>
+			<field name="code">852029</field>
+		</record>
+		<record id="eco_act_643" model="economic.activity">
+			<field name="name">ACTIVIDADES DE SERVICIOS SOCIALES</field>
+			<field name="code">Código</field>
+		</record>
+		<record id="eco_act_644" model="economic.activity">
+			<field name="name">SERVICIOS SOCIALES CON ALOJAMIENTO</field>
+			<field name="code">853100</field>
+		</record>
+		<record id="eco_act_645" model="economic.activity">
+			<field name="name">SERVICIOS SOCIALES SIN ALOJAMIENTO</field>
+			<field name="code">853200</field>
+		</record>
+		<record id="eco_act_646" model="economic.activity">
+			<field name="name">SERVICIOS DE VERTEDEROS</field>
+			<field name="code">900010</field>
+		</record>
+		<record id="eco_act_647" model="economic.activity">
+			<field name="name">BARRIDO DE EXTERIORES</field>
+			<field name="code">900020</field>
+		</record>
+		<record id="eco_act_648" model="economic.activity">
+			<field name="name">RECOGIDA Y ELIMINACIÓN DE DESECHOS</field>
+			<field name="code">900030</field>
+		</record>
+		<record id="eco_act_649" model="economic.activity">
+			<field name="name">SERVICIOS DE EVACUACIÓN DE RILES Y AGUAS SERVIDAS</field>
+			<field name="code">900040</field>
+		</record>
+		<record id="eco_act_650" model="economic.activity">
+			<field name="name">SERVICIOS DE TRATAMIENTO DE RILES Y AGUAS SERVIDAS</field>
+			<field name="code">900050</field>
+		</record>
+		<record id="eco_act_651" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES DE MANEJO DE DESPERDICIOS</field>
+			<field name="code">900090</field>
+		</record>
+		<record id="eco_act_652" model="economic.activity">
+			<field name="name">ACTIVIDADES DE ORGANIZACIONES EMPRESARIALES Y DE EMPLEADORES</field>
+			<field name="code">911100</field>
+		</record>
+		<record id="eco_act_653" model="economic.activity">
+			<field name="name">COLEGIOS PROFESIONALES</field>
+			<field name="code">911210</field>
+		</record>
+		<record id="eco_act_654" model="economic.activity">
+			<field name="name">ACTIVIDADES DE OTRAS ORGANIZACIONES PROFESIONALES</field>
+			<field name="code">911290</field>
+		</record>
+		<record id="eco_act_655" model="economic.activity">
+			<field name="name">ACTIVIDADES DE SINDICATOS</field>
+			<field name="code">912000</field>
+		</record>
+		<record id="eco_act_656" model="economic.activity">
+			<field name="name">ACTIVIDADES DE ORGANIZACIONES RELIGIOSAS</field>
+			<field name="code">919100</field>
+		</record>
+		<record id="eco_act_657" model="economic.activity">
+			<field name="name">ACTIVIDADES DE ORGANIZACIONES POLÍTICAS</field>
+			<field name="code">919200</field>
+		</record>
+		<record id="eco_act_658" model="economic.activity">
+			<field name="name">CENTROS DE MADRES Y UNIDADES VECINALES Y COMUNALES</field>
+			<field name="code">919910</field>
+		</record>
+		<record id="eco_act_659" model="economic.activity">
+			<field name="name">CLUBES SOCIALES</field>
+			<field name="code">919920</field>
+		</record>
+		<record id="eco_act_660" model="economic.activity">
+			<field name="name">SERVICIOS DE INSTITUTOS DE ESTUDIOS, FUNDACIONES, CORPORACIONES DE DESARROLLO (EDUCACIÓN, SALUD)</field>
+			<field name="code">919930</field>
+		</record>
+		<record id="eco_act_661" model="economic.activity">
+			<field name="name">ACTIVIDADES DE OTRAS ASOCIACIONES N.C.P.</field>
+			<field name="code">919990</field>
+		</record>
+		<record id="eco_act_662" model="economic.activity">
+			<field name="name">PRODUCCIÓN DE PELÍCULAS CINEMATOGRÁFICAS</field>
+			<field name="code">921110</field>
+		</record>
+		<record id="eco_act_663" model="economic.activity">
+			<field name="name">DISTRIBUIDORA CINEMATOGRÁFICAS</field>
+			<field name="code">921120</field>
+		</record>
+		<record id="eco_act_664" model="economic.activity">
+			<field name="name">EXHIBICIÓN DE FILMES Y VIDEOCINTAS</field>
+			<field name="code">921200</field>
+		</record>
+		<record id="eco_act_665" model="economic.activity">
+			<field name="name">ACTIVIDADES DE TELEVISIÓN</field>
+			<field name="code">921310</field>
+		</record>
+		<record id="eco_act_666" model="economic.activity">
+			<field name="name">ACTIVIDADES DE RADIO</field>
+			<field name="code">921320</field>
+		</record>
+		<record id="eco_act_667" model="economic.activity">
+			<field name="name">SERVICIOS DE PRODUCCIÓN DE RECITALES Y OTROS EVENTOS MUSICALES MASIVOS</field>
+			<field name="code">921411</field>
+		</record>
+		<record id="eco_act_668" model="economic.activity">
+			<field name="name">SERVICIOS DE PRODUCCIÓN TEATRAL Y OTROS N.C.P.</field>
+			<field name="code">921419</field>
+		</record>
+		<record id="eco_act_669" model="economic.activity">
+			<field name="name">ACTIVIDADES EMPRESARIALES DE ARTISTAS</field>
+			<field name="code">921420</field>
+		</record>
+		<record id="eco_act_670" model="economic.activity">
+			<field name="name">ACTIVIDADES ARTÍSTICAS; FUNCIONES DE ARTISTAS, ACTORES, MÚSICOS, CONFERENCISTAS, OTROS</field>
+			<field name="code">921430</field>
+		</record>
+		<record id="eco_act_671" model="economic.activity">
+			<field name="name">AGENCIAS DE VENTA DE BILLETES DE TEATRO, SALAS DE CONCIERTO Y DE TEATRO</field>
+			<field name="code">921490</field>
+		</record>
+		<record id="eco_act_672" model="economic.activity">
+			<field name="name">INSTRUCTORES DE DANZA</field>
+			<field name="code">921911</field>
+		</record>
+		<record id="eco_act_673" model="economic.activity">
+			<field name="name">ACTIVIDADES DE DISCOTECAS, CABARET, SALAS DE BAILE Y SIMILARES</field>
+			<field name="code">921912</field>
+		</record>
+		<record id="eco_act_674" model="economic.activity">
+			<field name="name">ACTIVIDADES DE PARQUES DE ATRACCIONES Y CENTROS SIMILARES</field>
+			<field name="code">921920</field>
+		</record>
+		<record id="eco_act_675" model="economic.activity">
+			<field name="name">ESPECTÁCULOS CIRCENSES, DE TÍTERES U OTROS SIMILARES</field>
+			<field name="code">921930</field>
+		</record>
+		<record id="eco_act_676" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES DE ENTRETENIMIENTO N.C.P.</field>
+			<field name="code">921990</field>
+		</record>
+		<record id="eco_act_677" model="economic.activity">
+			<field name="name">AGENCIAS DE NOTICIAS</field>
+			<field name="code">922001</field>
+		</record>
+		<record id="eco_act_678" model="economic.activity">
+			<field name="name">SERVICIOS PERIODÍSTICOS PRESTADO POR PROFESIONALES</field>
+			<field name="code">922002</field>
+		</record>
+		<record id="eco_act_679" model="economic.activity">
+			<field name="name">ACTIVIDADES DE BIBLIOTECAS Y ARCHIVOS</field>
+			<field name="code">923100</field>
+		</record>
+		<record id="eco_act_680" model="economic.activity">
+			<field name="name">ACTIVIDADES DE MUSEOS Y PRESERVACIÓN DE LUGARES Y EDIFICIOS HISTÓRICOS</field>
+			<field name="code">923200</field>
+		</record>
+		<record id="eco_act_681" model="economic.activity">
+			<field name="name">ACTIVIDADES DE JARDINES BOTÁNICOS Y ZOOLÓGICOS Y DE PARQUES NACIONALES</field>
+			<field name="code">923300</field>
+		</record>
+		<record id="eco_act_682" model="economic.activity">
+			<field name="name">EXPLOTACIÓN DE INSTALACIONES ESPECIALIZADAS PARA LAS PRACTICAS DEPORTIVAS</field>
+			<field name="code">924110</field>
+		</record>
+		<record id="eco_act_683" model="economic.activity">
+			<field name="name">ACTIVIDADES DE CLUBES DE DEPORTES Y ESTADIOS</field>
+			<field name="code">924120</field>
+		</record>
+		<record id="eco_act_684" model="economic.activity">
+			<field name="name">FUTBOL PROFESIONAL</field>
+			<field name="code">924131</field>
+		</record>
+		<record id="eco_act_685" model="economic.activity">
+			<field name="name">FUTBOL AMATEUR</field>
+			<field name="code">924132</field>
+		</record>
+		<record id="eco_act_686" model="economic.activity">
+			<field name="name">HIPÓDROMOS</field>
+			<field name="code">924140</field>
+		</record>
+		<record id="eco_act_687" model="economic.activity">
+			<field name="name">PROMOCIÓN Y ORGANIZACIÓN DE ESPECTÁCULOS DEPORTIVOS</field>
+			<field name="code">924150</field>
+		</record>
+		<record id="eco_act_688" model="economic.activity">
+			<field name="name">ESCUELAS PARA DEPORTES</field>
+			<field name="code">924160</field>
+		</record>
+		<record id="eco_act_689" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES RELACIONADAS AL DEPORTE N.C.P.</field>
+			<field name="code">924190</field>
+		</record>
+		<record id="eco_act_690" model="economic.activity">
+			<field name="name">SISTEMAS DE JUEGOS DE AZAR MASIVOS.</field>
+			<field name="code">924910</field>
+		</record>
+		<record id="eco_act_691" model="economic.activity">
+			<field name="name">ACTIVIDADES DE CASINO DE JUEGOS</field>
+			<field name="code">924920</field>
+		</record>
+		<record id="eco_act_692" model="economic.activity">
+			<field name="name">SALAS DE BILLAR, BOWLING, POOL Y JUEGOS ELECTRÓNICOS</field>
+			<field name="code">924930</field>
+		</record>
+		<record id="eco_act_693" model="economic.activity">
+			<field name="name">CONTRATACIÓN DE ACTORES PARA CINE, TV, Y TEATRO</field>
+			<field name="code">924940</field>
+		</record>
+		<record id="eco_act_694" model="economic.activity">
+			<field name="name">OTROS SERVICIOS DE DIVERSIÓN Y ESPARCIMIENTOS N.C.P.</field>
+			<field name="code">924990</field>
+		</record>
+		<record id="eco_act_695" model="economic.activity">
+			<field name="name">LAVADO Y LIMPIEZA DE PRENDAS DE TELA Y DE PIEL, INCLUSO LAS LIMPIEZAS EN SECO</field>
+			<field name="code">930100</field>
+		</record>
+		<record id="eco_act_696" model="economic.activity">
+			<field name="name">PELUQUERÍAS Y SALONES DE BELLEZA</field>
+			<field name="code">930200</field>
+		</record>
+		<record id="eco_act_697" model="economic.activity">
+			<field name="name">SERVICIOS FUNERARIOS</field>
+			<field name="code">930310</field>
+		</record>
+		<record id="eco_act_698" model="economic.activity">
+			<field name="name">SERVICIOS EN CEMENTERIOS</field>
+			<field name="code">930320</field>
+		</record>
+		<record id="eco_act_699" model="economic.activity">
+			<field name="name">SERVICIOS DE CARROZAS FÚNEBRES (TRANSPORTE DE CADÁVERES)</field>
+			<field name="code">930330</field>
+		</record>
+		<record id="eco_act_700" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES DE SERVICIOS FUNERARIOS Y OTRAS ACTIVIDADES CONEXAS</field>
+			<field name="code">930390</field>
+		</record>
+		<record id="eco_act_701" model="economic.activity">
+			<field name="name">ACTIVIDADES DE MANTENIMIENTO FÍSICO CORPORAL (BAÑOS, TURCOS, SAUNAS)</field>
+			<field name="code">930910</field>
+		</record>
+		<record id="eco_act_702" model="economic.activity">
+			<field name="name">OTRAS ACTIVIDADES DE SERVICIOS PERSONALES N.C.P.</field>
+			<field name="code">930990</field>
+		</record>
+		<record id="eco_act_703" model="economic.activity">
+			<field name="name">HOGARES PRIVADOS INDIVIDUALES CON SERVICIO DOMÉSTICO</field>
+			<field name="code">950001</field>
+		</record>
+		<record id="eco_act_704" model="economic.activity">
+			<field name="name">CONSEJO DE ADMINISTRACIÓN DE EDIFICIOS Y CONDOMINIOS</field>
+			<field name="code">950002</field>
+		</record>
+		<record id="eco_act_705" model="economic.activity">
+			<field name="name">ORGANIZACIONES Y ÓRGANOS EXTRATERRITORIALES</field>
+			<field name="code">990000</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_economic_activity_group_user,Actividades Economicas,model_economic_activity,base.group_user,1,0,0,0
+access_ecert_manager,E-Cert DTE Manager,model_l10n_cl_dte_ecert,group_dte_manager,1,1,1,1
+access_set_company_manager,Set Company Manager,model_set_company_dte,group_dte_manager,1,1,1,1

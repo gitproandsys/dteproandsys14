@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Res Company E-Cert -->
+		<record id="view_res_company_ecert_dte_form" model="ir.ui.view">
+			<field name="name">res.company.ecert.dte.modifier</field>
+			<field name="model">res.company</field>
+			<field name="inherit_id" ref="base.view_company_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[1]" position="after">
+					<div class="oe_right oe_button_box" name="buttons">
+						<button name="%(set_company_action)d" string="Ingresar Compañia" type="action"
+										attrs="{'invisible': [('dte_user','!=',False)]}"/>
+						<button name="set_company_img" string="Ingresar Logo DTE"
+								type="object" attrs="{'invisible': [('dte_user','=',False)]}"/>
+						<button name="get_notifications" string="Obtener Notificaciones DTE"
+								type="object" attrs="{'invisible': [('dte_user','=',False)]}"/>
+					</div>
+				</xpath>
+				<notebook position="inside">
+					<page string="DTE" name="DTE">
+						<group string="DTE" colspan="4">
+							<group>
+								<field name="ind_folios"/>
+							</group>
+							<group>
+								<field name="dte_user"/>
+								<field name="dte_pass"/>
+								<field name="dte_url"/>
+								<field name="resolution_number"/>
+								<field name="resolution_date"/>
+								<field name="sii_suc" required="1"/>
+							</group>
+							<group>
+								<field name="sii_doc_type_id" />
+							</group>
+							<group>
+								<field name="internal_pdf" invisible="1"/>
+								<field name="proxy_ip" />
+							</group>
+
+							<group string="E-cert" colspan="4">
+								<field name="ecert" colspan="4" nolabel="1">
+									<tree>
+										<field name="sequence" widget="handle"/>
+										<field name="name"/>
+									</tree>
+									<form>
+										<group>
+											<field name="name"/>
+										</group>
+										<group>
+											<group>
+												<field name="owner_rut"/>
+												<field name="password" password="1"/>
+											</group>
+											<group>
+												<field name="ecert"/>
+											</group>
+										</group>
+									</form>
+								</field>
+							</group>
+						</group>
+					</page>
+				</notebook>
+			</field>
+		</record>
+	</data>
+</odoo>
+

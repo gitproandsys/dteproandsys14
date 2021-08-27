@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="res_partner_modifier_form" model="ir.ui.view">
+			<field name="name">res.partner.modifier.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+				<field name="category_id" position="before">
+					<field name="giro" placeholder="Giro" attrs="{'required': [('is_company','=',True)]}"/>
+					<field name="nombre_fantasia" placeholder="Nombre de Fantasia"/>
+					<field name="economic_act_ids" widget="many2many_tags" placeholder="Actividad Económica"/>
+				</field>
+                <field name="category_id" position="after">
+                    <field name="coface" />
+                    <field name="dicom" />
+                </field>
+				<field name="email" position="after">
+					<field name="email_dte" widget="email"/>
+					<field name="email_cesor" widget="email"/>
+					<field name="cesionario"/>
+				</field>
+				<field name="lang" position="after">
+					<field name="contacto_invoice_id" context="{'default_type':'contact', 'default_parent_id': id}"/>
+                    <field name="contacto_collection_id" context="{'default_type':'contact', 'default_parent_id': id}"/>
+				</field>
+			</field>
+		</record>
+
+		<record id="view_res_users_ecert_dte_form" model="ir.ui.view">
+			<field name="name">res.users.ecert.dte.modifier</field>
+			<field name="model">res.users</field>
+			<field name="inherit_id" ref="base.view_users_form"/>
+			<field name="arch" type="xml">
+				<field name="company_id" position="after">
+					<field name="ecert" options="{'create': false, 'create_edit': false}"/>
+				</field>
+			</field>
+		</record>
+
+	</data>
+</odoo>
+
