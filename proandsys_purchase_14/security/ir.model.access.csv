@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_regime,access_regime,model_regime,base.group_user,1,1,1,1
+access_tracking,access_tracking,model_tracking,base.group_user,1,1,1,1
+access_transport_route,access_transport_route,model_transport_route,base.group_user,1,1,1,1
+access_container,access_container,model_container,base.group_user,1,1,1,1
+access_tracking_oc,access_tracking_oc,model_tracking_oc,base.group_user,1,1,1,1
+access_container_oc,access_container_oc,model_container_oc,base.group_user,1,1,1,1
+access_incomex_folder,access_incomex_folder,model_incomex_folder,base.group_user,1,1,1,1
+
+access_account_din,access_account_din,model_account_din,base.group_user,1,1,1,1
+access_stock_landed_cost_summary,access_stock_landed_cost_summary,model_stock_landed_cost_summary,base.group_user,1,1,1,1
+access_stock_landed_cost_lines_summary,access_stock_landed_cost_lines_summary,model_stock_landed_cost_lines_summary,base.group_user,1,1,1,1
+

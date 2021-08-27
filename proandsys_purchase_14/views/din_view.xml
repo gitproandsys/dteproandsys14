@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_din_tree" model="ir.ui.view">
+        <field name="name">account.din.tree</field>
+        <field name="model">account.din</field>
+        <field name="arch" type="xml">
+            <tree string="DIN">
+                <field name="origin"/>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="date"/>
+                <field name="folder_id" invisible="1"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="account_din_form" model="ir.ui.view">
+        <field name="name">account.din.form</field>
+        <field name="model">account.din</field>
+        <field name="arch" type="xml">
+            <form string="DIN">
+                <header>
+                    <button name="din_open" states="draft" string="Contabilizar" type="object"
+                                    class="oe_highlight" groups="account.group_account_invoice"/>
+                    <button name="din_cancel" states="done" string="Cancelar" type="object"
+                                                        groups="account.group_account_invoice"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done"
+                                                        statusbar_colors='{"draft":"blue"}'/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <span class="o_form_label" attrs="{'invisible': [('name','=',False)]}">Declaration</span>
+                        <span class="o_form_label" attrs="{'invisible': [('name','!=',False)]}">No-posted Declaration</span>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                       </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_id" domain="[('supplier_rank','>',0)]"
+                                context="{'res_partner_search_mode': 'supplier', 'show_vat': True,
+                                        'default_is_company': True,'show_address': 1}"/>
+                            <field name="origin"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                            <field name="date_din"/>
+                            <field name="journal_id"
+                                groups="account.group_account_user"
+                                    options="{'no_create': True}"/>
+                            <field name="account_id"
+                                domain="[('company_id', '=', company_id)]"
+                                    groups="account.group_account_user"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Detail">
+                            <group>
+                                <group string="Base">
+                                    <field name="rate"/>
+                                    <field name="cif_amount"/>
+                                    <field name="tax_id"/>
+                                    <field name="diff_tax"/>
+                                </group>
+                                <group string="Expenses">
+                                    <field name="ad_valorem"/>
+                                    <field name="account_ad_valorem_id"
+                                        attrs="{'invisible': [('ad_valorem','in',[0,False])],
+                                            'required': [('ad_valorem','not in',[0,False])]}"/>
+                                    <field name="others_1"/>
+                                    <field name="account_others_1_id"
+                                        attrs="{'invisible': [('others_1','in',[0,False])],
+                                            'required': [('others_1','not in',[0,False])]}"/>
+                                    <field name="others_2"/>
+                                    <field name="account_others_2_id"
+                                        attrs="{'invisible': [('others_2','in',[0,False])],
+                                            'required': [('others_2','not in',[0,False])]}"/>
+                                    <field name="others_3"/>
+                                    <field name="account_others_3_id"
+                                        attrs="{'invisible': [('others_3','in',[0,False])],
+                                            'required': [('others_3','not in',[0,False])]}"/>
+                                    <field name="others_4"/>
+                                    <field name="account_others_4_id"
+                                        attrs="{'invisible': [('others_4','in',[0,False])],
+                                            'required': [('others_4','not in',[0,False])]}"/>
+                                    <field name="amount_no_tax_usd"/>
+                                    <field name="account_no_tax_id"
+                                        attrs="{'invisible': [('amount_no_tax_usd','in',[0, False])],
+                                            'required': [('amount_no_tax_usd','not in',[0, False])]}"/>
+                                </group>
+                            </group>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="total_untaxed" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <field name="amount_tax" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <div class="oe_subtotal_footer_separator oe_inline">
+                                    <label for="amount_total"/>
+                                </div>
+                                <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator"
+                                    widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                            <field name="notes" class="oe_inline" placeholder="Leave a note or comment ..."/>
+                            <div class="oe_clear"/>
+                        </page>
+                        <page string="Other Info">
+                            <group>
+                                <group>
+                                    <field name="create_uid" readonly="1"/>
+                                    <field name="move_id" groups="account.group_account_user"/>
+                                </group>
+                                <group>
+                                    <field name="folder_id" required="1"/>
+                                    <field name="company_id" widget="selection" groups="base.group_multi_company"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_din_search" model="ir.ui.view">
+        <field name="name">account.din.search</field>
+        <field name="model">account.din</field>
+        <field name="arch" type="xml">
+            <search string="DIN">
+                <field name="name"/>
+                <field name="origin"/>
+                <field name="partner_id"/>
+                <field name="folder_id"/>
+                <field name="create_uid"/>
+                <group expand="0" string="Group By">
+                    <filter string="User" name="group_by_user" domain="[]" context="{'group_by': 'create_uid'}"/>
+                    <filter string="Date" name="group_by_date" domain="[]" context="{'group_by': 'date'}"/>
+                    <filter string="State" name="group_by_state" domain="[]" context="{'group_by': 'state'}"/>
+                    <filter string="Customs House" name="group_by_partner" domain="[]" context="{'group_by': 'partner_id'}"/>
+                    <filter string="Asociated Folder" name="group_by_folder" domain="[]" context="{'group_by': 'folder_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="account_din_action" model="ir.actions.act_window">
+        <field name="name">DIN</field>
+        <field name="res_model">account.din</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="account_din_action" id="menu_account_din_action" parent="account.menu_finance_payables"/>
+</odoo>
+

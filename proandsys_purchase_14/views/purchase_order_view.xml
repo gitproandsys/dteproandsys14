@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_proandsys_form_view" model="ir.ui.view">
+        <field name="name">purchase.order.proandsys.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="validate_uid" readonly="1"/>
+            </field>
+            <field name="date_order" position="after">
+                <field name="order_type"/>
+                <field name="product_type"/>
+                <field name="acquisition_country_id" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="origin_country_id" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="regime_id" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="transport_id" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+            </field>
+            <field name="currency_id" position="after">
+                <field name="transport_route_id" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="shipment_port_id" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="destination_port_id" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="tracking" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="folder_id" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="policy_reference" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="shipper" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+                <field name="consignee" attrs="{'invisible': [('order_type','!=','imported')]}"/>
+            </field>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+                <field name="barcode"/>
+            </xpath>
+            <notebook position="inside">
+                <page string="Purchase Order Tracking" attrs="{'invisible': [('order_type','!=','imported')]}">
+                    <field name="tracking_oc_ids">
+                        <tree string="Incomex Planning" editable="bottom"><!--Planificacion importacion-->
+                            <field name="name"/>
+                            <field name="fecha"/>
+                            <field name="oc_related" invisible="1"/>
+                        </tree>
+                    </field>
+                </page>
+                <page string="Containers" attrs="{'invisible': [('order_type','!=','imported')]}">
+                    <field name="max_line_sequence" invisible="1"/>
+                    <field name="container_ids">
+                        <tree string="Containers" editable="bottom">
+                            <field name="sequence2"/>
+                            <field name="container"/>
+                            <field name="serial"/>
+			                <field name="arrival_date"/>
+                            <field name="reception_date"/>
+                            <field name="return_date"/>
+                            <field name="demurrage_amount"/>
+                            <field name="notes"/>
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

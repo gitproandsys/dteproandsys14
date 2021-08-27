@@ -1,0 +1,1500 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* proandsys_purchase_14
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-11 01:56+0000\n"
+"PO-Revision-Date: 2020-12-11 00:12-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_CL\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ", emite la presente Orden de Compra, la cual se rige bajo las siguientes Condiciones Generales:"
+msgstr ", emite la presente Orden de Compra, la cual se rige bajo las siguientes Condiciones Generales:"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ""
+"//\n"
+"Email:"
+msgstr ""
+"//\n"
+"Correo:"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ""
+"//\n"
+"Rut:"
+msgstr ""
+"//\n"
+"Rut:"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "<b>TOTAL GASTOS</b>"
+msgstr "<b>TOTAL GASTOS</b>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ""
+"<br/>\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    <strong>O/C Aprobada por:</strong>"
+msgstr ""
+"<br/>\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    <strong>O/C Aprobada por:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ""
+"<br/>\n"
+"                                    <strong>1. LUGAR DE ENTREGA:</strong>\n"
+"                                    <br/>"
+msgstr ""
+"<br/>\n"
+"                                    <strong>1. LUGAR DE ENTREGA:</strong>\n"
+"                                    <br/>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ""
+"<br/>\n"
+"                                Teléfono:"
+msgstr ""
+"<br/>\n"
+"                                Teléfono:"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_form
+msgid ""
+"<span class=\"o_form_label\" attrs=\"{'invisible': [('name','=',False)]}\">Declaration</span>\n"
+"                        <span class=\"o_form_label\" attrs=\"{'invisible': [('name','!=',False)]}\">No-posted Declaration</span>"
+msgstr ""
+"<span class=\"o_form_label\" attrs=\"{'invisible': [('name','=',False)]}\">Declaración</span>\n"
+"                        <span class=\"o_form_label\" attrs=\"{'invisible': [('name','!=',False)]}\">Declaración no "
+"contabilizada</span>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<span>&amp;bull; </span>"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<span>&amp;bull; Rut:</span>"
+msgstr "<span>&amp;bull; Rut:</span>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "<span>Totales</span>"
+msgstr "<span>Totales</span>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong style=\"color:gray !important;\">Shipping address:</strong>"
+msgstr "<strong style=\"color:gray !important;\">Dirección de envío:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ""
+"<strong style=\"color:gray !important;\">Vendor address:</strong>\n"
+"                                    <br/>"
+msgstr ""
+"<strong style=\"color:gray !important;\">Dirección del vendedor:</strong>\n"
+"                                    <br/>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ""
+"<strong>\n"
+"                                        <span>Note:</span>\n"
+"                                    </strong>"
+msgstr ""
+"<strong>\n"
+"                                        <span>Notas:</span>\n"
+"                                    </strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ""
+"<strong>2. HORARIO DE RECEPCION:</strong>\n"
+"                                    <br/>De lunes a viernes de 9:30 a 17:00 hrs.(Agendar su recepcion)\n"
+"                                \n"
+"                                    <br/>\n"
+"                                    <strong>****Adjuntar la presente orden de compra, a la factura con lo cual evitara el "
+"rechazo y/o demora en su pago****</strong>\n"
+"                                    <br/>\n"
+"                                    <strong>FORMA DE PAGO:</strong>\n"
+"                                    <br/>\n"
+"                                    Mediante cheque o Transferencia electronica el primer martes despues de la semana de "
+"vencimiento. El retiro de cheques se hace en nuestras oficinas centrales de 15:00 a 17:00, para lo cual debe traer la cuarta "
+"copia ejecutiva Cedible\n"
+"                                \n"
+"                                    <br/>"
+msgstr ""
+"<strong>2. HORARIO DE RECEPCIÓN:</strong>\n"
+"                                    <br/>De lunes a viernes de 9:30 a 17:00 hrs.(Agendar su recepción)\n"
+"                                \n"
+"                                    <br/>\n"
+"                                    <strong>****Adjuntar la presente orden de compra, a la factura con lo cual evitara el "
+"rechazo y/o demora en su pago****</strong>\n"
+"                                    <br/>\n"
+"                                    <strong>FORMA DE PAGO:</strong>\n"
+"                                    <br/>\n"
+"                                    Mediante cheque o Transferencia electrónica el primer martes después de la semana de "
+"vencimiento. El retiro de cheques se hace en nuestras oficinas centrales de 15:00 a 17:00, para lo cual debe traer la cuarta "
+"copia ejecutiva Cedible\n"
+"                                \n"
+"                                    <br/>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Cantidad</strong>"
+msgstr "<strong>Cantidad</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Ciudad:</strong>"
+msgstr "<strong>Ciudad:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Code</strong>"
+msgstr "<strong>Código</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Codigo</strong>"
+msgstr "<strong>Código</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Comuna:</strong>"
+msgstr "<strong>Comuna:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid ""
+"<strong>DOCUMENTO NO VÁLIDO COMO ORDEN DE COMPRA</strong>\n"
+"                                    <br/>"
+msgstr ""
+"<strong>DOCUMENTO NO VÁLIDO COMO ORDEN DE COMPRA</strong>\n"
+"                                    <br/>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Date Req.</strong>"
+msgstr "<strong>Date Req.</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Descripcion</strong>"
+msgstr "<strong>Descripción</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Description</strong>"
+msgstr "<strong>Descripción</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Dirección:</strong>"
+msgstr "<strong>Dirección:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Facturar a:</strong>//"
+msgstr "<strong>Facturar a:</strong>//"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Fecha Aprobacion:</strong>"
+msgstr "<strong>Fecha Aprobación:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Fecha Emisión:</strong>"
+msgstr "<strong>Fecha Emisión:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Moneda:</strong>"
+msgstr "<strong>Moneda:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Net Price</strong>"
+msgstr "<strong>Precio Neto</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Notas:</strong>"
+msgstr "<strong>Notas:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Payment Term</strong>"
+msgstr "<strong>Términos de Pago</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Precio</strong>"
+msgstr "<strong>Precio</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Qty</strong>"
+msgstr "<strong>Cantidad</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Rut:</strong>"
+msgstr "<strong>Rut:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>SubTotal</strong>"
+msgstr "<strong>Subtotal</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Taxes</strong>"
+msgstr "<strong>Impuestos</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Teléfono:</strong>"
+msgstr "<strong>Teléfono:</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Total Neto</strong>"
+msgstr "<strong>Total Neto</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Total Without Taxes</strong>"
+msgstr "<strong>Total Neto</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>Precio Unitario</strong>"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__account_id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__acquisition_country_id
+msgid "Acquisicion country"
+msgstr "País adquisición"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__ad_valorem
+msgid "Ad Valorem"
+msgstr "Ad Valorem"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__account_ad_valorem_id
+msgid "Ad Valorem Account"
+msgstr "Cuenta Ad Valorem"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__additional_landed_cost
+msgid "Aditional landed cost"
+msgstr "Costes adicionales"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__total_untaxed
+msgid "Amount untaxed"
+msgstr "Base imponible"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__arrival_date
+msgid "Arrival date"
+msgstr "Fecha Arribo"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "Asiento Contable"
+msgstr "Asiento Contable"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_search
+msgid "Asociated Folder"
+msgstr "Carpeta asociada"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_attachment_count
+msgid "Attachment Count"
+msgstr "Cantidad de adjuntos"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Attention"
+msgstr "Atención"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_form
+msgid "Base"
+msgstr "Base"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Beneficiary"
+msgstr "Beneficiario"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__stock_landed_cost_lines_summary__split_method__by_current_cost_price
+msgid "By Current Cost"
+msgstr "Por coste actual"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__stock_landed_cost_lines_summary__split_method__by_quantity
+msgid "By Quantity"
+msgstr "Por cantidad"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__stock_landed_cost_lines_summary__split_method__by_volume
+msgid "By Volume"
+msgstr "Por volumen"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__stock_landed_cost_lines_summary__split_method__by_weight
+msgid "By Weight"
+msgstr "Por peso"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "CANTIDAD"
+msgstr "CANTIDAD"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__cif_amount
+msgid "CIF Amount"
+msgstr "Monto CIF"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "CODIGO"
+msgstr "CÓDIGO"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "COSTO"
+msgstr "COSTO"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "CUENTA"
+msgstr "CUENTA"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_form
+msgid "Cancelar"
+msgstr "Cancelar"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "Carpeta"
+msgstr "Carpeta"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "Casa Matriz:"
+msgstr "Casa Matriz:"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order_line__barcode
+msgid "Codigo"
+msgstr "Código"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__consignee
+msgid "Consignee"
+msgstr "Destinatario"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_form
+msgid "Contabilizar"
+msgstr "Contabilizar"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__container
+msgid "Container"
+msgstr "Contenedor"
+
+#. module: proandsys_purchase_14
+#: model:ir.actions.act_window,name:proandsys_purchase_14.container_action model:ir.ui.menu,name:proandsys_purchase_14.menu_container
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.container_tree_view
+msgid "Container Registry"
+msgstr "Registro de Contenedores"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__container_ids
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.purchase_order_proandsys_form_view
+msgid "Containers"
+msgstr "Contenedores"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__price_unit
+msgid "Cost"
+msgstr "Costo"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.stock_landed_cost_inherit_form_view
+msgid "Cost Summary"
+msgstr "Resumen de Costo"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__total_cost
+msgid "Total incomex cost"
+msgstr "Costo total importación"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Country Acquisition"
+msgstr "País adquisición"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Country of Origin"
+msgstr "País de origen"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container__create_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__create_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__create_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_regime__create_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__create_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__create_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking__create_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc__create_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_transport_route__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__create_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container__create_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__create_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__create_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_regime__create_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__create_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__create_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking__create_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc__create_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_transport_route__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__currency_id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__currency_id
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__partner_id
+msgid "Custom"
+msgstr "Aduana"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_search
+msgid "Customs House"
+msgstr "Aduanas"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "DESCRIPCION"
+msgstr "DESCRIPCIÓN"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__origin
+msgid "Number"
+msgstr "Número"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__date_din
+msgid "date"
+msgstr "Fecha"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc__fecha
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_search
+msgid "Date"
+msgstr "Fecha"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Date PO"
+msgstr "Fecha OC"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Date Printing"
+msgstr "Fecha de impresión"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_form model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_search
+#: model:ir.actions.act_window,name:proandsys_purchase_14.account_din_action model:ir.ui.menu,name:proandsys_purchase_14.menu_account_din_action
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_move__din_id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_move_line__din_id
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_tree
+msgid "DIN"
+msgstr "Declaración de Ingresos"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__demurrage_amount
+msgid "Demurrage Amount"
+msgstr "Monto Demurrage"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__name
+msgid "Description"
+msgstr "Descripción"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__destination_port_id
+msgid "Destination port"
+msgstr "Puerto destino"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_form
+msgid "Detail"
+msgstr "Detalle"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__display_name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container__display_name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__display_name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__display_name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_regime__display_name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__display_name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__display_name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking__display_name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc__display_name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_transport_route__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__account_din__state__done
+msgid "Done"
+msgstr "Publicado"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__account_din__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "ETD"
+msgstr "ETD"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__stock_landed_cost_lines_summary__split_method__equal
+msgid "Equal"
+msgstr "Igual"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_form
+msgid "Expenses"
+msgstr "Gastos"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost__move_ids
+msgid "Expenses invoice"
+msgstr "Factura de gastos"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "Fecha:"
+msgstr "Fecha:"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__final_cost
+msgid "Final cost"
+msgstr "Costo final"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__final_stock_cost
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_valuation_adjustment_lines__final_stock_cost
+msgid "Final stock cost"
+msgstr "Costo final stock"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)S"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Contactos)"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Forwarder"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "From"
+msgstr "Desde"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "Giro:"
+msgstr "Giro:"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container__id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_regime__id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking__id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc__id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_transport_route__id
+msgid "ID"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__amount_tax
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "IVA"
+msgstr "IVA"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__diff_tax
+msgid "IVA difference (CLP)"
+msgstr "Diferencia IVA (CLP)"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__message_needaction
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, un nuevo mensaje requiere su atención."
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__message_has_error
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algún mensaje tuvo un error de envío."
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__purchase_order__order_type__imported
+msgid "Imported"
+msgstr "Importada"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.stock_landed_cost_inherit_form_view
+msgid "Print Landed Cost Summary"
+msgstr "Imprimir Resumen Costeo"
+
+#. module: proandsys_purchase_14
+#: model:ir.actions.act_window,name:proandsys_purchase_14.incomex_folder_action
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_move__landed_cost_id
+#: model:ir.ui.menu,name:proandsys_purchase_14.menu_incomex_folder_action model_terms:ir.ui.view,arch_db:proandsys_purchase_14.incomex_folder_form_view
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.incomex_folder_tree_view
+msgid "Incomex Folder"
+msgstr "Carpeta Importación"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.purchase_order_proandsys_form_view
+msgid "Incomex Planning"
+msgstr "Planificación importación"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__date
+msgid "Incomex date"
+msgstr "Fecha importación"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__folder_id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost__folder_id
+msgid "Incomex folder"
+msgstr "Carpeta importación"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Incoterms"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_product_product__landed_cost_ok
+#: model:ir.model.fields,help:proandsys_purchase_14.field_product_template__landed_cost_ok
+msgid "Indicates whether the product is a landed cost."
+msgstr "Indica si el producto es un coste en destino."
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_purchase_order_line__barcode
+msgid "International Article Number used for product identification."
+msgstr "Número de articulo internacional usado para identificar el producto."
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_account_move
+msgid "Journal Entries"
+msgstr "Asientos contables"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__move_id
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__landed_cost_ids
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_product_product__landed_cost_ok
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_product_template__landed_cost_ok
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__landed_cost_id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__cost_id
+msgid "Landed Cost"
+msgstr "Costeo"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.product_landed_cost_form_view
+msgid "Landed Cost Service"
+msgstr "Servicio para costeo"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.incomex_folder_form_view
+msgid "Landed Costs"
+msgstr "Costeos"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__cost_id
+msgid "Landed cost"
+msgstr "Costeo"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost__landed_cost_summary_ids
+msgid "Landed cost summary"
+msgstr "Resumen de costeo"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din____last_update
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container____last_update
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc____last_update
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder____last_update
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_regime____last_update
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary____last_update
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary____last_update
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking____last_update
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc____last_update
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_transport_route____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__write_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container__write_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__write_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__write_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_regime__write_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__write_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__write_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking__write_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc__write_uid
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_transport_route__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__write_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container__write_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__write_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__write_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_regime__write_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__write_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__write_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking__write_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc__write_date
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_transport_route__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_form
+msgid "Leave a note or comment ..."
+msgstr "Deje una nota o comentario ..."
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost__lines_resume_ids
+msgid "Lines summary"
+msgstr "Líneas de Resumen"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__move_id
+msgid "Link to the automatically generated Journal Items."
+msgstr "Enlace a los apuntes contables generados automáticamente."
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "METODO"
+msgstr "MÉTODO"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto principal"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__purchase_order__product_type__materials
+msgid "Materials"
+msgstr "Materiales"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__max_line_sequence
+msgid "Max sequence in lines"
+msgstr "Secuencia máxima en líneas"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_has_error
+msgid "Message Delivery error"
+msgstr "Error al enviar el mensaje"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container__name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_regime__name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking__Name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc__name
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_transport_route__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__purchase_order__order_type__national
+msgid "National"
+msgstr "Nacional"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__final_stock_cost_per_unit
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_valuation_adjustment_lines__final_stock_cost_per_unit
+msgid "New unitary stock cost"
+msgstr "Nuevo costo unitario stock"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__final_cost_per_unit
+msgid "New unitary cost"
+msgstr "Nuevo costo unitario"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__notes
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes sin leer"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__former_cost
+msgid "Old total cost"
+msgstr "Costo total antiguo"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__former_cost_per_unit
+msgid "Old unitary cost"
+msgstr "Costo unitario antiguo"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "Orden de Compra"
+msgstr "Orden de Compra"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Orden de Compra:"
+msgstr "Orden de Compra:"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__origin_country_id
+msgid "Origin country"
+msgstr "País Origen"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__former_stock_quantity
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_valuation_adjustment_lines__former_stock_quantity
+msgid "Original stock quantity"
+msgstr "Cantidad en stock original"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__former_stock_cost
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_valuation_adjustment_lines__former_stock_cost
+msgid "Original total stock cost"
+msgstr "Costo total stock original"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__former_stock_cost_per_unit
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_valuation_adjustment_lines__former_stock_cost_per_unit
+msgid "Original unitary stock cost"
+msgstr "Costo unitario stock original"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__account_no_tax_id
+msgid "Other Expenses No Tax Account"
+msgstr "Cuenta otros gastos exentos"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__amount_no_tax_usd
+msgid "Other Expenses No Tax USD"
+msgstr "Otros gastos exentos (USD)"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_form
+msgid "Other Info"
+msgstr "Otra Información"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__others_1
+msgid "Others 1"
+msgstr "Otros 1"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__account_others_1_id
+msgid "Others 1 Account"
+msgstr "Cuenta otros 1"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__others_2
+msgid "Others 2"
+msgstr "Otros 2"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__account_others_2_id
+msgid "Others 2 Account"
+msgstr "Cuenta otros 2"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__others_3
+msgid "Others 3"
+msgstr "Otros 3"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__account_others_3_id
+msgid "Others 3 Account"
+msgstr "Cuenta otros 3"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__others_4
+msgid "Others 4"
+msgstr "Otros 4"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__account_others_4_id
+msgid "Others 4 Account"
+msgstr "Cuenta otros 4"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "PRODUCTO"
+msgstr "PRODUCTO"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Pagina:"
+msgstr "Página:"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__policy_reference
+msgid "Policy reference"
+msgstr "Referencia póliza"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Port of Destination"
+msgstr "Puerto de Destino"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Port of Shipment"
+msgstr "Puerto embarque"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__shipment_port_id
+msgid "Port of shipment"
+msgstr "Puerto embarque"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__date
+msgid "Post Date"
+msgstr "Fecha contable"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__product_id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_product_template
+msgid "Product Template"
+msgstr "Plantilla producto"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__product_type
+msgid "Product type"
+msgstr "Tipo producto"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_purchase_order
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__purchase_order_ids
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Línea de pedido de compra"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.purchase_order_proandsys_form_view
+msgid "Purchase Order Tracking"
+msgstr "Rastreo Orden Compra"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.incomex_folder_form_view
+msgid "Purchase Orders"
+msgstr "Ordenes de Compra"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__purchase_id
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost__purchase_order_ids
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_tracking_oc__oc_related
+msgid "Purchase order"
+msgstr "Orden de compra"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__tracking_oc_ids
+msgid "Purchase order planning"
+msgstr "Planificación de orden de compra"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__tracking
+msgid "Purchase order tracking"
+msgstr "Rastreo orden de compra"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__order_type
+msgid "Purchase order type"
+msgstr "Tipo orden de compra"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__quantity
+msgid "Quantity purchased"
+msgstr "Cantidad comprada"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__rate
+msgid "Rate"
+msgstr "Tipo de cambio"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "Recepcion"
+msgstr "Recepción"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__reception_date
+msgid "Reception date"
+msgstr "Fecha recepción"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Ref. PO"
+msgstr "Ref. OC"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_incomex_folder__name
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "Referencia:"
+msgstr "Referencia:"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__regime_id
+msgid "Regime"
+msgstr "Regimen"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Regimen"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__folder_id
+msgid "Related incomex folder"
+msgstr "Carpeta de importación asociada"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Request for Quotation"
+msgstr "Solicitud de Presupuesto"
+
+#. module: proandsys_purchase_14
+#: model:ir.actions.report,name:proandsys_purchase_14.summary_landedcost
+msgid "Resumen Costeo Importacion"
+msgstr "Resumen Costeo importación"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__return_date
+msgid "Return date"
+msgstr "Fecha devolución"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error enviando SMS"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__sequence2
+msgid "Sequence 2"
+msgstr "Secuencia 2"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_container_oc__serial
+msgid "Serial"
+msgstr "Serie"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__purchase_order__product_type__services
+msgid "Services"
+msgstr "Servicios"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Señor(es):"
+msgstr "Señor(es):"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__shipper
+msgid "Shipper"
+msgstr "Transportista"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_container_oc__sequence model:ir.model.fields,help:proandsys_purchase_14.field_container_oc__sequence2
+msgid "Shows the sequence of this line in the invoice."
+msgstr "Muestra la secuencia de esta línea en la factura."
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Sitio web:"
+msgstr "Sitio Web:"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Solicitud de O/C:"
+msgstr "Solicitud de O/C:"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_lines_summary__split_method
+msgid "Split Method"
+msgstr "Método de división"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__state
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_search
+msgid "State"
+msgstr "Estado"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_stock_landed_cost
+msgid "Stock Landed Cost"
+msgstr "Coste en destino"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_stock_landed_cost_lines_summary
+msgid "Stock Landed Cost Lines Resumen"
+msgstr "Líneas de resumen"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__tax_id
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "Telefono:"
+msgstr "Teléfono:"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Term of Credit"
+msgstr "Térms. del Crédito"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__currency_id
+msgid "The currency used to enter statement"
+msgstr "La moneda usada para ingresar la declaración"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__amount_total
+msgid "Total"
+msgstr "Total"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__transport_id
+msgid "Transport"
+msgstr "Transporte"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_purchase_order__transport_route_id
+msgid "Transport route"
+msgstr "Vía transporte"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Cantidad Mensajes no leídos"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__create_uid
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.account_din_search
+msgid "User"
+msgstr "Usuario"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "VALOR COMPRA TOTAL"
+msgstr "VALOR COMPRA TOTAL"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "VALOR COMPRA UNITARIO"
+msgstr "VALOR COMPRA UNITARIO"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "VALOR TOTAL ADICIONAL GASTOS"
+msgstr "VALOR TOTAL ADICIONAL GASTOS"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "VALOR UNITARIO ADICIONAL GASTOS"
+msgstr "VALOR UNITARIO ADICIONAL GASTOS"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.summary_landed_report
+msgid "VALOR UNITARIO NUEVO"
+msgstr "VALOR UNITARIO NUEVO"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_stock_valuation_adjustment_lines
+msgid "Valuation Adjustment Lines"
+msgstr "Líneas de ajuste de valoración"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.proandsys_purchase_order
+msgid "Via Transport"
+msgstr "Vía Transporte"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__volume
+msgid "Volume"
+msgstr "Volumen"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_account_din__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes sitio web"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,help:proandsys_purchase_14.field_account_din__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación sitio web"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_landed_cost_summary__weight
+msgid "Weight"
+msgstr "Peso"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_account_din
+msgid "account.din"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.stock_landed_cost_summary_tree_view
+msgid "Total Additional Cost"
+msgstr "Costo Total Adicional"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_container
+msgid "container"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_container_oc
+msgid "container.oc"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.stock_landed_cost_summary_tree_view
+msgid "Total Cost"
+msgstr "Costo Total"
+
+#. module: proandsys_purchase_14
+#: model_terms:ir.ui.view,arch_db:proandsys_purchase_14.stock_landed_cost_summary_tree_view
+msgid "Total Former Cost"
+msgstr "Total Costo Anterior"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_picking__document_number
+msgid "Document number"
+msgstr "Número documento"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__stock_picking__reception_document__invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields.selection,name:proandsys_purchase_14.selection__stock_picking__reception_document__dispatch_order
+msgid "Dispatch Order"
+msgstr "Guía de despacho"
+
+#. module: proandsys_purchase_14
+#: model:ir.model.fields,field_description:proandsys_purchase_14.field_stock_picking__reception_document
+msgid "Reception document"
+msgstr "Documento recepción"
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_incomex_folder
+msgid "incomex.folder"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_regime
+msgid "regime"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_stock_landed_cost_summary
+msgid "stock.landed.cost.summary"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_tracking
+msgid "tracking"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_tracking_oc
+msgid "tracking.oc"
+msgstr ""
+
+#. module: proandsys_purchase_14
+#: model:ir.model,name:proandsys_purchase_14.model_transport_route
+msgid "transport.route"
+msgstr ""

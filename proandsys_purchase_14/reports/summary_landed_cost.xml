@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report id="summary_landedcost" string="Resumen Costeo Importacion"
+            model="stock.landed.cost" report_type="qweb-pdf" name="proandsys_purchase_14.summary_landed_report"/>
+
+        <template id="summary_landed_report" name="Resumen Costeo Importacion">
+            <t t-name="proandsys_purchase_14.summary_landed">
+                <t t-call="web.basic_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="header">
+                            <div class="col-xs-12" style="padding:0px !important;">
+                                <div class="col-xs-3" style="padding:0px !important">
+                                    <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" style="width:120px; display: block; margin-left: auto; margin-right: auto;"/>
+                                </div>
+                                <div class="col-xs-6 text-center" style="padding:0px !important">
+                                    <span style="font-size:10px;"><t t-esc="res_company.name"/></span><br/>
+                                    <span style="font-size:10px;">Giro: <t t-esc="res_company.company_registry"/></span><br/>
+                                    <span style="font-size:10px;">Telefono: <t t-esc="res_company.phone"/></span><br/>
+                                    <span style="font-size:10px;">Casa Matriz: <t t-esc="res_company.street"/></span><br/>
+                                    <span style="font-size:10px;"><t t-esc="res_company.state_id.name"/></span><br/>
+                                    <span style="font-size:10px;"><t t-esc="res_company.city"/></span><br/>
+                                    <span style="font-size:10px;"><t t-esc="res_company.website"/> | <t t-esc="res_company.email"/></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page">
+                            <style>
+                                thead > tr {
+                                    border-bottom: 1px solid black;
+                                    margin-bottom: 3px;
+                                    page-break-inside: avoid
+                                }
+                                th {
+                                    vertical-align: middle;
+                                }
+                                th {
+                                    font-size: 12px;
+                                }
+                                td {
+                                    font-size: 10px;
+                                }
+                                td {
+                                    padding: 3px 2px 1px 5px;
+                                }
+                                table {
+                                    border-radius: 10px;
+                                    border: 1px solid black;
+                                    width: 100%;
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+                                }
+                                .col-xs-7, .col-xs-4 {
+                                    padding: 0px !important;
+                                }
+                                .col-xs-4 span,.col-xs-8 span {
+                                    font-size: 10px;
+                                }
+                                .timbre_sii {
+                                    height: 80px;
+                                    width: 230px;
+                                    margin: 20px 0px 0px 150px;
+                                }
+                                tr {
+                                    page-break-inside: avoid
+                                }
+                            </style>
+                            <table>
+                                <tr>
+                                    <td>Fecha: </td>
+                                    <td><span t-esc="o.date"/></td>
+                                    <td>Referencia: </td>
+                                    <td><span t-esc="o.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Recepcion</td>
+                                    <td><span t-esc="o.picking_ids.name"/></td>
+                                    <td>Carpeta</td>
+                                    <td><span t-if="o.folder_id" t-field="o.folder_id"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Orden de Compra</td>
+                                    <td><span t-if="o.purchase_order_ids" t-esc="o.purchase_order_ids[0].name" colspan="2"/></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Asiento Contable</td>
+                                    <td><span t-if="o.account_move_id" t-field="o.account_move_id"/></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <table class="productos" style="width:895px">
+                                <thead>
+                                    <tr>
+                                        <th style="border-right:1px solid black;" class="text-center">DESCRIPCION</th>
+                                        <th style="border-right:1px solid black;" colspan="2" class="text-center">CUENTA</th>
+                                        <th style="border-right:1px solid black;" class="text-center">METODO</th>
+                                        <th style="border-right:1px solid black;" class="text-center">COSTO</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="invoice_tbody">
+                                    <tr t-foreach="o.lines_summary_ids" t-as="l" style="height:5px">
+                                        <td style="border-right:1px solid black;">
+                                            <t t-esc="l.name"/>
+                                        </td>
+                                        <td style="border-right:1px solid black;" colspan="2">
+                                            <t t-esc="l.account_id.name"/>
+                                        </td>
+                                        <td class="text-center" style="border-right:1px solid black;">
+                                            <t t-esc="{False: False, 'equal': 'Igual', 'by_quantity': 'Por Cantidad', 'by_current_cost_price': 'Por Precio', 'by_weight': 'Por peso', 'by_volume': 'Por Volumen'}[l.split_method]"/>
+                                        </td>
+                                        <td class="text-center" style="border-right:1px solid black;">
+                                            <t t-esc="l.price_unit" t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right:1px solid black;"/>
+                                        <td style="border-right:1px solid black;" colspan="2"/>
+                                        <td style="border-right:1px solid black;"/>
+                                        <td style="border-right:1px solid black;"/>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table>
+                                <tr>
+                                    <td class="text-right" style="border-right:1px solid black; width:100px;">
+                                        <p class="text-right" style="margin-bottom:3px"><b>TOTAL GASTOS</b></p>
+                                    </td>
+                                    <td>
+                                        <p  class="text-right" style="margin-bottom:3px"><b><t t-esc="o.amount_total" t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/></b></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="productos" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>CODIGO</th>
+                                        <th>PRODUCTO</th>
+                                        <th>CANTIDAD</th>
+                                        <th>VALOR COMPRA TOTAL</th>
+                                        <th>VALOR COMPRA UNITARIO</th>
+                                        <th>VALOR UNITARIO ADICIONAL GASTOS</th>
+                                        <th>VALOR TOTAL ADICIONAL GASTOS</th>
+                                        <th>VALOR UNITARIO NUEVO</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="invoice_tbody">
+                                    <tr t-foreach="o.landed_cost_summary_ids" t-as="l">
+                                        <td>
+                                            <t t-esc="l.product_id.barcode"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="l.product_id.name"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="l.quantity"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="l.former_cost" t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/>
+                                        </td>
+                                        <td class="text-center">
+                                            <t t-esc="l.former_cost_per_unit" t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="l.additional_landed_cost"  t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="l.final_cost"  t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="l.final_cost_per_unit"  t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">
+                                            <span>Totales</span>
+                                        </td>
+                                        <td/>
+                                        <td/>
+                                        <td class="text-right" style="font-weight: bold;">
+                                            <t t-esc="sum(l.former_cost for l in o.landed_cost_summary_ids)" t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/>
+                                        </td>
+                                        <td/>
+                                        <td class="text-right" style="font-weight: bold;">
+                                            <t t-esc="sum(l.additional_landed_cost for l in o.landed_cost_summary_ids)" t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/>
+                                        </td>
+                                        <td class="text-right" style="font-weight: bold;">
+                                            <t t-esc="sum(l.final_cost for l in o.landed_cost_summary_ids)"  t-esc-options='{"widget": "monetary", "display_currency": "res_company.currency_id"}'/>
+                                        </td>
+                                        <td/>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
+

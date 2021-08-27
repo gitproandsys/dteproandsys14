@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="container_tree_view" model="ir.ui.view">
+        <field name="name">container.oc.tree.view</field>
+        <field name="model">container.oc</field>
+        <field name="arch" type="xml">
+            <tree string="Container Registry">
+                <field name="sequence2" readonly="1"/>
+                <field name="container" readonly="1"/>
+                <field name="serial" readonly="1"/>
+                <field name="arrival_date" readonly="1"/>
+                <field name="reception_date" readonly="1"/>
+                <field name="return_date" readonly="1"/>
+                <field name="demurrage_amount" readonly="1"/>
+                <field name="notes" readonly="1"/>
+                <field name="purchase_id" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="container_action" model="ir.actions.act_window">
+        <field name="name">Container Registry</field>
+        <field name="res_model">container.oc</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem action="container_action" id="menu_container" parent="purchase.menu_purchase_config" sequence="10"/>
+
+    <record id="incomex_folder_tree_view" model="ir.ui.view">
+        <field name="name">incomex.folder.tree.view</field>
+        <field name="model">incomex.folder</field>
+        <field name="arch" type="xml">
+            <tree string="Incomex Folder">
+                <field name="name"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="incomex_folder_form_view" model="ir.ui.view">
+        <field name="name">incomex.folder.form.view</field>
+	<field name="model">incomex.folder</field>
+        <field name="arch" type="xml">
+            <form string="Incomex Folder">
+                <sheet string="Incomex Folder">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="date"/>
+                        </group>
+                        <group>
+                            <field name="total_cost"/>
+                        </group>
+                        <group string="Purchase Orders" colspan="4">
+                            <field name="purchase_order_ids" widget="many2many" nolabel="1">
+                                <tree editable="top">
+                                    <field name="date_order" readonly="1"/>
+                                    <field name="name" readonly="1"/>
+                                    <field name="partner_id" readonly="1"/>
+                                    <field name="origin" readonly="1"/>
+                                    <field name="amount_total" readonly="1"/>
+                                    <field name="state" readonly="1"/>
+                                    <field name="company_id" invisible="1" readonly="1"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group string="Landed Costs" colspan="4">
+                            <field name="landed_cost_ids" nolabel="1"/>
+                        </group>
+                    </group> 
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="incomex_folder_action" model="ir.actions.act_window">
+        <field name="name">Incomex Folder</field>
+        <field name="res_model">incomex.folder</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="incomex_folder_action" id="menu_incomex_folder_action" parent="purchase.menu_purchase_config" sequence="15"/>
+</odoo>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_landed_cost_inherit_form_view" model="ir.ui.view">
+        <field name="name">stock.landed.cost.inherit.form.view</field>
+        <field name="model">stock.landed.cost</field>
+        <field name="inherit_id" ref="stock_landed_costs.view_stock_landed_cost_form"/>
+        <field name="arch" type="xml">
+            <button name="button_cancel" position="before">
+                <button name="summary_print" string="Print Landed Cost Summary" type="object" class="oe_highlight"/>
+            </button>
+            <field name="picking_ids" position="after">
+                <field name="folder_id"/>
+                <field name="purchase_order_ids" widget="many2many_tags"/>
+            </field>
+            <field name="vendor_bill_id" position="after">
+                <field name="move_ids" widget="many2many_tags"/>
+            </field>
+            <field name="cost_lines" position="before">
+                <field name="lines_summary_ids"/>
+            </field>
+            <field name="cost_lines" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <xpath expr="//page[2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//page[2]" position="after">
+                <page name="cost_summary" string="Cost Summary">
+                    <!-- <button name="button_summary" type="object" string="Cargar Resumen"/> -->
+                    <field name="landed_cost_summary_ids"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="incomex_folder_stock_landed_cost_tree_view" model="ir.ui.view">
+        <field name="name">incomex.folder.stock.landed.cost.tree.view</field>
+        <field name="model">stock.landed.cost</field>
+        <field name="inherit_id" ref="stock_landed_costs.view_stock_landed_cost_tree"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="folder_id"/>
+                <field name="purchase_order_ids" widget="many2many_tags"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="stock_landed_cost_summary_tree_view" model="ir.ui.view">
+        <field name="name">stock.landed.cost.summary.tree.view</field>
+        <field name="model">stock.landed.cost.summary</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0">
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="former_cost" sum="Total Former Cost"/>
+                <field name="former_cost_per_unit"/>
+                <field name="additional_landed_cost" sum="Total Additional Cost"/>
+                <field name="final_cost" sum="Total Cost"/>
+                <field name="final_cost_per_unit"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="stock_landed_cost_lines_summary_tree_view" model="ir.ui.view">
+        <field name="name">stock.landed.cost.lines.summary.tree.view</field>
+        <field name="model">stock.landed.cost.lines.summary</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="product_id" domain="[('landed_cost_ok','=',True)]"/>
+                <field name="account_id"/>
+                <field name="split_method"/>
+                <field name="price_unit"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="stock_landed_cost_account_move_form_view" model="ir.ui.view">
+        <field name="name">account.move.landed.cost.form.view</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <field name="fiscal_position_id" position="replace">
+                <field name="landed_cost_id"/>
+            </field>
+        </field>
+    </record>
+</odoo>
+
